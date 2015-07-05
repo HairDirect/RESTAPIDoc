@@ -3017,23 +3017,34 @@ body {
 h2 {
   border-bottom: 4px double #253237; }
 
+h3 {
+  color: #5C6B73; }
+
+h4, h5, h6 {
+  color: #9DB4C0; }
+
 /*------------------------------------*\
     $TABLES
 \*------------------------------------*/
-/**
- * Cell alignments
- */
+.table--data > thead > tr > td {
+  font-weight: bold; }
+
 /**
  * Bordered tables
  */
-.table--bordered td:empty {
-  border: 1px solid #ccc; }
+.table--bordered th, .table--bordered td, .table--bordered td:empty {
+  border: 1px solid #9DB4C0; }
 
 /**
  * Striped tables
  */
 .table--striped tbody tr:nth-of-type(odd) {
-  background-color: #E0FBFC; }
+  background-color: #C2DFE3; }
+
+.btn--positive {
+  background-color: #253237;
+  color: #E0FBFC;
+  /*border: $medium-border-width solid $medium-gray-blue;*/ }
 
 /*------------------------------------*\
     $CARDS
