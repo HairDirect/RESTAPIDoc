@@ -1,0 +1,37 @@
+﻿<div class="action">
+    <h3>{{Name}}</h3>
+    <span>Description: {{Description}}</span><br />
+    <span>Endpoint: {{Endpoint}}</span><br />
+    <span>Verb: {{Verb}}</span>
+    <h4>Payload</h4>
+    <table class="table--bordered table--striped table--data">
+        <thead>
+            <tr><td>Name</td><td>Type</td><td>Notes</td></tr>
+        </thead>
+        <tbody>
+            {{#each Payload}}
+            <tr>
+                {{> p-payload}}
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+    <h4>Response</h4>
+    <table class="table--bordered table--striped table--data">
+        <thead>
+            <tr><td>Name</td><td>Type</td><td>Notes</td></tr>
+        </thead>
+        <tbody>
+            {{#each Payload}}
+            <tr>
+                {{> p-payload}}
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+    <h4>Test it</h4>
+    <button class="btn btn--gamma btn--secondary">Clear</button>
+    <button class="btn btn--gamma btn--positive btn--primary" data-endpoint="{{Endpoint}}" data-verb="{{Verb}}" data-sample='{{stringifyJSON SampleCall}}'>Execute</button>
+    <h5>Result</h5>
+    <code></code>
+</div>

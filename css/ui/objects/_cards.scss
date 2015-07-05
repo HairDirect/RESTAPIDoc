@@ -1,0 +1,16 @@
+/*------------------------------------*\
+    $CARDS
+\*------------------------------------*/
+
+.card {
+    list-style: none;
+    margin: 0px;
+    & ul{
+        list-style: none;
+        margin: 0px;
+    }
+    
+    border: 1px solid $gray;
+    border-radius: 5px;
+    padding: 0 16px; 
+}

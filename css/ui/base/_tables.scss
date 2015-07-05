@@ -1,0 +1,25 @@
+/*------------------------------------*\
+    $TABLES
+\*------------------------------------*/
+
+/**
+ * Cell alignments
+ */
+
+
+/**
+ * Bordered tables
+ */
+.table--bordered {
+    td:empty {
+        border: 1px solid $base-ui-color;
+    }
+}
+/**
+ * Striped tables
+ */
+.table--striped {
+    tbody tr:nth-of-type(odd) {
+        background-color: $gray; /* Override this color in your theme stylesheet */
+    }
+}

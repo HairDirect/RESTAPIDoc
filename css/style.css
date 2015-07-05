@@ -1,0 +1,3520 @@
+/*------------------------------------*\
+    STYLE.CSS
+\*------------------------------------*/
+/*
+ *
+ * sass --watch style.scss:style.min.css --style compressed
+ *
+ * Here we pull in some variables, include the inuit.css framework, then add our
+ * project-specific components afterwards.
+ */
+/*
+ * Setup
+ */
+/*------------------------------------*\
+    VARS.SCSS
+\*------------------------------------*/
+/**
+ * Any variables you find set in inuit.css’ `_vars.scss` that you do not wish to
+ * keep, simply redefine here. This means that if inuit.css, for example, sets
+ * your `$base-font-size` at 16px and you wish it to be 14px, simply redeclare
+ * that variable in this file. inuit.css ignores its own variables in favour of
+ * using your own, so you can completely modify how inuit.css works without ever
+ * having to alter the framework itself.
+ */
+/*------------------------------------*\
+    $OBJECTS-AND-ABSTRACTIONS
+\*------------------------------------*/
+/**
+ * All of inuit.css’ objects and abstractions are initially turned off by
+ * default. This means that you start any project with as little as possible,
+ * and introducing objects and abstractions is as simple as switching the
+ * following variables to `true`.
+ */
+/*------------------------------------*\
+    $OVERRIDES
+\*------------------------------------*/
+/**
+ * Place any variables that should override inuit.css’ defaults here.
+ */
+/*------------------------------------*\
+    $BRAND
+\*------------------------------------*/
+/**
+ * How big would you like round corners to be by default?
+ */
+/*------------------------------------*\
+    $CUSTOM
+\*------------------------------------*/
+/**
+ * Place any of your own variables that sit on top of inuit.css here.
+ */
+/** COLORS */
+/*------------------------------------*\
+    INUIT.CSS
+\*------------------------------------*/
+/*!*
+ *
+ * inuitcss.com -- @inuitcss -- @csswizardry
+ *
+ */
+/**
+ * inuit.css acts as a base stylesheet which you should extend with your own
+ * theme stylesheet.
+ *
+ * inuit.css aims to do the heavy lifting; sorting objects and abstractions,
+ * design patterns and fiddly bits of CSS, whilst leaving as much design as
+ * possible to you. inuit.css is the scaffolding to your decorator.
+ *
+ * This stylesheet is heavily documented and contains lots of comments, please
+ * take care to read and refer to them as you build. For further support please
+ * tweet at @inuitcss.
+ *
+ * Owing to the amount of comments please only ever use minified CSS in
+ * production. This file is purely a dev document.
+ *
+ * The table of contents below maps to section titles of the same name, to jump
+ * to any section simply run a find for $[SECTION-TITLE].
+ *
+ * Most objects and abstractions come with a chunk of markup that you should be
+ * able to paste into any view to quickly see how the CSS works in conjunction
+ * with the correct HTML.
+ *
+ * inuit.css is written to this standard: github.com/csswizardry/CSS-Guidelines
+ *
+ * LICENSE
+ *
+ * Copyright 2013 Harry Roberts
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * Thank you for choosing inuit.css. May your web fonts render perfectly.
+ */
+/*------------------------------------*\
+    $CONTENTS
+\*------------------------------------*/
+/**
+ * CONTENTS............You’re reading it!
+ * WARNING.............Here be dragons!
+ * IMPORTS.............Begin importing the sections below
+ *
+ * MIXINS..............Super-simple Sass stuff
+ * NORMALIZE...........normalize.css
+ * RESET...............Set some defaults
+ * CLEARFIX............
+ * SHARED..............Shared declarations
+ *
+ * MAIN................High-level elements like `html`, `body`, etc.
+ * HEADINGS............Double-stranded heading hierarchy
+ * PARAGRAPHS..........
+ * SMALLPRINT..........Smaller text elements like `small`
+ * QUOTES..............
+ * CODE................
+ * LISTS...............
+ * IMAGES..............
+ * TABLES..............
+ * FORMS...............
+ *
+ * GRIDS...............Fluid, proportional and nestable grids
+ * FLEXBOX.............Crudely emulate flexbox
+ * COLUMNS.............CSS3 columns
+ * NAV.................A simple abstraction to put a list in horizontal nav mode
+ * OPTIONS.............Grouped nav items
+ * PAGINATION..........Very stripped back, basic paginator
+ * BREADCRUMB..........Simple breadcrumb trail object
+ * MEDIA...............Media object
+ * MARGINALIA..........Simple marginalia content
+ * ISLAND..............Boxed off content
+ * BLOCK-LIST..........Blocky lists of content
+ * MATRIX..............Gridded lists
+ * SPLIT...............A simple split-in-two object
+ * THIS-OR-THIS........Options object
+ * LINK-COMPLEX........
+ * FLYOUT..............Flyout-on-hover object
+ * ARROWS..............CSS arrows
+ * SPRITE..............Generic spriting element
+ * ICON-TEXT...........Icon and text couplings
+ * BEAUTONS............Use the beautons micro library
+ * LOZENGES............Basic lozenge styles
+ * RULES...............Horizontal rules
+ * STATS...............Simple stats object
+ * GREYBOX.............Wireframing styles
+ *
+ * WIDTHS..............Width classes for use alongside the grid system etc.
+ * PUSH................Push classes for manipulating grids
+ * PULL................Pull classes for manipulating grids
+ * BRAND...............Helper class to apply brand treatment to elements
+ * HELPER..............A series of helper classes to use arbitrarily
+ * DEBUG...............Enable to add visual flags for debugging purposes
+ */
+/*------------------------------------*\
+    $WARNING
+\*------------------------------------*/
+/*
+ * inuit.css, being an OO framework, works in keeping with the open/closed
+ * principle. The variables you set previously are now being used throughout
+ * inuit.css to style everything we need for a base. Any custom styles SHOULD
+ * NOT be added or modified in inuit.css directly, but added via your theme
+ * stylesheet as per the open/closed principle:
+ *
+ * csswizardry.com/2012/06/the-open-closed-principle-applied-to-css
+ *
+ * Try not to edit any CSS beyond this point; if you find you need to do so
+ * it is a failing of the framework so please tweet at @inuitcss.
+ */
+/*------------------------------------*\
+    $IMPORTS
+\*------------------------------------*/
+/**
+ * Generic utility styles etc.
+ */
+/*------------------------------------*\
+    $DEFAULTS
+\*------------------------------------*/
+/**
+ * inuit.css’ default variables. Redefine these in your `_vars.scss` file (found
+ * in the inuit.css-web-template) to override them.
+ */
+/*------------------------------------*\
+    $DEBUG
+\*------------------------------------*/
+/**
+ * Debug mode will visually highlight any potential markup/accessibility quirks
+ * in the browser. Set to `true` or `false`.
+ */
+/*------------------------------------*\
+    $BORDER-BOX
+\*------------------------------------*/
+/**
+ * Do you want all elements to adopt `box-sizing:border-box;` as per
+ * paulirish.com/2012/box-sizing-border-box-ftw ?
+ */
+/*------------------------------------*\
+    $BASE
+\*------------------------------------*/
+/**
+ * Base stuff
+ */
+/**
+ * Base font-family.
+ */
+/**
+ * Default colour for objects’ borders etc.
+ */
+/*------------------------------------*\
+    $RESPONSIVE
+\*------------------------------------*/
+/**
+ * Responsiveness?
+ */
+/**
+ * Responsiveness for widescreen/high resolution desktop monitors and beyond?
+ * Note: `$responsive` variable above must be set to true before enabling this.
+ */
+/**
+ * Responsive push and pull produce a LOT of code, only turn them on if you
+ * definitely need them.
+ */
+/**
+ * Note: `$push` variable above must be set to true before enabling these.
+ */
+/**
+ * Note: `$pull` variable above must be set to true before enabling these.
+ */
+/**
+ * Tell inuit.css when breakpoints start.
+ */
+/*------------------------------------*\
+    $FONT-SIZES
+\*------------------------------------*/
+/**
+ * Font-sizes (in pixels). Refer to relevant sections for their implementations.
+ */
+/*------------------------------------*\
+    $QUOTES
+\*------------------------------------*/
+/**
+ * English quote marks?
+ */
+/**
+ * If you want English quotes then please do not edit these; they’re only here
+ * because Sass needs them.
+ */
+/**
+ * If you need non-English quotes, please alter the following values accordingly:
+ */
+/*------------------------------------*\
+    $BRAND
+\*------------------------------------*/
+/**
+ * Brand stuff
+ */
+/**
+ * How big would you like round corners to be by default?
+ */
+/*------------------------------------*\
+    $OBJECTS AND ABSTRACTIONS
+\*------------------------------------*/
+/**
+ * Which objects and abstractions would you like to use?
+ */
+/*------------------------------------*\
+    $FRAMEWORK
+\*------------------------------------*/
+/**
+ * inuit.css will work these next ones out for use within the framework.
+ *
+ * Assign our `$base-line-height` to a new spacing var for more transparency.
+ */
+/*------------------------------------*\
+    $MIXINS
+\*------------------------------------*/
+/**
+ * Create a fully formed type style (sizing and vertical rhythm) by passing in a
+ * single value, e.g.:
+ *
+   `@include font-size(10px);`
+ *
+ * Thanks to @redclov3r for the `line-height` Sass:
+ * twitter.com/redclov3r/status/250301539321798657
+ */
+/**
+ * Style any number of headings in one fell swoop, e.g.:
+ *
+   .foo{
+       @include headings(1, 3){
+           color:#BADA55;
+       }
+    }
+ *
+ * With thanks to @lar_zzz, @paranoida, @rowanmanning and ultimately
+ * @thierrylemoulec for refining and improving my initial mixin.
+ */
+/**
+ * Create vendor-prefixed CSS in one go, e.g.
+ *
+   `@include vendor(border-radius, 4px);`
+ *
+ */
+/**
+ * Create CSS keyframe animations for all vendors in one go, e.g.:
+ *
+   .foo{
+       @include vendor(animation, shrink 3s);
+   }
+
+   @include keyframe(shrink){
+       from{
+           font-size:5em;
+       }
+   }
+ *
+ * Courtesy of @integralist: twitter.com/integralist/status/260484115315437569
+ */
+/**
+ * Force overly long spans of text to truncate, e.g.:
+ *
+   `@include truncate(100%);`
+ *
+ * Where `$truncation-boundary` is a united measurement.
+ */
+/**
+ * CSS arrows!!! But... before you read on, you might want to grab a coffee...
+ *
+ * This mixin creates a CSS arrow on a given element. We can have the arrow
+ * appear in one of 12 locations, thus:
+ *
+ *       01    02    03
+ *    +------------------+
+ * 12 |                  | 04
+ *    |                  |
+ * 11 |                  | 05
+ *    |                  |
+ * 10 |                  | 06
+ *    +------------------+
+ *       09    08    07
+ *
+ * You pass this position in along with a desired arrow color and optional
+ * border color, for example:
+ *
+ * `@include arrow(top, left, red)`
+ *
+ * for just a single, red arrow, or:
+ *
+ * `@include arrow(bottom, center, red, black)`
+ *
+ * which will create a red triangle with a black border which sits at the bottom
+ * center of the element. Call the mixin thus:
+ *
+   .foo{
+       background-color:#BADA55;
+       border:1px solid #ACE;
+       @include arrow(top, left, #BADA55, #ACE);
+   }
+ *
+ */
+/**
+ * Media query mixin.
+ *
+ * It’s not great practice to define solid breakpoints up-front, preferring to
+ * modify your design when it needs it, rather than assuming you’ll want a
+ * change at ‘mobile’. However, as inuit.css is required to take a hands off
+ * approach to design decisions, this is the closest we can get to baked-in
+ * responsiveness. It’s flexible enough to allow you to set your own breakpoints
+ * but solid enough to be frameworkified.
+ *
+ * We define some broad breakpoints in our vars file that are picked up here
+ * for use in a simple media query mixin. Our options are:
+ *
+ * palm
+ * lap
+ * lap-and-up
+ * portable
+ * desk
+ * desk-wide
+ *
+ * Not using a media query will, naturally, serve styles to all devices.
+ *
+ * `@include media-query(palm){ [styles here] }`
+ *
+ * We work out your end points for you:
+ */
+/*! normalize.css v2.1.0 | MIT License | git.io/normalize */
+/* ==========================================================================
+   HTML5 display definitions
+   ========================================================================== */
+/*
+ * Correct `block` display not defined in IE 8/9.
+ */
+/* line 22, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/normalize */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+  display: block; }
+
+/*
+ * Correct `inline-block` display not defined in IE 8/9.
+ */
+/* line 32, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/normalize */
+audio, canvas, video {
+  display: inline-block; }
+
+/*
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+/* line 41, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/normalize */
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+/*
+ * Address styling not present in IE 8/9.
+ */
+/* line 50, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/normalize */
+[hidden] {
+  display: none; }
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+/*
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+/* line 64, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/normalize */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */ }
+
+/*
+ * Remove default margin.
+ */
+/* line 74, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/normalize */
+body {
+  margin: 0; }
+
+/* ==========================================================================
+   Links
+   ========================================================================== */
+/*
+ * Address `outline` inconsistency between Chrome and other browsers.
+ */
+/* line 86, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/normalize */
+a:focus {
+  outline: thin dotted; }
+
+/*
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+/* line 95, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/normalize */
+a:active, a:hover {
+  outline: 0; }
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+/*
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari 5, and Chrome.
+ */
+/* line 108, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/normalize */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+/*
+ * Address styling not present in IE 8/9, Safari 5, and Chrome.
+ */
+/* line 117, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/normalize */
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+/*
+ * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
+ */
+/* line 126, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/normalize */
+b, strong {
+  font-weight: bold; }
+
+/*
+ * Address styling not present in Safari 5 and Chrome.
+ */
+/* line 134, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/normalize */
+dfn {
+  font-style: italic; }
+
+/*
+ * Address differences between Firefox and other browsers.
+ */
+/* line 142, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/normalize */
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0; }
+
+/*
+ * Address styling not present in IE 8/9.
+ */
+/* line 152, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/normalize */
+mark {
+  background: #ff0;
+  color: #000; }
+
+/*
+ * Correct font family set oddly in Safari 5 and Chrome.
+ */
+/* line 164, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/normalize */
+code, kbd, pre, samp {
+  font-family: monospace, serif;
+  font-size: 1em; }
+
+/*
+ * Improve readability of pre-formatted text in all browsers.
+ */
+/* line 173, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/normalize */
+pre {
+  white-space: pre-wrap; }
+
+/*
+ * Set consistent quote types.
+ */
+/* line 181, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/normalize */
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019"; }
+
+/*
+ * Address inconsistent and variable font size in all browsers.
+ */
+/* line 189, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/normalize */
+small {
+  font-size: 80%; }
+
+/*
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+/* line 198, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/normalize */
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+/* line 205, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/normalize */
+sup {
+  top: -0.5em; }
+
+/* line 209, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/normalize */
+sub {
+  bottom: -0.25em; }
+
+/* ==========================================================================
+   Embedded content
+   ========================================================================== */
+/*
+ * Remove border when inside `a` element in IE 8/9.
+ */
+/* line 221, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/normalize */
+img {
+  border: 0; }
+
+/*
+ * Correct overflow displayed oddly in IE 9.
+ */
+/* line 229, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/normalize */
+svg:not(:root) {
+  overflow: hidden; }
+
+/* ==========================================================================
+   Figures
+   ========================================================================== */
+/*
+ * Address margin not present in IE 8/9 and Safari 5.
+ */
+/* line 241, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/normalize */
+figure {
+  margin: 0; }
+
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+/*
+ * Define consistent border, margin, and padding.
+ */
+/* line 253, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/normalize */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+/*
+ * 1. Correct `color` not being inherited in IE 8/9.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+/* line 264, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/normalize */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/*
+ * 1. Correct font family not being inherited in all browsers.
+ * 2. Correct font size not being inherited in all browsers.
+ * 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome.
+ */
+/* line 278, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/normalize */
+button, input, select, textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 2 */
+  margin: 0;
+  /* 3 */ }
+
+/*
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+/* line 290, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/normalize */
+button, input {
+  line-height: normal; }
+
+/*
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+.
+ * Correct `select` style inheritance in Firefox 4+ and Opera.
+ */
+/* line 302, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/normalize */
+button, select {
+  text-transform: none; }
+
+/*
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+/* line 317, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/normalize */
+button, html input[type="button"], input[type="reset"], input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */ }
+
+/*
+ * Re-set default cursor for disabled elements.
+ */
+/* line 327, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/normalize */
+button[disabled], html input[disabled] {
+  cursor: default; }
+
+/*
+ * 1. Address box sizing set to `content-box` in IE 8/9.
+ * 2. Remove excess padding in IE 8/9.
+ */
+/* line 337, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/normalize */
+input[type="checkbox"], input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/*
+ * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+/* line 348, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/normalize */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box; }
+
+/*
+ * Remove inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */
+/* line 361, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/normalize */
+input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/*
+ * Remove inner padding and border in Firefox 4+.
+ */
+/* line 370, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/normalize */
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+/*
+ * 1. Remove default vertical scrollbar in IE 8/9.
+ * 2. Improve readability and alignment in all browsers.
+ */
+/* line 380, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/normalize */
+textarea {
+  overflow: auto;
+  /* 1 */
+  vertical-align: top;
+  /* 2 */ }
+
+/* ==========================================================================
+   Tables
+   ========================================================================== */
+/*
+ * Remove most spacing between table cells.
+ */
+/* line 393, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/normalize */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/*------------------------------------*\
+    $RESET
+\*------------------------------------*/
+/**
+ * A more considered reset; more of a restart...
+ * As per: csswizardry.com/2011/10/reset-restarted
+ */
+/**
+    * Let’s make the box model all nice, shall we...?
+    */
+/* line 16, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/reset */
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/**
+ * The usual...
+ */
+/* line 30, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/reset */
+h1, h2, h3, h4, h5, h6, p, blockquote, pre, dl, dd, ol, ul, form, fieldset, legend, table, th, td, caption, hr {
+  margin: 0;
+  padding: 0; }
+
+/**
+ * Give a help cursor to elements that give extra info on `:hover`.
+ */
+/* line 38, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/reset */
+abbr[title], dfn[title] {
+  cursor: help; }
+
+/**
+ * Remove underlines from potentially troublesome elements.
+ */
+/* line 45, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/reset */
+u, ins {
+  text-decoration: none; }
+
+/**
+ * Apply faux underline via `border-bottom`.
+ */
+/* line 52, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/reset */
+ins {
+  border-bottom: 1px solid; }
+
+/**
+ * So that `alt` text is visually offset if images don’t load.
+ */
+/* line 59, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/reset */
+img {
+  font-style: italic; }
+
+/**
+ * Give form elements some cursor interactions...
+ */
+/* line 71, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/reset */
+label, input, textarea, button, select, option {
+  cursor: pointer; }
+
+/* line 77, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/reset */
+.text-input:active, .text-input:focus, textarea:active, textarea:focus {
+  cursor: text;
+  outline: none; }
+
+/*------------------------------------*\
+    $CLEARFIX
+\*------------------------------------*/
+/**
+ * Micro clearfix, as per: css-101.org/articles/clearfix/latest-new-clearfix-so-far.php
+ * Extend the clearfix class with Sass to avoid the `.cf` class appearing over
+ * and over in your markup.
+ */
+/* line 10, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/clearfix */
+.cf:after, .media:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+/*------------------------------------*\
+    $SHARED
+\*------------------------------------*/
+/**
+ * Where `margin-bottom` is concerned, this value will be the same as the
+ * base line-height. This allows us to keep a consistent vertical rhythm.
+ * As per: csswizardry.com/2012/06/single-direction-margin-declarations
+ */
+/**
+ * Base elements
+ */
+/* line 24, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/shared */
+h1, h2, h3, h4, h5, h6, hgroup, ul, ol, dl, blockquote, p, address, table, fieldset, figure, pre, .form-fields > li, .media, .island, .islet {
+  margin-bottom: 24px;
+  margin-bottom: 1.5rem; }
+  /* line 28, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/shared */
+  .islet h1, .islet h2, .islet h3, .islet h4, .islet h5, .islet h6, .islet hgroup, .islet ul, .islet ol, .islet dl, .islet blockquote, .islet p, .islet address, .islet table, .islet fieldset, .islet figure, .islet pre, .islet .form-fields > li, .islet .media, .islet .island, .islet .islet {
+    margin-bottom: 12px;
+    margin-bottom: 0.75rem; }
+
+/**
+ * Doubled up `margin-bottom` helper class.
+ */
+/* line 38, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/shared */
+.landmark {
+  margin-bottom: 48px;
+  margin-bottom: 3rem; }
+
+/**
+ * `hr` elements only take up a few pixels, so we need to give them special
+ * treatment regarding vertical rhythm.
+ */
+/* line 48, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/shared */
+hr {
+  margin-bottom: 22px;
+  margin-bottom: 1.375rem; }
+
+/**
+ * Where `margin-left` is concerned we want to try and indent certain elements
+ * by a consistent amount. Define that amount once, here.
+ */
+/* line 58, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/shared */
+ul, ol, dd {
+  margin-left: 48px;
+  margin-left: 3rem; }
+
+/**
+ * Base styles; unclassed HTML elements etc.
+ */
+/*------------------------------------*\
+    $MAIN
+\*------------------------------------*/
+/* line 4, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/base/main */
+html {
+  font: 1em/1.5 sans-serif;
+  overflow-y: scroll;
+  min-height: 100%; }
+
+/*------------------------------------*\
+    $HEADINGS
+\*------------------------------------*/
+/**
+ * As per: csswizardry.com/2012/02/pragmatic-practical-font-sizing-in-css
+ *
+ * When we define a heading we also define a corresponding class to go with it.
+ * This allows us to apply, say, `class=alpha` to a `h3`; a double-stranded
+ * heading hierarchy.
+ */
+/* line 11, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/base/headings */
+h1, .alpha {
+  font-size: 36px;
+  font-size: 2.25rem;
+  line-height: 1.333333333; }
+
+/* line 14, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/base/headings */
+h2, .beta {
+  font-size: 30px;
+  font-size: 1.875rem;
+  line-height: 1.6; }
+
+/* line 17, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/base/headings */
+h3, .gamma {
+  font-size: 24px;
+  font-size: 1.5rem;
+  line-height: 1; }
+
+/* line 20, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/base/headings */
+h4, .delta {
+  font-size: 20px;
+  font-size: 1.25rem;
+  line-height: 1.2; }
+
+/* line 23, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/base/headings */
+h5, .epsilon {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.5; }
+
+/* line 26, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/base/headings */
+h6, .zeta {
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.714285714; }
+
+/**
+ * Heading groups and generic any-heading class.
+ * To target any heading of any level simply apply a class of `.hN`, e.g.:
+ *
+   <hgroup>
+       <h1 class=hN>inuit.css</h1>
+       <h2 class=hN>Best. Framework. Ever!</h2>
+   </hgroup>
+ *
+ */
+/* line 43, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/base/headings */
+hgroup .hN {
+  margin-bottom: 0; }
+
+/**
+ * A series of classes for setting massive type; for use in heroes, mastheads,
+ * promos, etc.
+ */
+/* line 52, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/base/headings */
+.giga {
+  font-size: 96px;
+  font-size: 6rem;
+  line-height: 1; }
+
+/* line 55, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/base/headings */
+.mega {
+  font-size: 72px;
+  font-size: 4.5rem;
+  line-height: 1; }
+
+/* line 58, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/base/headings */
+.kilo {
+  font-size: 48px;
+  font-size: 3rem;
+  line-height: 1; }
+
+/*------------------------------------*\
+    $PARAGRAPHS
+\*------------------------------------*/
+/**
+ * The `.lede` class is used to make the introductory text (usually a paragraph)
+ * of a document slightly larger.
+ */
+/* line 9, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/base/paragraphs */
+.lede, .lead {
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 1.333333333; }
+
+/*------------------------------------*\
+    $SMALLPRINT
+\*------------------------------------*/
+/**
+ * A series of classes for setting tiny type; for use in smallprint etc.
+ */
+/* line 8, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/base/smallprint */
+.smallprint, .milli {
+  font-size: 12px;
+  font-size: 0.75rem;
+  line-height: 2; }
+
+/* line 11, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/base/smallprint */
+.micro {
+  font-size: 10px;
+  font-size: 0.625rem;
+  line-height: 2.4; }
+
+/*------------------------------------*\
+    $QUOTES
+\*------------------------------------*/
+/**
+ * If English quotes are set in `_vars.scss`, define them here.
+ */
+/**
+ * Big up @boblet: html5doctor.com/blockquote-q-cite
+ */
+/**
+ * Inline quotes.
+ */
+/* line 20, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/base/quotes */
+q {
+  quotes: "\2018" "\2019" "\201C" "\201D"; }
+  /* line 23, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/base/quotes */
+  q:before {
+    content: "\2018";
+    content: open-quote; }
+  /* line 27, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/base/quotes */
+  q:after {
+    content: "\2019";
+    content: close-quote; }
+  /* line 32, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/base/quotes */
+  q q:before {
+    content: "\201C";
+    content: open-quote; }
+  /* line 36, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/base/quotes */
+  q q:after {
+    content: "\201D";
+    content: close-quote; }
+
+/* line 42, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/base/quotes */
+blockquote {
+  quotes: "\201C" "\201D"; }
+  /* line 45, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/base/quotes */
+  blockquote p:before {
+    content: "\201C";
+    content: open-quote; }
+  /* line 49, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/base/quotes */
+  blockquote p:after {
+    content: "";
+    content: no-close-quote; }
+  /* line 53, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/base/quotes */
+  blockquote p:last-of-type:after {
+    content: "\201D";
+    content: close-quote; }
+  /* line 58, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/base/quotes */
+  blockquote q:before {
+    content: "\2018";
+    content: open-quote; }
+  /* line 62, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/base/quotes */
+  blockquote q:after {
+    content: "\2019";
+    content: close-quote; }
+
+/**
+ *
+   <blockquote>
+       <p>Insanity: doing the same thing over and over again and expecting
+       different results.</p>
+       <b class=source>Albert Einstein</b>
+   </blockquote>
+ *
+ */
+/* line 78, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/base/quotes */
+blockquote {
+  /**
+     * .4em is roughly equal to the width of the opening “ that we wish to hang.
+     */
+  text-indent: -0.41em; }
+  /* line 84, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/base/quotes */
+  blockquote p:last-of-type {
+    margin-bottom: 0; }
+
+/* line 89, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/base/quotes */
+.source {
+  display: block;
+  text-indent: 0; }
+  /* line 93, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/base/quotes */
+  .source:before {
+    content: "\2014"; }
+
+/*------------------------------------*\
+    $CODE
+\*------------------------------------*/
+/**
+ * Use an explicit font stack to ensure browsers render correct `line-height`.
+ */
+/* line 7, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/base/code */
+pre {
+  overflow: auto; }
+
+/* line 10, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/base/code */
+pre mark {
+  background: none;
+  border-bottom: 1px solid;
+  color: inherit; }
+
+/**
+ * Add comments to your code examples, e.g.:
+ *
+   <code>&lt;/div&gt;<span class=code-comment>&lt;!-- /wrapper --&gt;</span></code>
+ *
+ */
+/* line 23, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/base/code */
+.code-comment {
+  /**
+     * Override this setting in your theme stylesheet
+     */
+  opacity: 0.75;
+  filter: alpha(opacity=75); }
+
+/**
+ * You can add line numbers to your code examples but be warned, it requires
+ * some pretty funky looking markup, e.g.:
+ *
+   <ol class=line-numbers>
+       <li><code>.nav{</code></li>
+       <li><code>    list-style:none;</code></li>
+       <li><code>    margin-left:0;</code></li>
+       <li><code>}</code></li>
+       <li><code>    .nav > li,</code></li>
+       <li><code>        .nav > li > a{</code></li>
+       <li><code>            display:inline-block;</code></li>
+       <li><code>           *display:inline-block;</code></li>
+       <li><code>            zoom:1;</code></li>
+       <li><code>        }</code></li>
+   </ol>
+ *
+ * 1. Make the list look like code.
+ * 2. Give the list flush numbers with a leading zero.
+ * 3. Make sure lines of code don’t wrap.
+ * 4. Give the code form by forcing the `code` to honour white-space.
+ */
+/* line 54, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/base/code */
+.line-numbers {
+  font-family: monospace, serif;
+  /* [1] */
+  list-style: decimal-leading-zero inside;
+  /* [2] */
+  white-space: nowrap;
+  /* [3] */
+  overflow: auto;
+  /* [3] */
+  margin-left: 0; }
+
+/* line 61, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/base/code */
+.line-numbers code {
+  white-space: pre;
+  /* [4] */ }
+
+/*------------------------------------*\
+    $IMAGES
+\*------------------------------------*/
+/**
+ * Demo: jsfiddle.net/inuitcss/yMtur
+ */
+/**
+ * Fluid images.
+ */
+/* line 10, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/base/images */
+img {
+  max-width: 100%; }
+
+/**
+ * Non-fluid images if you specify `width` and/or `height` attributes.
+ */
+/* line 19, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/base/images */
+img[width], img[height] {
+  max-width: none; }
+
+/**
+ * Rounded images.
+ */
+/* line 27, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/base/images */
+.img--round {
+  border-radius: 4px; }
+
+/**
+ * Image placement variations.
+ */
+/* line 33, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/base/images */
+.img--right {
+  float: right;
+  margin-bottom: 24px;
+  margin-left: 24px; }
+
+/* line 38, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/base/images */
+.img--left {
+  float: left;
+  margin-right: 24px;
+  margin-bottom: 24px; }
+
+/* line 43, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/base/images */
+.img--center {
+  display: block;
+  margin-right: auto;
+  margin-bottom: 24px;
+  margin-left: auto; }
+
+/**
+ * Keep your images on your baseline.
+ *
+ * Please note, these will not work too nicely with fluid images and will
+ * distort when resized below a certain width. Use with caution.
+ */
+/* line 57, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/base/images */
+.img--short {
+  height: 120px; }
+
+/* line 60, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/base/images */
+.img--medium {
+  height: 240px; }
+
+/* line 63, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/base/images */
+.img--tall {
+  height: 360px; }
+
+/**
+ * Images in `figure` elements.
+ */
+/* line 71, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/base/images */
+figure > img {
+  display: block; }
+
+/*------------------------------------*\
+    $LISTS
+\*------------------------------------*/
+/**
+ * Remove vertical spacing from nested lists.
+ */
+/* line 9, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/base/lists */
+li > ul, li > ol {
+  margin-bottom: 0; }
+
+/**
+ * Have a numbered `ul` without the semantics implied by using an `ol`.
+ */
+/*ul*/
+/* line 17, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/base/lists */
+.numbered-list {
+  list-style-type: decimal; }
+
+/*------------------------------------*\
+    $TABLES
+\*------------------------------------*/
+/**
+ * We have a lot at our disposal for making very complex table constructs, e.g.:
+ *
+   <table class="table--bordered  table--striped  table--data">
+       <colgroup>
+           <col class=t10>
+           <col class=t10>
+           <col class=t10>
+           <col>
+       </colgroup>
+       <thead>
+           <tr>
+               <th colspan=3>Foo</th>
+               <th>Bar</th>
+           </tr>
+           <tr>
+               <th>Lorem</th>
+               <th>Ipsum</th>
+               <th class=numerical>Dolor</th>
+               <th>Sit</th>
+           </tr>
+       </thead>
+       <tbody>
+           <tr>
+               <th rowspan=3>Sit</th>
+               <td>Dolor</td>
+               <td class=numerical>03.788</td>
+               <td>Lorem</td>
+           </tr>
+           <tr>
+               <td>Dolor</td>
+               <td class=numerical>32.210</td>
+               <td>Lorem</td>
+           </tr>
+           <tr>
+               <td>Dolor</td>
+               <td class=numerical>47.797</td>
+               <td>Lorem</td>
+           </tr>
+           <tr>
+               <th rowspan=2>Sit</th>
+               <td>Dolor</td>
+               <td class=numerical>09.640</td>
+               <td>Lorem</td>
+           </tr>
+           <tr>
+               <td>Dolor</td>
+               <td class=numerical>12.117</td>
+               <td>Lorem</td>
+           </tr>
+       </tbody>
+   </table>
+ *
+ */
+/* line 58, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/base/tables */
+table {
+  width: 100%; }
+
+/* line 62, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/base/tables */
+th, td {
+  padding: 6px;
+  text-align: left; }
+  @media screen and (min-width: 480px) {
+    th, td {
+      padding: 12px; } }
+
+/**
+ * Cell alignments
+ */
+/* line 74, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/base/tables */
+[colspan] {
+  text-align: center; }
+
+/* line 77, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/base/tables */
+[colspan="1"] {
+  text-align: left; }
+
+/* line 80, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/base/tables */
+[rowspan] {
+  vertical-align: middle; }
+
+/* line 83, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/base/tables */
+[rowspan="1"] {
+  vertical-align: top; }
+
+/* line 86, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/base/tables */
+.numerical {
+  text-align: right; }
+
+/**
+ * In the HTML above we see several `col` elements with classes whose numbers
+ * represent a percentage width for that column. We leave one column free of a
+ * class so that column can soak up the effects of any accidental breakage in
+ * the table.
+ */
+/* line 96, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/base/tables */
+.t5 {
+  width: 5%; }
+
+/* line 97, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/base/tables */
+.t10 {
+  width: 10%; }
+
+/* line 98, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/base/tables */
+.t12 {
+  width: 12.5%; }
+
+/* 1/8 */
+/* line 99, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/base/tables */
+.t15 {
+  width: 15%; }
+
+/* line 100, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/base/tables */
+.t20 {
+  width: 20%; }
+
+/* line 101, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/base/tables */
+.t25 {
+  width: 25%; }
+
+/* 1/4 */
+/* line 102, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/base/tables */
+.t30 {
+  width: 30%; }
+
+/* line 103, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/base/tables */
+.t33 {
+  width: 33.333%; }
+
+/* 1/3 */
+/* line 104, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/base/tables */
+.t35 {
+  width: 35%; }
+
+/* line 105, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/base/tables */
+.t37 {
+  width: 37.5%; }
+
+/* 3/8 */
+/* line 106, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/base/tables */
+.t40 {
+  width: 40%; }
+
+/* line 107, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/base/tables */
+.t45 {
+  width: 45%; }
+
+/* line 108, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/base/tables */
+.t50 {
+  width: 50%; }
+
+/* 1/2 */
+/* line 109, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/base/tables */
+.t55 {
+  width: 55%; }
+
+/* line 110, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/base/tables */
+.t60 {
+  width: 60%; }
+
+/* line 111, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/base/tables */
+.t62 {
+  width: 62.5%; }
+
+/* 5/8 */
+/* line 112, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/base/tables */
+.t65 {
+  width: 65%; }
+
+/* line 113, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/base/tables */
+.t66 {
+  width: 66.666%; }
+
+/* 2/3 */
+/* line 114, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/base/tables */
+.t70 {
+  width: 70%; }
+
+/* line 115, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/base/tables */
+.t75 {
+  width: 75%; }
+
+/* 3/4*/
+/* line 116, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/base/tables */
+.t80 {
+  width: 80%; }
+
+/* line 117, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/base/tables */
+.t85 {
+  width: 85%; }
+
+/* line 118, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/base/tables */
+.t87 {
+  width: 87.5%; }
+
+/* 7/8 */
+/* line 119, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/base/tables */
+.t90 {
+  width: 90%; }
+
+/* line 120, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/base/tables */
+.t95 {
+  width: 95%; }
+
+/**
+ * Bordered tables
+ */
+/* line 129, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/base/tables */
+.table--bordered th, .table--bordered td {
+  border: 1px solid #ccc; }
+  /* line 132, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/base/tables */
+  .table--bordered th:empty, .table--bordered td:empty {
+    border: none; }
+/* line 137, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/base/tables */
+.table--bordered thead tr:last-child th {
+  border-bottom-width: 2px; }
+/* line 141, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/base/tables */
+.table--bordered tbody tr th:last-of-type {
+  border-right-width: 2px; }
+
+/**
+ * Striped tables
+ */
+/* line 152, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/base/tables */
+.table--striped tbody tr:nth-of-type(odd) {
+  background-color: #ffc;
+  /* Override this color in your theme stylesheet */ }
+
+/**
+ * Data table
+ */
+/* line 161, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/base/tables */
+.table--data {
+  font: 12px/1.5 sans-serif; }
+
+/*------------------------------------*\
+    $FORMS
+\*------------------------------------*/
+/**
+ *
+ * Demo: jsfiddle.net/inuitcss/MhHHU
+ *
+ */
+/* line 9, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/base/forms */
+fieldset {
+  padding: 24px; }
+
+/**
+ * Text inputs
+ *
+ * Instead of a `[type]` selector for each kind of form input, we just use a
+ * class to target any/every one, e.g.:
+   <input type=text class=text-input>
+   <input type=email class=text-input>
+   <input type=password class=text-input>
+ *
+ */
+/* line 25, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/base/forms */
+.text-input, textarea {
+  /**
+     * Style these via your theme stylesheet.
+     */ }
+
+/**
+ * Group sets of form fields in a list, e.g.:
+ *
+   <ul class=form-fields>
+       <li>
+           <label />
+           <input />
+       </li>
+       <li>
+           <label />
+           <select />
+       </li>
+       <li>
+           <label />
+           <input />
+       </li>
+   </ul>
+ *
+ */
+/* line 51, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/base/forms */
+.form-fields {
+  list-style: none;
+  margin: 0; }
+
+/* line 58, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/base/forms */
+.form-fields > li:last-child {
+  margin-bottom: 0; }
+
+/**
+ * Labels
+ *
+ * Define a `.label` class as well as a `label` element. This means we can apply
+ * label-like styling to meta-labels for groups of options where a `label`
+ * element is not suitable, e.g.:
+ *
+   <li>
+       <span class=label>Select an option below:</span>
+       <ul class="multi-list  four-cols">
+           <li>
+               <input /> <label />
+           </li>
+           <li>
+               <input /> <label />
+           </li>
+           <li>
+               <input /> <label />
+           </li>
+           <li>
+               <input /> <label />
+           </li>
+       </ul>
+   </li>
+ *
+ */
+/* line 90, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/base/forms */
+label, .label {
+  display: block; }
+
+/**
+     * Extra help text in `label`s, e.g.:
+     *
+       <label>Card number <small class=additional>No spaces</small></label>
+     *
+     */
+/* line 99, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/base/forms */
+.additional {
+  display: block;
+  font-weight: normal; }
+
+/*
+ * Groups of checkboxes and radios, e.g.:
+ *
+   <li>
+       <ul class=check-list>
+           <li>
+               <input /> <label />
+           </li>
+           <li>
+               <input /> <label />
+           </li>
+       </ul>
+   </li>
+ *
+ */
+/* line 120, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/base/forms */
+.check-list {
+  list-style: none;
+  margin: 0; }
+
+/*
+     * Labels in check-lists
+     */
+/* line 129, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/base/forms */
+.check-label, .check-list label, .check-list .label {
+  display: inline-block; }
+
+/**
+ * Spoken forms are for forms that read like spoken word, e.g.:
+ *
+   <li class=spoken-form>
+       Hello, my <label for=spoken-name>name</label> is
+       <input type=text class=text-input id=spoken-name>. My home
+       <label for=country>country</label> is
+       <select id=country>
+           <option>UK</option>
+           <option>US</option>
+           <option>Other</option>
+       </select>
+   </li>
+ *
+ */
+/* line 149, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/base/forms */
+.spoken-form label {
+  display: inline-block;
+  font: inherit; }
+
+/**
+ * Extra help text displayed after a field when that field is in focus, e.g.:
+ *
+   <label for=email>Email:</label>
+   <input type=email class=text-input id=email>
+   <small class=extra-help>.edu emails only</small>
+ *
+ * We leave the help text in the document flow and merely set it to
+ * `visibility:hidden;`. This means that it won’t interfere with anything once
+ * it reappears.
+ *
+ */
+/*small*/
+/* line 167, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/base/forms */
+.extra-help {
+  display: inline-block;
+  visibility: hidden; }
+
+/* line 172, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/base/forms */
+.text-input:active + .extra-help, .text-input:focus + .extra-help {
+  visibility: visible; }
+
+/**
+ * Objects and abstractions
+ */
+/*------------------------------------*\
+    $GRIDS
+\*------------------------------------*/
+/**
+ * Fluid and nestable grid system, e.g.:
+ *
+   <div class="grid">
+
+       <div class="grid__item  one-third">
+           <p>One third grid</p>
+       </div><!--
+
+    --><div class="grid__item  two-thirds">
+           <p>Two thirds grid</p>
+       </div><!--
+
+    --><div class="grid__item  one-half">
+           <p>One half grid</p>
+       </div><!--
+
+    --><div class="grid__item  one-quarter">
+           <p>One quarter grid</p>
+       </div><!--
+
+    --><div class="grid__item  one-quarter">
+           <p>One quarter grid</p>
+       </div>
+
+   </div>
+ *
+ * Demo: jsfiddle.net/inuitcss/CLYUC
+ *
+ */
+/**
+ * Grid wrapper
+ */
+/* line 41, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/objects/grids */
+.grid {
+  margin-left: -24px;
+  list-style: none;
+  margin-bottom: 0; }
+
+/**
+     * Very infrequently occuring grid wrappers as children of grid wrappers.
+     */
+/* line 51, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/objects/grids */
+.grid > .grid {
+  margin-left: 0; }
+
+/**
+     * Grid
+     */
+/* line 59, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/objects/grids */
+.grid__item {
+  display: inline-block;
+  width: 100%;
+  padding-left: 24px;
+  vertical-align: top; }
+
+/*------------------------------------*\
+    $FLEXBOX
+\*------------------------------------*/
+/**
+ * Until we can utilise flexbox natively we can kinda, sorta, attempt to emulate
+ * it, in a way... e.g.:
+ *
+   <header class=flexbox>
+
+       <div class=flexbox__item>
+           <b>Welcome to</b>
+       </div>
+
+       <div class=flexbox__item>
+           <img src="//csswizardry.com/inuitcss/img/logo.jpg" alt="inuit.css">
+       </div>
+
+   </header>
+ *
+ * We can also combine our grid system classes with `.flexbox__item` classes,
+ * e.g.:
+ *
+   <div class=flexbox>
+       <div class="flexbox__item  one-quarter">
+       </div>
+       <div class="flexbox__item  three-quarters">
+       </div>
+   </div>
+ *
+ * It’s pretty poorly named I’m afraid, but it works...
+ *
+ * Demo: jsfiddle.net/inuitcss/ufUh2
+ *
+ */
+/* line 37, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/objects/flexbox */
+.flexbox {
+  display: table;
+  width: 100%; }
+
+/**
+ * Nasty hack to circumvent Modernizr conflicts.
+ */
+/* line 45, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/objects/flexbox */
+html.flexbox {
+  display: block;
+  width: auto; }
+
+/* line 50, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/objects/flexbox */
+.flexbox__item {
+  display: table-cell;
+  vertical-align: middle; }
+
+/*------------------------------------*\
+    $COLUMNS
+\*------------------------------------*/
+/**
+ * Here we can set elements in columns of text using CSS3, e.g.:
+ *
+   <p class=text-cols--2>
+ *
+ * Demo: jsfiddle.net/inuitcss/E26Yd
+ *
+ */
+/* line 14, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/objects/columns */
+.text-cols--2, .text-cols--3, .text-cols--4, .text-cols--5 {
+  -webkit-column-gap: 24px;
+  -moz-column-gap: 24px;
+  -ms-column-gap: 24px;
+  -o-column-gap: 24px;
+  column-gap: 24px; }
+
+/* line 17, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/objects/columns */
+.text-cols--2 {
+  -webkit-column-count: 2;
+  -moz-column-count: 2;
+  -ms-column-count: 2;
+  -o-column-count: 2;
+  column-count: 2; }
+
+/* line 18, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/objects/columns */
+.text-cols--3 {
+  -webkit-column-count: 3;
+  -moz-column-count: 3;
+  -ms-column-count: 3;
+  -o-column-count: 3;
+  column-count: 3; }
+
+/* line 19, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/objects/columns */
+.text-cols--4 {
+  -webkit-column-count: 4;
+  -moz-column-count: 4;
+  -ms-column-count: 4;
+  -o-column-count: 4;
+  column-count: 4; }
+
+/* line 20, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/objects/columns */
+.text-cols--5 {
+  -webkit-column-count: 5;
+  -moz-column-count: 5;
+  -ms-column-count: 5;
+  -o-column-count: 5;
+  column-count: 5; }
+
+/*------------------------------------*\
+    $MEDIA
+\*------------------------------------*/
+/**
+ * Place any image- and text-like content side-by-side, as per:
+ * stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code
+ * E.g.:
+ *
+   <div class=media>
+       <img src=http://placekitten.com/200/300 alt="" class=media__img>
+       <p class=media__body>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+       sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+   </div>
+ *
+ * Demo: jsfiddle.net/inuitcss/cf4Qs
+ *
+ */
+/* line 20, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/objects/media */
+.media {
+  display: block; }
+
+/* line 24, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/objects/media */
+.media__img {
+  float: left;
+  margin-right: 24px; }
+
+/**
+     * Reversed image location (right instead of left).
+     */
+/* line 31, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/objects/media */
+.media__img--rev {
+  float: right;
+  margin-left: 24px; }
+
+/* line 37, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/objects/media */
+.media__img img, .media__img--rev img {
+  display: block; }
+
+/* line 41, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/objects/media */
+.media__body {
+  overflow: hidden; }
+
+/* line 45, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/objects/media */
+.media__body, .media__body > :last-child {
+  margin-bottom: 0; }
+
+/**
+     * `.img`s in `.islet`s need an appropriately sized margin.
+     */
+/* line 53, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/objects/media */
+.islet .media__img {
+  margin-right: 12px; }
+
+/* line 56, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/objects/media */
+.islet .media__img--rev {
+  margin-left: 12px; }
+
+/*------------------------------------*\
+    $BLOCK-LIST
+\*------------------------------------*/
+/**
+ * Create big blocky lists of content, e.g.:
+ *
+   <ul class=block-list>
+      <li>Foo</li>
+      <li>Bar</li>
+      <li>Baz</li>
+      <li><a href=# class=block-list__link>Foo Bar Baz</a></li>
+   </ul>
+ *
+ * Extend this object in your theme stylesheet.
+ *
+ * Demo: jsfiddle.net/inuitcss/hR57q
+ *
+ */
+/* line 24, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/objects/block-list */
+.block-list, .block-list > li {
+  border: 0 solid #ccc; }
+
+/* line 28, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/objects/block-list */
+.block-list {
+  list-style: none;
+  margin-left: 0;
+  border-top-width: 1px; }
+  /* line 33, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/objects/block-list */
+  .block-list > li {
+    border-bottom-width: 1px;
+    padding: 12px; }
+
+/* line 38, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/objects/block-list */
+.block-list__link {
+  display: block;
+  padding: 12px;
+  margin: -12px; }
+
+/*------------------------------------*\
+    $BEAUTONS.CSS
+\*------------------------------------*/
+/**
+ * beautons is a beautifully simple button toolkit.
+ *
+ * LICENSE
+ * 
+ * Copyright 2013 Harry Roberts
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
+ * http://apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ * 
+ */
+/*!*
+ * 
+ * @csswizardry -- csswizardry.com/beautons
+ * 
+ */
+/*------------------------------------*\
+    $BASE
+\*------------------------------------*/
+/**
+ * Base button styles.
+ *
+ * 1. Allow us to better style box model properties.
+ * 2. Line different sized buttons up a little nicer.
+ * 3. Stop buttons wrapping and looking broken.
+ * 4. Make buttons inherit font styles.
+ * 5. Force all elements using beautons to appear clickable.
+ * 6. Normalise box model styles.
+ * 7. If the button’s text is 1em, and the button is (3 * font-size) tall, then
+ *    there is 1em of space above and below that text. We therefore apply 1em
+ *    of space to the left and right, as padding, to keep consistent spacing.
+ * 8. Basic cosmetics for default buttons. Change or override at will.
+ * 9. Don’t allow buttons to have underlines; it kinda ruins the illusion.
+ */
+/* line 56, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/objects/beautons */
+.btn {
+  display: inline-block;
+  /* [1] */
+  vertical-align: middle;
+  /* [2] */
+  white-space: nowrap;
+  /* [3] */
+  font-family: inherit;
+  /* [4] */
+  font-size: 100%;
+  /* [4] */
+  cursor: pointer;
+  /* [5] */
+  border: none;
+  /* [6] */
+  margin: 0;
+  /* [6] */
+  padding-top: 0;
+  /* [6] */
+  padding-bottom: 0;
+  /* [6] */
+  line-height: 3;
+  /* [7] */
+  padding-right: 1em;
+  /* [7] */
+  padding-left: 1em;
+  /* [7] */
+  border-radius: 4px;
+  /* [8] */ }
+
+/* line 76, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/objects/beautons */
+.btn, .btn:hover {
+  text-decoration: none;
+  /* [9] */ }
+/* line 81, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/objects/beautons */
+.btn:active, .btn:focus {
+  outline: none; }
+
+/*------------------------------------*\
+    $SIZES
+\*------------------------------------*/
+/**
+ * Button size modifiers.
+ *
+ * These all follow the same sizing rules as above; text is 1em, space around it
+ * remains uniform.
+ */
+/* line 99, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/objects/beautons */
+.btn--small {
+  padding-right: 0.5em;
+  padding-left: 0.5em;
+  line-height: 2; }
+
+/* line 105, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/objects/beautons */
+.btn--large {
+  padding-right: 1.5em;
+  padding-left: 1.5em;
+  line-height: 4; }
+
+/* line 111, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/objects/beautons */
+.btn--huge {
+  padding-right: 2em;
+  padding-left: 2em;
+  line-height: 5; }
+
+/**
+ * These buttons will fill the entirety of their container.
+ *
+ * 1. Remove padding so that widths and paddings don’t conflict.
+ */
+/* line 122, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/objects/beautons */
+.btn--full {
+  width: 100%;
+  padding-right: 0;
+  /* [1] */
+  padding-left: 0;
+  /* [1] */
+  text-align: center; }
+
+/*------------------------------------*\
+    $FONT-SIZES
+\*------------------------------------*/
+/**
+ * Button font-size modifiers.
+ */
+/* line 139, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/objects/beautons */
+.btn--alpha {
+  font-size: 3rem; }
+
+/* line 143, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/objects/beautons */
+.btn--beta {
+  font-size: 2rem; }
+
+/* line 147, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/objects/beautons */
+.btn--gamma {
+  font-size: 1rem; }
+
+/**
+ * Make the button inherit sizing from its parent.
+ */
+/* line 154, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/objects/beautons */
+.btn--natural {
+  vertical-align: baseline;
+  font-size: inherit;
+  line-height: inherit;
+  padding-right: 0.5em;
+  padding-left: 0.5em; }
+
+/*------------------------------------*\
+    $FUNCTIONS
+\*------------------------------------*/
+/**
+ * Button function modifiers.
+ */
+/**
+ * Positive actions; e.g. sign in, purchase, submit, etc.
+ */
+/* line 179, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/objects/beautons */
+.btn--positive {
+  background-color: #4A993E;
+  color: #fff; }
+
+/**
+ * Negative actions; e.g. close account, delete photo, remove friend, etc.
+ */
+/* line 187, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/objects/beautons */
+.btn--negative {
+  background-color: #b33630;
+  color: #fff; }
+
+/**
+ * Inactive, disabled buttons.
+ * 
+ * 1. Make the button look like normal text when hovered.
+ */
+/* line 200, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/objects/beautons */
+.btn--inactive, .btn--inactive:hover, .btn--inactive:active, .btn--inactive:focus {
+  background-color: #ddd;
+  color: #777;
+  cursor: text;
+  /* [1] */ }
+
+/*------------------------------------*\
+    $STYLES
+\*------------------------------------*/
+/**
+ * Button style modifiers.
+ *
+ * 1. Use an overly-large number to ensure completely rounded, pill-like ends.
+ */
+/* line 218, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/objects/beautons */
+.btn--soft {
+  border-radius: 200px;
+  /* [1] */ }
+
+/* line 222, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/objects/beautons */
+.btn--hard {
+  border-radius: 0; }
+
+/**
+ * Style trumps; helper and brand classes
+ */
+/*------------------------------------*\
+    $WIDTHS
+\*------------------------------------*/
+/**
+ * Sizes in human readable format. These are used in conjunction with other
+ * objects and abstractions found in inuit.css, most commonly the grid system
+ * and faux flexbox.
+ *
+ * We have a mixin to generate our widths and their breakpoint-specific
+ * variations.
+ */
+/**
+    * Whole
+    */
+/* line 17, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+.one-whole {
+  width: 100%; }
+
+/**
+    * Halves
+    */
+/* line 23, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+.one-half, .two-quarters, .three-sixths, .four-eighths, .five-tenths, .six-twelfths {
+  width: 50%; }
+
+/**
+    * Thirds
+    */
+/* line 29, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+.one-third, .two-sixths, .four-twelfths {
+  width: 33.333%; }
+
+/* line 30, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+.two-thirds, .four-sixths, .eight-twelfths {
+  width: 66.666%; }
+
+/**
+    * Quarters
+    */
+/* line 36, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+.one-quarter, .two-eighths, .three-twelfths {
+  width: 25%; }
+
+/* line 38, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+.three-quarters, .six-eighths, .nine-twelfths {
+  width: 75%; }
+
+/**
+    * Fifths
+    */
+/* line 44, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+.one-fifth, .two-tenths {
+  width: 20%; }
+
+/* line 45, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+.two-fifths, .four-tenths {
+  width: 40%; }
+
+/* line 46, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+.three-fifths, .six-tenths {
+  width: 60%; }
+
+/* line 47, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+.four-fifths, .eight-tenths {
+  width: 80%; }
+
+/**
+    * Sixths
+    */
+/* line 53, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+.one-sixth, .two-twelfths {
+  width: 16.666%; }
+
+/* line 57, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+.five-sixths, .ten-twelfths {
+  width: 83.333%; }
+
+/**
+    * Eighths
+    */
+/* line 63, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+.one-eighth {
+  width: 12.5%; }
+
+/* line 65, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+.three-eighths {
+  width: 37.5%; }
+
+/* line 67, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+.five-eighths {
+  width: 62.5%; }
+
+/* line 69, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+.seven-eighths {
+  width: 87.5%; }
+
+/**
+    * Tenths
+    */
+/* line 75, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+.one-tenth {
+  width: 10%; }
+
+/* line 77, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+.three-tenths {
+  width: 30%; }
+
+/* line 81, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+.seven-tenths {
+  width: 70%; }
+
+/* line 83, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+.nine-tenths {
+  width: 90%; }
+
+/**
+    * Twelfths
+    */
+/* line 89, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+.one-twelfth {
+  width: 8.333%; }
+
+/* line 93, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+.five-twelfths {
+  width: 41.666%; }
+
+/* line 95, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+.seven-twelfths {
+  width: 58.333%; }
+
+/* line 99, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+.eleven-twelfths {
+  width: 91.666%; }
+
+/**
+ * If you have set `$responsive` to ‘true’ in `_vars.scss` then you now have
+ * access to these classes. You can define at which breakpoint you’d like an
+ * element to be a certain size, e.g.:
+ *
+ * `<div class="g  one-quarter  lap-one-half  palm-one-whole"> ... </div>`
+ *
+ * This would create a `div` that, at ‘desktop’ sizes, takes up a quarter of the
+ * horizontal space, a half of that space at ‘tablet’ sizes, and goes full width
+ * at ‘mobile’ sizes.
+ *
+ * Demo: jsfiddle.net/inuitcss/WS4Ge
+ *
+ */
+@media only screen and (max-width: 480px) {
+  /**
+    * Whole
+    */
+  /* line 17, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+  .palm-one-whole {
+    width: 100%; }
+
+  /**
+    * Halves
+    */
+  /* line 23, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+  .palm-one-half, .palm-two-quarters, .palm-three-sixths, .palm-four-eighths, .palm-five-tenths, .palm-six-twelfths {
+    width: 50%; }
+
+  /**
+    * Thirds
+    */
+  /* line 29, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+  .palm-one-third, .palm-two-sixths, .palm-four-twelfths {
+    width: 33.333%; }
+
+  /* line 30, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+  .palm-two-thirds, .palm-four-sixths, .palm-eight-twelfths {
+    width: 66.666%; }
+
+  /**
+    * Quarters
+    */
+  /* line 36, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+  .palm-one-quarter, .palm-two-eighths, .palm-three-twelfths {
+    width: 25%; }
+
+
+  /* line 38, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+  .palm-three-quarters, .palm-six-eighths, .palm-nine-twelfths {
+    width: 75%; }
+
+  /**
+    * Fifths
+    */
+  /* line 44, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+  .palm-one-fifth, .palm-two-tenths {
+    width: 20%; }
+
+  /* line 45, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+  .palm-two-fifths, .palm-four-tenths {
+    width: 40%; }
+
+  /* line 46, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+  .palm-three-fifths, .palm-six-tenths {
+    width: 60%; }
+
+  /* line 47, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+  .palm-four-fifths, .palm-eight-tenths {
+    width: 80%; }
+
+  /**
+    * Sixths
+    */
+  /* line 53, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+  .palm-one-sixth, .palm-two-twelfths {
+    width: 16.666%; }
+
+
+
+
+  /* line 57, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+  .palm-five-sixths, .palm-ten-twelfths {
+    width: 83.333%; }
+
+  /**
+    * Eighths
+    */
+  /* line 63, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+  .palm-one-eighth {
+    width: 12.5%; }
+
+
+  /* line 65, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+  .palm-three-eighths {
+    width: 37.5%; }
+
+
+  /* line 67, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+  .palm-five-eighths {
+    width: 62.5%; }
+
+
+  /* line 69, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+  .palm-seven-eighths {
+    width: 87.5%; }
+
+  /**
+    * Tenths
+    */
+  /* line 75, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+  .palm-one-tenth {
+    width: 10%; }
+
+
+  /* line 77, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+  .palm-three-tenths {
+    width: 30%; }
+
+
+
+
+  /* line 81, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+  .palm-seven-tenths {
+    width: 70%; }
+
+
+  /* line 83, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+  .palm-nine-tenths {
+    width: 90%; }
+
+  /**
+    * Twelfths
+    */
+  /* line 89, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+  .palm-one-twelfth {
+    width: 8.333%; }
+
+
+
+
+  /* line 93, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+  .palm-five-twelfths {
+    width: 41.666%; }
+
+
+  /* line 95, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+  .palm-seven-twelfths {
+    width: 58.333%; }
+
+
+
+
+  /* line 99, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+  .palm-eleven-twelfths {
+    width: 91.666%; }
+ }
+
+@media only screen and (min-width: 481px) and (max-width: 1023px) {
+  /**
+    * Whole
+    */
+  /* line 17, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+  .lap-one-whole {
+    width: 100%; }
+
+  /**
+    * Halves
+    */
+  /* line 23, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+  .lap-one-half, .lap-two-quarters, .lap-three-sixths, .lap-four-eighths, .lap-five-tenths, .lap-six-twelfths {
+    width: 50%; }
+
+  /**
+    * Thirds
+    */
+  /* line 29, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+  .lap-one-third, .lap-two-sixths, .lap-four-twelfths {
+    width: 33.333%; }
+
+  /* line 30, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+  .lap-two-thirds, .lap-four-sixths, .lap-eight-twelfths {
+    width: 66.666%; }
+
+  /**
+    * Quarters
+    */
+  /* line 36, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+  .lap-one-quarter, .lap-two-eighths, .lap-three-twelfths {
+    width: 25%; }
+
+
+  /* line 38, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+  .lap-three-quarters, .lap-six-eighths, .lap-nine-twelfths {
+    width: 75%; }
+
+  /**
+    * Fifths
+    */
+  /* line 44, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+  .lap-one-fifth, .lap-two-tenths {
+    width: 20%; }
+
+  /* line 45, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+  .lap-two-fifths, .lap-four-tenths {
+    width: 40%; }
+
+  /* line 46, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+  .lap-three-fifths, .lap-six-tenths {
+    width: 60%; }
+
+  /* line 47, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+  .lap-four-fifths, .lap-eight-tenths {
+    width: 80%; }
+
+  /**
+    * Sixths
+    */
+  /* line 53, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+  .lap-one-sixth, .lap-two-twelfths {
+    width: 16.666%; }
+
+
+
+
+  /* line 57, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+  .lap-five-sixths, .lap-ten-twelfths {
+    width: 83.333%; }
+
+  /**
+    * Eighths
+    */
+  /* line 63, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+  .lap-one-eighth {
+    width: 12.5%; }
+
+
+  /* line 65, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+  .lap-three-eighths {
+    width: 37.5%; }
+
+
+  /* line 67, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+  .lap-five-eighths {
+    width: 62.5%; }
+
+
+  /* line 69, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+  .lap-seven-eighths {
+    width: 87.5%; }
+
+  /**
+    * Tenths
+    */
+  /* line 75, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+  .lap-one-tenth {
+    width: 10%; }
+
+
+  /* line 77, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+  .lap-three-tenths {
+    width: 30%; }
+
+
+
+
+  /* line 81, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+  .lap-seven-tenths {
+    width: 70%; }
+
+
+  /* line 83, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+  .lap-nine-tenths {
+    width: 90%; }
+
+  /**
+    * Twelfths
+    */
+  /* line 89, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+  .lap-one-twelfth {
+    width: 8.333%; }
+
+
+
+
+  /* line 93, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+  .lap-five-twelfths {
+    width: 41.666%; }
+
+
+  /* line 95, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+  .lap-seven-twelfths {
+    width: 58.333%; }
+
+
+
+
+  /* line 99, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+  .lap-eleven-twelfths {
+    width: 91.666%; }
+ }
+
+@media only screen and (min-width: 481px) {
+  /**
+    * Whole
+    */
+  /* line 17, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+  .lap-and-up-one-whole {
+    width: 100%; }
+
+  /**
+    * Halves
+    */
+  /* line 23, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+  .lap-and-up-one-half, .lap-and-up-two-quarters, .lap-and-up-three-sixths, .lap-and-up-four-eighths, .lap-and-up-five-tenths, .lap-and-up-six-twelfths {
+    width: 50%; }
+
+  /**
+    * Thirds
+    */
+  /* line 29, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+  .lap-and-up-one-third, .lap-and-up-two-sixths, .lap-and-up-four-twelfths {
+    width: 33.333%; }
+
+  /* line 30, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+  .lap-and-up-two-thirds, .lap-and-up-four-sixths, .lap-and-up-eight-twelfths {
+    width: 66.666%; }
+
+  /**
+    * Quarters
+    */
+  /* line 36, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+  .lap-and-up-one-quarter, .lap-and-up-two-eighths, .lap-and-up-three-twelfths {
+    width: 25%; }
+
+
+  /* line 38, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+  .lap-and-up-three-quarters, .lap-and-up-six-eighths, .lap-and-up-nine-twelfths {
+    width: 75%; }
+
+  /**
+    * Fifths
+    */
+  /* line 44, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+  .lap-and-up-one-fifth, .lap-and-up-two-tenths {
+    width: 20%; }
+
+  /* line 45, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+  .lap-and-up-two-fifths, .lap-and-up-four-tenths {
+    width: 40%; }
+
+  /* line 46, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+  .lap-and-up-three-fifths, .lap-and-up-six-tenths {
+    width: 60%; }
+
+  /* line 47, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+  .lap-and-up-four-fifths, .lap-and-up-eight-tenths {
+    width: 80%; }
+
+  /**
+    * Sixths
+    */
+  /* line 53, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+  .lap-and-up-one-sixth, .lap-and-up-two-twelfths {
+    width: 16.666%; }
+
+
+
+
+  /* line 57, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+  .lap-and-up-five-sixths, .lap-and-up-ten-twelfths {
+    width: 83.333%; }
+
+  /**
+    * Eighths
+    */
+  /* line 63, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+  .lap-and-up-one-eighth {
+    width: 12.5%; }
+
+
+  /* line 65, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+  .lap-and-up-three-eighths {
+    width: 37.5%; }
+
+
+  /* line 67, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+  .lap-and-up-five-eighths {
+    width: 62.5%; }
+
+
+  /* line 69, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+  .lap-and-up-seven-eighths {
+    width: 87.5%; }
+
+  /**
+    * Tenths
+    */
+  /* line 75, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+  .lap-and-up-one-tenth {
+    width: 10%; }
+
+
+  /* line 77, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+  .lap-and-up-three-tenths {
+    width: 30%; }
+
+
+
+
+  /* line 81, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+  .lap-and-up-seven-tenths {
+    width: 70%; }
+
+
+  /* line 83, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+  .lap-and-up-nine-tenths {
+    width: 90%; }
+
+  /**
+    * Twelfths
+    */
+  /* line 89, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+  .lap-and-up-one-twelfth {
+    width: 8.333%; }
+
+
+
+
+  /* line 93, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+  .lap-and-up-five-twelfths {
+    width: 41.666%; }
+
+
+  /* line 95, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+  .lap-and-up-seven-twelfths {
+    width: 58.333%; }
+
+
+
+
+  /* line 99, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+  .lap-and-up-eleven-twelfths {
+    width: 91.666%; }
+ }
+
+@media only screen and (max-width: 1023px) {
+  /**
+    * Whole
+    */
+  /* line 17, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+  .portable-one-whole {
+    width: 100%; }
+
+  /**
+    * Halves
+    */
+  /* line 23, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+  .portable-one-half, .portable-two-quarters, .portable-three-sixths, .portable-four-eighths, .portable-five-tenths, .portable-six-twelfths {
+    width: 50%; }
+
+  /**
+    * Thirds
+    */
+  /* line 29, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+  .portable-one-third, .portable-two-sixths, .portable-four-twelfths {
+    width: 33.333%; }
+
+  /* line 30, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+  .portable-two-thirds, .portable-four-sixths, .portable-eight-twelfths {
+    width: 66.666%; }
+
+  /**
+    * Quarters
+    */
+  /* line 36, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+  .portable-one-quarter, .portable-two-eighths, .portable-three-twelfths {
+    width: 25%; }
+
+
+  /* line 38, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+  .portable-three-quarters, .portable-six-eighths, .portable-nine-twelfths {
+    width: 75%; }
+
+  /**
+    * Fifths
+    */
+  /* line 44, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+  .portable-one-fifth, .portable-two-tenths {
+    width: 20%; }
+
+  /* line 45, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+  .portable-two-fifths, .portable-four-tenths {
+    width: 40%; }
+
+  /* line 46, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+  .portable-three-fifths, .portable-six-tenths {
+    width: 60%; }
+
+  /* line 47, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+  .portable-four-fifths, .portable-eight-tenths {
+    width: 80%; }
+
+  /**
+    * Sixths
+    */
+  /* line 53, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+  .portable-one-sixth, .portable-two-twelfths {
+    width: 16.666%; }
+
+
+
+
+  /* line 57, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+  .portable-five-sixths, .portable-ten-twelfths {
+    width: 83.333%; }
+
+  /**
+    * Eighths
+    */
+  /* line 63, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+  .portable-one-eighth {
+    width: 12.5%; }
+
+
+  /* line 65, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+  .portable-three-eighths {
+    width: 37.5%; }
+
+
+  /* line 67, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+  .portable-five-eighths {
+    width: 62.5%; }
+
+
+  /* line 69, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+  .portable-seven-eighths {
+    width: 87.5%; }
+
+  /**
+    * Tenths
+    */
+  /* line 75, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+  .portable-one-tenth {
+    width: 10%; }
+
+
+  /* line 77, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+  .portable-three-tenths {
+    width: 30%; }
+
+
+
+
+  /* line 81, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+  .portable-seven-tenths {
+    width: 70%; }
+
+
+  /* line 83, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+  .portable-nine-tenths {
+    width: 90%; }
+
+  /**
+    * Twelfths
+    */
+  /* line 89, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+  .portable-one-twelfth {
+    width: 8.333%; }
+
+
+
+
+  /* line 93, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+  .portable-five-twelfths {
+    width: 41.666%; }
+
+
+  /* line 95, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+  .portable-seven-twelfths {
+    width: 58.333%; }
+
+
+
+
+  /* line 99, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+  .portable-eleven-twelfths {
+    width: 91.666%; }
+ }
+
+@media only screen and (min-width: 1024px) {
+  /**
+    * Whole
+    */
+  /* line 17, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+  .desk-one-whole {
+    width: 100%; }
+
+  /**
+    * Halves
+    */
+  /* line 23, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+  .desk-one-half, .desk-two-quarters, .desk-three-sixths, .desk-four-eighths, .desk-five-tenths, .desk-six-twelfths {
+    width: 50%; }
+
+  /**
+    * Thirds
+    */
+  /* line 29, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+  .desk-one-third, .desk-two-sixths, .desk-four-twelfths {
+    width: 33.333%; }
+
+  /* line 30, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+  .desk-two-thirds, .desk-four-sixths, .desk-eight-twelfths {
+    width: 66.666%; }
+
+  /**
+    * Quarters
+    */
+  /* line 36, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+  .desk-one-quarter, .desk-two-eighths, .desk-three-twelfths {
+    width: 25%; }
+
+
+  /* line 38, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+  .desk-three-quarters, .desk-six-eighths, .desk-nine-twelfths {
+    width: 75%; }
+
+  /**
+    * Fifths
+    */
+  /* line 44, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+  .desk-one-fifth, .desk-two-tenths {
+    width: 20%; }
+
+  /* line 45, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+  .desk-two-fifths, .desk-four-tenths {
+    width: 40%; }
+
+  /* line 46, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+  .desk-three-fifths, .desk-six-tenths {
+    width: 60%; }
+
+  /* line 47, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+  .desk-four-fifths, .desk-eight-tenths {
+    width: 80%; }
+
+  /**
+    * Sixths
+    */
+  /* line 53, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+  .desk-one-sixth, .desk-two-twelfths {
+    width: 16.666%; }
+
+
+
+
+  /* line 57, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+  .desk-five-sixths, .desk-ten-twelfths {
+    width: 83.333%; }
+
+  /**
+    * Eighths
+    */
+  /* line 63, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+  .desk-one-eighth {
+    width: 12.5%; }
+
+
+  /* line 65, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+  .desk-three-eighths {
+    width: 37.5%; }
+
+
+  /* line 67, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+  .desk-five-eighths {
+    width: 62.5%; }
+
+
+  /* line 69, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+  .desk-seven-eighths {
+    width: 87.5%; }
+
+  /**
+    * Tenths
+    */
+  /* line 75, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+  .desk-one-tenth {
+    width: 10%; }
+
+
+  /* line 77, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+  .desk-three-tenths {
+    width: 30%; }
+
+
+
+
+  /* line 81, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+  .desk-seven-tenths {
+    width: 70%; }
+
+
+  /* line 83, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+  .desk-nine-tenths {
+    width: 90%; }
+
+  /**
+    * Twelfths
+    */
+  /* line 89, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+  .desk-one-twelfth {
+    width: 8.333%; }
+
+
+
+
+  /* line 93, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+  .desk-five-twelfths {
+    width: 41.666%; }
+
+
+  /* line 95, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+  .desk-seven-twelfths {
+    width: 58.333%; }
+
+
+
+
+  /* line 99, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/widths */
+  .desk-eleven-twelfths {
+    width: 91.666%; }
+ }
+
+/**
+ * If you have set the additional `$responsive-extra` variable to ‘true’ in
+ * `_vars.scss` then you now have access to the following class available to
+ * accomodate much larger screen resolutions.
+ */
+/* endif */
+/*------------------------------------*\
+    $PUSH
+\*------------------------------------*/
+/**
+ * Push classes, to move grid items over to the right by certain amounts.
+ */
+/*------------------------------------*\
+    $PULL
+\*------------------------------------*/
+/**
+ * Pull classes, to move grid items over to the right by certain amounts.
+ */
+/*------------------------------------*\
+    $BRAND
+\*------------------------------------*/
+/**
+ * `.brand` is a quick and simple way to apply your brand face and/or color to
+ * any element using a handy helper class.
+ */
+/* line 8, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/brand */
+.brand {
+  font-family: "Helvetica Neue", sans-serif!important;
+  color: #4a8ec2!important; }
+
+/* line 12, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/brand */
+.brand-face {
+  font-family: "Helvetica Neue", sans-serif!important; }
+
+/* line 16, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/brand */
+.brand-color, .brand-colour {
+  color: #4a8ec2!important; }
+
+/*------------------------------------*\
+    $HELPER
+\*------------------------------------*/
+/**
+ * A series of helper classes to use arbitrarily. Only use a helper class if an
+ * element/component doesn’t already have a class to which you could apply this
+ * styling, e.g. if you need to float `.main-nav` left then add `float:left;` to
+ * that ruleset as opposed to adding the `.float--left` class to the markup.
+ *
+ * A lot of these classes carry `!important` as you will always want them to win
+ * out over other selectors.
+ */
+/**
+ * Add/remove floats
+ */
+/* line 18, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/helper */
+.float--right {
+  float: right !important; }
+
+/* line 19, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/helper */
+.float--left {
+  float: left !important; }
+
+/* line 20, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/helper */
+.float--none {
+  float: none !important; }
+
+/**
+ * Text alignment
+ */
+/* line 26, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/helper */
+.text--left {
+  text-align: left !important; }
+
+/* line 27, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/helper */
+.text--center {
+  text-align: center !important; }
+
+/* line 28, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/helper */
+.text--right {
+  text-align: right !important; }
+
+/**
+ * Font weights
+ */
+/* line 34, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/helper */
+.weight--light {
+  font-weight: 300 !important; }
+
+/* line 35, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/helper */
+.weight--normal {
+  font-weight: 400 !important; }
+
+/* line 36, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/helper */
+.weight--semibold {
+  font-weight: 600 !important; }
+
+/**
+ * Add/remove margins
+ */
+/* line 42, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/helper */
+.push {
+  margin: 24px !important; }
+
+/* line 43, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/helper */
+.push--top {
+  margin-top: 24px !important; }
+
+/* line 44, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/helper */
+.push--right {
+  margin-right: 24px !important; }
+
+/* line 45, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/helper */
+.push--bottom {
+  margin-bottom: 24px !important; }
+
+/* line 46, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/helper */
+.push--left {
+  margin-left: 24px !important; }
+
+/* line 47, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/helper */
+.push--ends {
+  margin-top: 24px !important;
+  margin-bottom: 24px !important; }
+
+/* line 48, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/helper */
+.push--sides {
+  margin-right: 24px !important;
+  margin-left: 24px !important; }
+
+/* line 50, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/helper */
+.push-half {
+  margin: 12px !important; }
+
+/* line 51, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/helper */
+.push-half--top {
+  margin-top: 12px !important; }
+
+/* line 52, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/helper */
+.push-half--right {
+  margin-right: 12px !important; }
+
+/* line 53, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/helper */
+.push-half--bottom {
+  margin-bottom: 12px !important; }
+
+/* line 54, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/helper */
+.push-half--left {
+  margin-left: 12px !important; }
+
+/* line 55, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/helper */
+.push-half--ends {
+  margin-top: 12px !important;
+  margin-bottom: 12px !important; }
+
+/* line 56, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/helper */
+.push-half--sides {
+  margin-right: 12px !important;
+  margin-left: 12px !important; }
+
+/* line 58, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/helper */
+.flush {
+  margin: 0 !important; }
+
+/* line 59, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/helper */
+.flush--top {
+  margin-top: 0 !important; }
+
+/* line 60, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/helper */
+.flush--right {
+  margin-right: 0 !important; }
+
+/* line 61, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/helper */
+.flush--bottom {
+  margin-bottom: 0 !important; }
+
+/* line 62, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/helper */
+.flush--left {
+  margin-left: 0 !important; }
+
+/* line 63, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/helper */
+.flush--ends {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important; }
+
+/* line 64, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/helper */
+.flush--sides {
+  margin-right: 0 !important;
+  margin-left: 0 !important; }
+
+/**
+ * Add/remove paddings
+ */
+/* line 70, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/helper */
+.soft {
+  padding: 24px !important; }
+
+/* line 71, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/helper */
+.soft--top {
+  padding-top: 24px !important; }
+
+/* line 72, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/helper */
+.soft--right {
+  padding-right: 24px !important; }
+
+/* line 73, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/helper */
+.soft--bottom {
+  padding-bottom: 24px !important; }
+
+/* line 74, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/helper */
+.soft--left {
+  padding-left: 24px !important; }
+
+/* line 75, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/helper */
+.soft--ends {
+  padding-top: 24px !important;
+  padding-bottom: 24px !important; }
+
+/* line 76, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/helper */
+.soft--sides {
+  padding-right: 24px !important;
+  padding-left: 24px !important; }
+
+/* line 78, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/helper */
+.soft-half {
+  padding: 12px !important; }
+
+/* line 79, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/helper */
+.soft-half--top {
+  padding-top: 12px !important; }
+
+/* line 80, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/helper */
+.soft-half--right {
+  padding-right: 12px !important; }
+
+/* line 81, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/helper */
+.soft-half--bottom {
+  padding-bottom: 12px !important; }
+
+/* line 82, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/helper */
+.soft-half--left {
+  padding-left: 12px !important; }
+
+/* line 83, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/helper */
+.soft-half--ends {
+  padding-top: 12px !important;
+  padding-bottom: 12px !important; }
+
+/* line 84, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/helper */
+.soft-half--sides {
+  padding-right: 12px !important;
+  padding-left: 12px !important; }
+
+/* line 86, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/helper */
+.hard {
+  padding: 0 !important; }
+
+/* line 87, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/helper */
+.hard--top {
+  padding-top: 0 !important; }
+
+/* line 88, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/helper */
+.hard--right {
+  padding-right: 0 !important; }
+
+/* line 89, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/helper */
+.hard--bottom {
+  padding-bottom: 0 !important; }
+
+/* line 90, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/helper */
+.hard--left {
+  padding-left: 0 !important; }
+
+/* line 91, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/helper */
+.hard--ends {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important; }
+
+/* line 92, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/helper */
+.hard--sides {
+  padding-right: 0 !important;
+  padding-left: 0 !important; }
+
+/**
+ * Pull items full width of `.island` parents.
+ */
+/* line 98, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/helper */
+.full-bleed {
+  margin-right: -24px !important;
+  margin-left: -24px !important; }
+  /* line 102, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/helper */
+  .islet .full-bleed {
+    margin-right: -12px !important;
+    margin-left: -12px !important; }
+
+/**
+ * Add a help cursor to any element that gives the user extra information on
+ * `:hover`.
+ */
+/* line 113, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/helper */
+.informative {
+  cursor: help !important; }
+
+/**
+ * Mute an object by reducing its opacity.
+ */
+/* line 121, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/helper */
+.muted {
+  opacity: 0.5 !important;
+  filter: alpha(opacity=50) !important; }
+
+/**
+ * Align items to the right where they imply progression/movement forward, e.g.:
+ *
+   <p class=proceed><a href=#>Read more...</a></p>
+ *
+ */
+/* line 133, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/helper */
+.proceed {
+  text-align: right !important; }
+
+/**
+ * Add a right-angled quote to links that imply movement, e.g.:
+ *
+   <a href=# class=go>Read more</a>
+ *
+ */
+/* line 144, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/helper */
+.go:after {
+  content: "\00A0" "\00BB" !important; }
+
+/**
+ * Apply capital case to an element (usually a `strong`).
+ */
+/* line 152, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/helper */
+.caps {
+  text-transform: uppercase !important; }
+
+/**
+ * Hide content off-screen without resorting to `display:none;`, also provide
+ * breakpoint specific hidden elements.
+ */
+/* line 172, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/helper */
+.accessibility, .visuallyhidden {
+  border: 0 !important;
+  clip: rect(0 0 0 0) !important;
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important; }
+
+@media only screen and (max-width: 480px) {
+  /* line 178, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/helper */
+  .accessibility--palm, .visuallyhidden--palm {
+    border: 0 !important;
+    clip: rect(0 0 0 0) !important;
+    height: 1px !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    position: absolute !important;
+    width: 1px !important; }
+ }
+
+@media only screen and (min-width: 481px) and (max-width: 1023px) {
+  /* line 178, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/helper */
+  .accessibility--lap, .visuallyhidden--lap {
+    border: 0 !important;
+    clip: rect(0 0 0 0) !important;
+    height: 1px !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    position: absolute !important;
+    width: 1px !important; }
+ }
+
+@media only screen and (min-width: 481px) {
+  /* line 178, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/helper */
+  .accessibility--lap-and-up, .visuallyhidden--lap-and-up {
+    border: 0 !important;
+    clip: rect(0 0 0 0) !important;
+    height: 1px !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    position: absolute !important;
+    width: 1px !important; }
+ }
+
+@media only screen and (max-width: 1023px) {
+  /* line 178, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/helper */
+  .accessibility--portable, .visuallyhidden--portable {
+    border: 0 !important;
+    clip: rect(0 0 0 0) !important;
+    height: 1px !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    position: absolute !important;
+    width: 1px !important; }
+ }
+
+@media only screen and (min-width: 1024px) {
+  /* line 178, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/helper */
+  .accessibility--desk, .visuallyhidden--desk {
+    border: 0 !important;
+    clip: rect(0 0 0 0) !important;
+    height: 1px !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    position: absolute !important;
+    width: 1px !important; }
+ }
+
+@media only screen and (min-width: 1200px) {
+  /* line 178, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/inuit.css/generic/helper */
+  .accessibility--desk-wide, .visuallyhidden--desk-wide {
+    border: 0 !important;
+    clip: rect(0 0 0 0) !important;
+    height: 1px !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    position: absolute !important;
+    width: 1px !important; }
+ }
+
+/* endif */
+/*
+ * Custom Styles
+ */
+/* ==========================================================================
+   $NORMALIZE
+   ========================================================================== */
+/* line 5, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/ui/generic/normalize */
+body {
+  padding: 16px; }
+
+/*------------------------------------*\
+    $HEADINGS
+\*------------------------------------*/
+/* line 5, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/ui/base/headings */
+h2 {
+  border-bottom: 4px double #444; }
+
+/*------------------------------------*\
+    $TABLES
+\*------------------------------------*/
+/**
+ * Cell alignments
+ */
+/**
+ * Bordered tables
+ */
+/* line 14, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/ui/base/tables */
+.table--bordered td:empty {
+  border: 1px solid #ccc; }
+
+/**
+ * Striped tables
+ */
+/* line 22, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/ui/base/tables */
+.table--striped tbody tr:nth-of-type(odd) {
+  background-color: #eaeaea;
+  /* Override this color in your theme stylesheet */ }
+
+/*------------------------------------*\
+    $CARDS
+\*------------------------------------*/
+/* line 5, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/ui/objects/cards */
+.card {
+  list-style: none;
+  margin: 0px;
+  border: 1px solid #eaeaea;
+  border-radius: 5px;
+  padding: 0 16px; }
+  /* line 8, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/ui/objects/cards */
+  .card ul {
+    list-style: none;
+    margin: 0px; }
+
+/* common */
+/* line 2, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/ui/objects/json-viewer */
+.mark-water {
+  color: #bbb; }
+
+/* eof common */
+/* node */
+/* line 8, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/ui/objects/json-viewer */
+.node-content-wrapper {
+  font-family: 'Quicksand', sans-serif;
+  background-color: #fff; }
+
+/* line 12, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/ui/objects/json-viewer */
+.node-content-wrapper ul {
+  border-left: 1px dotted #ccc;
+  list-style: none;
+  padding-left: 25px;
+  margin: 0px; }
+
+/* line 18, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/ui/objects/json-viewer */
+.node-content-wrapper ul li {
+  list-style: none;
+  border-bottom: 0;
+  padding-bottom: 0; }
+
+/* line 23, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/ui/objects/json-viewer */
+.node-hgl-path {
+  background-color: #fefbdf; }
+
+/* line 26, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/ui/objects/json-viewer */
+.node-bracket {
+  font-weight: bold;
+  display: inline-block;
+  cursor: pointer; }
+
+/* line 31, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/ui/objects/json-viewer */
+.node-bracket:hover {
+  color: #999; }
+
+/* eof node */
+/* leaf */
+/* line 37, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/ui/objects/json-viewer */
+.leaft-container {
+  width: 100%;
+  max-width: 300px;
+  height: 100%; }
+
+/* line 43, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/ui/objects/json-viewer */
+.title {
+  color: #ccc; }
+
+/* line 44, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/ui/objects/json-viewer */
+.string {
+  color: #080; }
+
+/* line 45, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/ui/objects/json-viewer */
+.number {
+  color: #ccaa00; }
+
+/* line 46, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/ui/objects/json-viewer */
+.boolean {
+  color: #1979d3; }
+
+/* line 47, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/ui/objects/json-viewer */
+.date {
+  color: #aa6655; }
+
+/* line 48, C:/Users/mikek/Documents/Visual Studio 2013/WebSites/RESTAPIDoc/css/ui/objects/json-viewer */
+.null {
+  color: #ff5050; }
+
+/* eof leaf */

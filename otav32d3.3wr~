@@ -1,0 +1,275 @@
+﻿{
+    "Hosts": [
+        {
+            "Name": "Staging",
+            "URL": "https://testservices.hairdirect.com"
+        },
+        {
+            "Name": "Production",
+            "URL": "https://services.hairdirect.com"
+        }
+    ],
+    "Categories": [
+        {
+            "Name": "Account",
+            "Description": "Interact with website account data.",
+            "Actions": [
+                {
+                    "Name": "Update Primary Contact",
+                    "Description": "Updates data for the primary contact on the customer’s account.",
+                    "Endpoint": "/account.svc/account/set/update-default",
+                    "Verb": "POST",
+                    "Payload": [
+                        {
+                            "Name": "CultureCode",
+                            "Type": "string",
+                            "Notes": "Currently the only implemented option is: en-US",
+                            "Required": true
+                        },
+                        {
+                            "Name": "SalesforceContactId",
+                            "Type": "string",
+                            "Notes": "Must be 50 characters or less",
+                            "Required": true
+                        },
+                        {
+                            "Name": "FirstName",
+                            "Type": "string",
+                            "Notes": "Must be 50 characters or less",
+                            "Required": true
+                        },
+                        {
+                            "Name": "LastName",
+                            "Type": "string",
+                            "Notes": "Must be 50 characters or less",
+                            "Required": true
+                        },
+                        {
+                            "Name": "PhoneNumber",
+                            "Type": "string",
+                            "Notes": "Must be 16 characters or less",
+                            "Required": true
+                        },
+                        {
+                            "Name": "AddIntegrationQueueRecord",
+                            "Type": "boolean",
+                            "Notes": "",
+                            "Required": false
+                        }
+                    ],
+                    "Response": [
+                        {
+                            "Name": "Error",
+                            "Type": "string",
+                            "Notes": "Empty string indicates no errors were encountered"
+                        }
+                    ]
+                },
+                {
+                    "Name": "Set Salesforce Account Id",
+                    "Description": "Sets the Salesforce account id for a customer account.",
+                    "Endpoint": "/account.svc/account/set/salesforce-account-id",
+                    "Verb": "POST",
+                    "Payload": [
+                        {
+                            "Name": "CultureCode",
+                            "Type": "string",
+                            "Notes": "Currently the only implemented option is: en-US",
+                            "Required": true
+                        },
+                        {
+                            "Name": "SalesforceContactId",
+                            "Type": "string",
+                            "Notes": "Must be 50 characters or less",
+                            "Required": true
+                        },
+                        {
+                            "Name": "EmailAddress",
+                            "Type": "string",
+                            "Notes": "Must be 150 characters or less",
+                            "Required": true
+                        }
+                    ],
+                    "Response": [
+                        {
+                            "Name": "Error",
+                            "Type": "string",
+                            "Notes": "Empty string indicates no errors were encountered"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "Address",
+            "Description": "Interact with customer address data.",
+            "Actions": [
+                {
+                    "Name": "Get Customer Addresses",
+                    "Description": "Gets all of the addresses for a customer.",
+                    "Endpoint": "/address.svc/addresses/get/by-customer-id",
+                    "Verb": "POST",
+                    "Payload": [
+                        {
+                            "Name": "CustomerIdEncrypted",
+                            "Type": "string",
+                            "Notes": "",
+                            "Required": true
+                        },
+                        {
+                            "Name": "CultureCode",
+                            "Type": "string",
+                            "Notes": "Currently the only implemented value is: en-US",
+                            "Required": true
+                        },
+                        {
+                            "Name": "SelectedShippingContactIdEncrypted",
+                            "Type": "string",
+                            "Notes": "Used to indicate that an address is currently designated as the shipping address on an order.",
+                            "Required": false
+                        },
+                        {
+                            "Name": "SelectedBillingContactIdEncrypted",
+                            "Type": "string",
+                            "Notes": "Used to indicate that an address is currently designated as the billing address on an order.",
+                            "Required": false
+                        }
+                    ],
+                    "Response": [
+                        {
+                            "Name": "Error",
+                            "Type": "string",
+                            "Notes": "Empty string indicates no errors were encountered"
+                        },
+                        {
+                            "Name": "CustomerAddresses",
+                            "Type": "object",
+                            "Notes": ""
+                        }
+                    ]
+                },
+                {
+                    "Name": "Create Address",
+                    "Description": "Create an address for a customer.",
+                    "Endpoint": "/address.svc/address/set/add",
+                    "Verb": "POST",
+                    "Payload": [
+                        {
+                            "Name": "CustomerIdEncrypted",
+                            "Type": "string",
+                            "Notes": "Currently the only implemented option is: en-US",
+                            "Required": true
+                        },
+                        {
+                            "Name": "CultureCode",
+                            "Type": "string",
+                            "Notes": "Currently the only implemented option is: en-US",
+                            "Required": true
+                        },
+                        {
+                            "Name": "ShopId",
+                            "Type": "long",
+                            "Notes": "Must be 50 characters or less",
+                            "Required": true
+                        },
+                        {
+                            "Name": "ShoppingCartIdEncrypted",
+                            "Type": "string",
+                            "Notes": "",
+                            "Required": true
+                        },
+                        {
+                            "Name": "FirstName",
+                            "Type": "string",
+                            "Notes": "",
+                            "Required": true
+                        },
+                        {
+                            "Name": "LastName",
+                            "Type": "string",
+                            "Notes": "",
+                            "Required": true
+                        },
+                        {
+                            "Name": "Phone",
+                            "Type": "string",
+                            "Notes": "",
+                            "Required": true
+                        },
+                        {
+                            "Name": "StreetAddress1",
+                            "Type": "string",
+                            "Notes": "",
+                            "Required": true
+                        },
+                        {
+                            "Name": "StreetAddress2",
+                            "Type": "string",
+                            "Notes": "",
+                            "Required": false
+                        },
+                        {
+                            "Name": "CountryName",
+                            "Type": "string",
+                            "Notes": "",
+                            "Required": true
+                        },
+                        {
+                            "Name": "StateName",
+                            "Type": "string",
+                            "Notes": "",
+                            "Required": false
+                        },
+                        {
+                            "Name": "City",
+                            "Type": "string",
+                            "Notes": "",
+                            "Required": true
+                        },
+                        {
+                            "Name": "PostalCode",
+                            "Type": "string",
+                            "Notes": "",
+                            "Required": true
+                        },
+                        {
+                            "Name": "Company",
+                            "Type": "string",
+                            "Notes": "",
+                            "Required": false
+                        },
+                        {
+                            "Name": "IsShippingDefault",
+                            "Type": "boolean",
+                            "Notes": "",
+                            "Required": false
+                        },
+                        {
+                            "Name": "IsBillingDefault",
+                            "Type": "boolean",
+                            "Notes": "",
+                            "Required": false
+                        }
+                    ],
+                    "Response": [
+                        {
+                            "Name": "Error",
+                            "Type": "string",
+                            "Notes": "Empty string indicates no errors were encountered"
+                        },
+                        {
+                            "Name": "ContactIdEncrypted",
+                            "Type": "string",
+                            "Notes": ""
+                        },
+                        {
+                            "Name": "BackOfficeAddressId",
+                            "Type": "string",
+                            "Notes": ""
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
