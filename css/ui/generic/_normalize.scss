@@ -3,5 +3,12 @@
    ========================================================================== */
 
 body {
-    padding: 16px;
+    @include rem-attribute('padding', 1);
+} 
+
+code,
+kbd,
+pre,
+samp {
+    @include rem-attribute('font-size', 1);
 }

@@ -3,7 +3,7 @@
 templates['category-list'] = template({"1":function(depth0,helpers,partials,data) {
     var stack1;
 
-  return "        <li>\r\n"
+  return "        <li class=\"grid\">\r\n"
     + ((stack1 = this.invokePartial(partials['p-category'],depth0,{"name":"p-category","data":data,"indent":"            ","helpers":helpers,"partials":partials})) != null ? stack1 : "")
     + "        </li>\r\n";
 },"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {

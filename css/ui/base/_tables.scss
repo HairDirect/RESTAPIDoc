@@ -3,6 +3,7 @@
 \*------------------------------------*/
 
 .table--data {
+    @include rem-attribute('font-size', 1);
     > thead {
         > tr {
             > td {

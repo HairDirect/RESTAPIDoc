@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "RESTAPIDoc", "http://localhost:51120", "{DF969131-5C50-4B9B-8DBA-76B819CA5C3F}"
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "RESTAPIDoc(1)", "http://localhost:51120", "{DF969131-5C50-4B9B-8DBA-76B819CA5C3F}"
 	ProjectSection(WebsiteProperties) = preProject
 		UseIISExpress = "true"
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
@@ -22,6 +22,11 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "RESTAPIDoc", "http://localh
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
 		SlnRelativePath = "..\..\..\..\..\..\Git\mikekoser.github.io\"
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{73B7C810-8B12-4BD9-B4BE-4751F3551E3B}"
+	ProjectSection(SolutionItems) = preProject
+		WebEssentials-Settings.json = WebEssentials-Settings.json
 	EndProjectSection
 EndProject
 Global

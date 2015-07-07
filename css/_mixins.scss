@@ -1,0 +1,10 @@
+// REM ATTRIBUTE
+//
+// Set a rem value with pixel fallback for any element attribute
+// e.g. SASS: @include rem-attribute('margin-top', 2);
+// CSS: margin-top: 31px; margin-top: 2rem;
+
+@mixin rem-attribute($attribute, $value) {
+  #{$attribute}: $value * $base-font-size;
+  #{$attribute}: $value + rem;
+}
