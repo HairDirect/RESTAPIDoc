@@ -1,16 +1,14 @@
 /*------------------------------------*\
     $CARDS
 \*------------------------------------*/
-
 .card {
     list-style: none;
-    margin: 0px;
-    & ul{
-        list-style: none;
-        margin: 0px;
-    }
-    
     border: 1px solid $dark-gray-blue;
     border-radius: 5px;
-    padding: 0 16px; 
+    @include rem-attribute('padding', 1);
+
+    & ul {
+        list-style: none;
+        margin: 0;
+    }
 }

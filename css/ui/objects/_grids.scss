@@ -1,0 +1,18 @@
+.grid {
+    letter-spacing: -.3em !important;
+	* {
+		letter-spacing: 0;
+	}
+}
+
+/* Opera hack */
+.opera:-o-prefocus,
+.grid {
+    word-spacing: -0.43em;
+}
+
+.grid__item {
+    letter-spacing: normal;
+    word-spacing: normal;
+    padding-left: 0;
+}

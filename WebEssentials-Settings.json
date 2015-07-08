@@ -54,7 +54,7 @@
   },
   "Handlebars": {
     "CompileOnBuild": false,
-    "CompileOnSave": true,
+    "CompileOnSave": false,
     "MinifyInPlace": false,
     "OutputDirectory": null
   },
@@ -144,7 +144,7 @@
   "Scss": {
     "CompileOnBuild": false,
     "CompileOnSave": false,
-    "EnableChainCompilation": true,
+    "EnableChainCompilation": false,
     "GenerateSourceMaps": true,
     "MinifyInPlace": false,
     "NumberPrecision": 5,

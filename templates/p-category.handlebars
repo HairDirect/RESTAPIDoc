@@ -1,9 +1,9 @@
-﻿<div class="grid__item one-whole category">
+﻿<div>
     <h2>{{Name}}</h2>
     <span>{{Description}}</span>
-    <ul>
+    <ul class="grid action-list">
         {{#each Actions}}
-        <li>
+        <li class="grid__item one-whole action">
             {{> p-action}}
         </li>
         {{/each}}

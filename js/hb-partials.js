@@ -3,17 +3,17 @@
 Handlebars.partials['p-category'] = template({"1":function(depth0,helpers,partials,data) {
     var stack1;
 
-  return "        <li>\r\n"
+  return "        <li class=\"grid__item one-whole action\">\r\n"
     + ((stack1 = this.invokePartial(partials['p-action'],depth0,{"name":"p-action","data":data,"indent":"            ","helpers":helpers,"partials":partials})) != null ? stack1 : "")
     + "        </li>\r\n";
 },"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
     var stack1, helper, alias1=helpers.helperMissing, alias2="function", alias3=this.escapeExpression;
 
-  return "﻿<div class=\"grid__item one-whole category\">\r\n    <h2>"
+  return "﻿<div>\r\n    <h2>"
     + alias3(((helper = (helper = helpers.Name || (depth0 != null ? depth0.Name : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"Name","hash":{},"data":data}) : helper)))
     + "</h2>\r\n    <span>"
     + alias3(((helper = (helper = helpers.Description || (depth0 != null ? depth0.Description : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"Description","hash":{},"data":data}) : helper)))
-    + "</span>\r\n    <ul>\r\n"
+    + "</span>\r\n    <ul class=\"grid action-list\">\r\n"
     + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.Actions : depth0),{"name":"each","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
     + "    </ul>\r\n</div>";
 },"usePartial":true,"useData":true});
@@ -26,7 +26,7 @@ Handlebars.partials['p-action'] = template({"1":function(depth0,helpers,partials
 },"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
     var stack1, helper, alias1=helpers.helperMissing, alias2="function", alias3=this.escapeExpression;
 
-  return "﻿<div class=\"action\">\r\n    <h3>"
+  return "﻿<div class=\"card\">\r\n    <h3>"
     + alias3(((helper = (helper = helpers.Name || (depth0 != null ? depth0.Name : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"Name","hash":{},"data":data}) : helper)))
     + "</h3>\r\n    <span>Description: "
     + alias3(((helper = (helper = helpers.Description || (depth0 != null ? depth0.Description : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"Description","hash":{},"data":data}) : helper)))

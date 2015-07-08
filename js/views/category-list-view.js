@@ -7,8 +7,8 @@ var CategoryListView = Backbone.View.extend({
 	//#region -- Backbone Objects --
 	el: "#category-list",
 	events: {
-		"click .action > .btn--primary": "actionPrimaryClicked",
-		"click .action > .btn--secondary": "actionSecondaryClicked"
+		"click .action .btn--primary": "actionPrimaryClicked",
+		"click .action .btn--secondary": "actionSecondaryClicked"
 	},
 	appContext: null,
 	template: Handlebars.templates["category-list"],
