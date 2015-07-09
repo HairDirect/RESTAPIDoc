@@ -5,7 +5,15 @@
     list-style: none;
     border: 1px solid $dark-gray-blue;
     border-radius: 5px;
-    @include rem-attribute('padding', 1);
+    @include rem-attribute('padding', .5);
+
+    > h3 {
+        border-bottom: 1px dashed $dark-gray-blue;
+        text-align: center;
+        position: relative;
+        @include rem-attribute('bottom', .5);
+        @include rem-attribute('padding', .5)
+    }
 
     & ul {
         list-style: none;
