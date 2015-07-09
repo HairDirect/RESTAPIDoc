@@ -4,7 +4,8 @@
 
 .table--data {
     @include rem-attribute('font-size', 1);
-    > thead {
+
+    > thead, > th {
         > tr {
             > td {
                 font-weight: bold;
@@ -29,5 +30,66 @@
 .table--striped {
     tbody tr:nth-of-type(odd) {
         background-color: $medium-gray-blue;
+    }
+}
+
+/**
+ * Responsive tables
+ */
+@media #{$desk} {
+
+    table.responsive {
+        margin-bottom: 0;
+
+        td, th {
+            position: relative;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+    }
+
+    .pinned {
+        position: absolute;
+        left: 0;
+        top: 0;
+        background: #fff;
+        width: 35%;
+        overflow: hidden;
+        overflow-x: scroll;
+        border-right: 1px solid $dark-gray-blue;
+
+        table {
+            border-right: none;
+            border-left: none;
+            width: 100%;
+
+            th, td {
+                white-space: nowrap;
+            }
+        }
+    }
+
+    .pinned td:last-child {
+        border-bottom: 0;
+    }
+
+    div.table-wrapper {
+        position: relative;
+        margin-bottom: 20px;
+        overflow: hidden;
+        border-right: 1px solid $dark-gray-blue;
+
+        div.scrollable {
+            overflow: scroll;
+            overflow-y: hidden;
+
+            table {
+                margin-left: 35%;
+            }
+        }
+    }
+
+    div.table-wrapper table.responsive th:first-child, table.responsive td:first-child, table.responsive td:first-child, table.responsive.pinned td {
+        display: none;
     }
 }

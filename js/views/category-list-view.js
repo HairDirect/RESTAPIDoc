@@ -15,6 +15,9 @@ var CategoryListView = Backbone.View.extend({
 	render: function (categories) {
 		var view = this;
 		view.$el.html(view.template(categories));
+		if (updateTables && typeof updateTables == "function") {
+			updateTables();
+		}
 	},
 	actionPrimaryClicked: function (event) {
 		var $this = $(event.target),
