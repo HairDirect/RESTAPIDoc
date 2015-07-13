@@ -70,6 +70,7 @@ $palm-pull: false;
  */
 
 /** COLORS */
+$white: #FFF;
 $light-gray-blue: #E0FBFC;
 $medium-gray-blue: #C2DFE3;
 $dark-gray-blue: #9DB4C0;
@@ -81,6 +82,6 @@ $thick-border-width: 4px;
 
 /* MEDIA QUERIES */
 $palm: "only screen and (max-width : 29.999em)";
-$lap: "only screen and (max-width: 49.999em)";
-$desk: "only screen and (max-width : 74.999em)";
-$desk-wide: "only screen and (min-width : 75em)";
+$lap: "only screen and (min-width: 50em)";
+$desk: "only screen and (min-width : 75em)";
+$desk-wide: "only screen and (min-width : 120em)";

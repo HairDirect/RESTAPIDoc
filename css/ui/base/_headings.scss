@@ -10,6 +10,10 @@ h3 {
     color: $darker-gray-blue;
 }
 
-h4,h5,h6 {
+h4, h5, h6 {
     color: $dark-gray-blue;
+}
+
+header > h1 {
+    margin-bottom: 0;
 }

@@ -2,13 +2,15 @@
    $NORMALIZE
    ========================================================================== */
 
-body {
-    @include rem-attribute('padding', 1);
-} 
-
 code,
 kbd,
 pre,
 samp {
     @include rem-attribute('font-size', 1);
+}
+
+header {
+    @include rem-attribute('padding-bottom', 1);
+    @include rem-attribute('padding-left', 1);
+    @include rem-attribute('padding-right', 1);
 }

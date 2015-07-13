@@ -4,26 +4,32 @@
 
 .navigation {
     /*Strip the ul of padding and list styling*/
+    ul li, li a {
+        width: 100%;
+    }
+
     ul {
         list-style-type: none;
         margin: 0;
         padding: 0;
-        position: absolute;
+        position: static;
+        display: none;
         /*Create a horizontal list with spacing*/
         li {
             display: inline-block;
-            float: left;
+            /*float: left;*/
             margin-right: 1px;
+            margin-bottom: 1px;
             /*Style for menu links*/
             a {
                 display: block;
-                min-width: 140px;
-                height: 50px;
+                @include rem-attribute('min-width', 8.75);
+                @include rem-attribute('height', 3.125);
+                @include rem-attribute('line-height', 3.125);
                 text-align: center;
-                line-height: 50px;
                 font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-                color: #fff;
-                background: #2f3036;
+                color: $white;
+                background-color: $darkest-gray-blue;
                 text-decoration: none;
             }
             /*Hide dropdown links until they are needed*/
@@ -34,12 +40,16 @@
                     /*Make dropdown links vertical*/
                     li {
                         display: block;
-                        float: none;
+                        /*floa*/t: none;
                         /*Prevent text wrapping*/
                         a {
                             width: auto;
                             min-width: 100px;
-                            padding: 0 20px;
+                            @include rem-attribute('min-width', 6.25);
+                            padding-top: 0;
+                            padding-bottom: 0;
+                            @include rem-attribute('padding-left', 1.25);
+                            @include rem-attribute('padding-right', 1.25);
                             /*Display the dropdown on hover*/
                             &:hover + .hidden, .hidden:hover {
                                 display: block;
@@ -52,20 +62,20 @@
             &:hover {
                 a {
                     /*Hover state for top level links*/
-                    background-color: #19c589;
+                    background-color: $dark-gray-blue;
                 }
 
                 ul {
                     /*Style for dropdown links*/
                     a {
-                        background: #f3f3f3;
-                        color: #2f3036;
-                        height: 40px;
-                        line-height: 40px;
+                        background-color: $medium-gray-blue;
+                        color: $darkest-gray-blue;
+                        @include rem-attribute('height', 2.5);
+                        @include rem-attribute('line-height', 2.5);
                         /*Hover state for dropdown links*/
                         &:hover {
-                            background: #19c589;
-                            color: #fff;
+                            background-color: $dark-gray-blue;
+                            color: $white;
                         }
                     }
                 }
@@ -74,13 +84,19 @@
     }
     /*Style 'show menu' label button and hide it by default*/
     .toggle-menu {
-        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        display: block;
         text-decoration: none;
-        color: #fff;
-        background: #19c589;
+        color: $white;
+        background-color: $darker-gray-blue;
         text-align: center;
-        padding: 10px 0;
-        display: none;
+        padding-left: 0;
+        padding-right: 0;
+        @include rem-attribute('padding-top', .625);
+        @include rem-attribute('padding-bottom', .625);
+
+        &:hover {
+            background-color: $dark-gray-blue;
+        }
     }
     /*Hide checkbox*/
     input[type=checkbox] {
@@ -91,23 +107,22 @@
         display: block;
     }
     /*Responsive Styles*/
-    @media screen and (max-width : 760px) {
-        /*Make dropdown links appear inline*/
+    @media #{$lap} {
         ul {
-            position: static;
-            display: none;
-        }
-        /*Create vertical spacing*/
-        li {
-            margin-bottom: 1px;
-        }
-        /*Make all menu links full width*/
-        ul li, li a {
-            width: 100%;
-        }
-        /*Display 'show menu' link*/
-        .toggle-menu {
+            position: absolute;
             display: block;
+        }
+
+        li {
+            margin-bottom: 0;
+        }
+        /* Make all menu standard width */
+        ul li, li a {
+            width: auto;
+        }
+        /* Hide 'show menu' link */
+        .toggle-menu {
+            display: none;
         }
     }
 }
