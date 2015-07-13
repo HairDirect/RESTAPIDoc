@@ -25,7 +25,7 @@ updateTables = function () {
 			});
 			return true;
 		}
-		else if (switched && ($(window).width() > 800)) {
+		else if (switched && ($(window).width() >= 800)) {
 			switched = false;
 			$("table.responsive").each(function (i, element) {
 				unsplitTable($(element));

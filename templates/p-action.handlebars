@@ -4,31 +4,35 @@
     <span>Endpoint: {{Endpoint}}</span><br />
     <span>Verb: {{Verb}}</span>
     <h4>Payload</h4>
-    <table class="table--bordered table--striped table--data responsive">
-        <thead>
-            <tr><td>Name</td><td>Type</td><td>Notes</td></tr>
-        </thead>
-        <tbody>
-            {{#each Payload}}
-            <tr>
-                {{> p-payload}}
-            </tr>
-            {{/each}}
-        </tbody>
-    </table>
+    <div class="table-wrapper">
+        <table class="table--bordered table--striped table--data table--responsive">
+            <thead>
+                <tr><th>Name</th><th>Type</th><th>Notes</th></tr>
+            </thead>
+            <tbody>
+                {{#each Payload}}
+                <tr>
+                    {{> p-payload}}
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
     <h4>Response</h4>
-    <table class="table--bordered table--striped table--data responsive">
-        <thead>
-            <tr><td>Name</td><td>Type</td><td>Notes</td></tr>
-        </thead>
-        <tbody>
-            {{#each Response}}
-            <tr>
-                {{> p-response}}
-            </tr>
-            {{/each}}
-        </tbody>
-    </table>
+    <div class="table-wrapper">
+        <table class="table--bordered table--striped table--data table--responsive">
+            <thead>
+                <tr><th>Name</th><th>Type</th><th>Notes</th></tr>
+            </thead>
+            <tbody>
+                {{#each Response}}
+                <tr>
+                    {{> p-response}}
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
     <h4>Test it</h4>
     <button class="btn btn--gamma btn--secondary">Clear</button>
     <button class="btn btn--gamma btn--positive btn--primary" data-endpoint="{{Endpoint}}" data-verb="{{Verb}}" data-sample='{{stringifyJSON SampleCall}}'>Execute</button>
