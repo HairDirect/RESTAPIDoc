@@ -10,7 +10,6 @@ samp {
 }
 
 header {
-    @include rem-attribute('padding-bottom', 1);
     @include rem-attribute('padding-left', 1);
     @include rem-attribute('padding-right', 1);
 }

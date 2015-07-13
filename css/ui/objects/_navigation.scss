@@ -3,6 +3,9 @@
 \*------------------------------------*/
 
 .navigation {
+    nav {
+        @include rem-attribute('min-height', 3.125);
+    }
     /*Strip the ul of padding and list styling*/
     ul li, li a {
         width: 100%;
@@ -34,17 +37,15 @@
             }
             /*Hide dropdown links until they are needed*/
             li {
-
                 ul {
                     display: none;
                     /*Make dropdown links vertical*/
                     li {
                         display: block;
-                        /*floa*/t: none;
+                        /*float: none;*/
                         /*Prevent text wrapping*/
                         a {
                             width: auto;
-                            min-width: 100px;
                             @include rem-attribute('min-width', 6.25);
                             padding-top: 0;
                             padding-bottom: 0;
