@@ -1,0 +1,9 @@
+﻿<label for="toggle-menu" class="toggle-menu" data-show-text="Show Menu" data-hide-text="Hide Menu">Show Menu</label>
+<input type="checkbox" id="toggle-menu" role="button">
+<nav id="primary-navigation">
+    <ul id="menu">
+        {{#each this}}
+        <li><a href="#category-{{toLower Name}}">{{Name}}</a></li>
+        {{/each}}
+    </ul>
+</nav>

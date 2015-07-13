@@ -1,8 +1,4 @@
 ﻿/// <reference path="../models/checkout-models.js" />
-/// <reference path="checkout-view.js" />
-/// <reference path="../ui-binding.js" />
-/// <reference path="../models/checkout-models.js" />
-
 var CategoryListView = Backbone.View.extend({
 	//#region -- Backbone Objects --
 	el: "#category-list",
@@ -19,6 +15,7 @@ var CategoryListView = Backbone.View.extend({
 			updateTables();
 		}
 	},
+	//#endregion -- Backbone Objects --
 	actionPrimaryClicked: function (event) {
 		var $this = $(event.target),
 			origText = $this.text(),
@@ -39,5 +36,4 @@ var CategoryListView = Backbone.View.extend({
 	actionSecondaryClicked: function () {
 		$(event.target).siblings("code").html("");
 	}
-	//#endregion -- Backbone Objects --
 });

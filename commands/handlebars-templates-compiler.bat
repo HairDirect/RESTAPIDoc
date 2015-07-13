@@ -1,2 +1,2 @@
 REM compile templates
-handlebars "C:\Git\mikekoser.github.io\templates\category-list.handlebars" -f "C:\Git\mikekoser.github.io\js\hb-templates.js" 
+handlebars "C:\Git\mikekoser.github.io\templates\category-list.handlebars" "C:\Git\mikekoser.github.io\templates\primary-navigation.handlebars" -f "C:\Git\mikekoser.github.io\js\hb-templates.js" 
