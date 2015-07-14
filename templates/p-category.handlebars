@@ -1,6 +1,7 @@
 ﻿<div>
     <h2>{{Name}}</h2>
     <span>{{Description}}</span>
+    <div>Actions: {{#each Actions}}<a class="loz" href="#action-{{toLower Name}}">{{Name}}</a>{{/each}}</div>
     <ul class="grid action-list">
         {{#each Actions}}
         <li class="grid__item one-whole action">

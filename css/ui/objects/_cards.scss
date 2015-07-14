@@ -6,6 +6,8 @@
     border: 1px solid $dark-gray-blue;
     border-radius: 5px;
     @include rem-attribute('padding', .5);
+    @include rem-attribute('margin-top', .5);
+    @include rem-attribute('margin-bottom', .5);
 
     > h3 {
         border-bottom: 1px dashed $dark-gray-blue;

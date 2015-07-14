@@ -1,18 +1,21 @@
-.grid {
-    letter-spacing: -.3em !important;
-	* {
-		letter-spacing: 0;
-	}
-}
+@if $use-grids == true {
+    .grid {
+        letter-spacing: -.3em !important;
 
-/* Opera hack */
-.opera:-o-prefocus,
-.grid {
-    word-spacing: -0.43em;
-}
+        * {
+            letter-spacing: 0;
+        }
+    }
 
-.grid__item {
-    letter-spacing: normal;
-    word-spacing: normal;
-    padding-left: 0;
+    /* Opera hack */
+    .opera:-o-prefocus,
+    .grid {
+        word-spacing: -0.43em;
+    }
+
+    .grid__item {
+        letter-spacing: normal;
+        word-spacing: normal;
+        padding-left: 0;
+    }
 }

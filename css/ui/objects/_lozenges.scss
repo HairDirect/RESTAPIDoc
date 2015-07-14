@@ -1,0 +1,23 @@
+@if $use-lozenges == true {
+
+    /*------------------------------------*\
+    $LOZENGES
+\*------------------------------------*/
+    .pill, .loz {
+        background-color: $dark-gray-blue;
+        color: $darkest-gray-blue;
+    }
+
+    a {
+        &.pill, &.loz {
+            text-decoration: none;
+            @include rem-attribute('margin-left', .25);
+            @include rem-attribute('margin-right', .25);
+            &:hover {
+                background-color: $medium-gray-blue;
+                color: $darker-gray-blue;
+            }
+        }
+    }
+}
+//endif
