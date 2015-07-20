@@ -13,6 +13,8 @@
             text-decoration: none;
             @include rem-attribute('margin-left', .25);
             @include rem-attribute('margin-right', .25);
+            @include rem-attribute('margin-top', .25);
+            @include rem-attribute('margin-bottom', .25);
             &:hover {
                 background-color: $medium-gray-blue;
                 color: $darker-gray-blue;
