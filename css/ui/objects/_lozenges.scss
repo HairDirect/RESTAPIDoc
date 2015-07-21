@@ -6,6 +6,7 @@
     .pill, .loz {
         background-color: $dark-gray-blue;
         color: $darkest-gray-blue;
+        text-shadow: 0 1px 0 $medium-gray-blue;
     }
 
     a {
@@ -18,6 +19,7 @@
             &:hover {
                 background-color: $medium-gray-blue;
                 color: $darker-gray-blue;
+                text-shadow: 0 1px 0 $light-gray-blue;
             }
         }
     }
