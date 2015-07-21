@@ -1468,6 +1468,207 @@
                     ]
                 }
             ]
+        },
+        {
+            "Name": "Manufacturer",
+            "Description": "Interact with product manufacturer data.",
+            "Actions": [
+                {
+                    "Name": "Get Manufacturer List",
+                    "Description": "Gets a list of manufacturer names, urls, and product counts.",
+                    "Endpoint": "/manufacturer.svc/manufacturers/get/links",
+                    "Verb": "POST",
+                    "Payload": [
+                        {
+                            "Name": "CultureCode",
+                            "Type": "string",
+                            "Notes": "Currently the only implemented option is: en-US",
+                            "Required": true
+                        },
+                        {
+                            "Name": "RegionId",
+                            "Type": "long",
+                            "Notes": "",
+                            "Required": true
+                        },
+                        {
+                            "Name": "ShopId",
+                            "Type": "long",
+                            "Notes": "",
+                            "Required": true
+                        }
+                    ],
+                    "Response": [
+                        {
+                            "Name": "ManufacturerLinks",
+                            "Type": "object array",
+                            "Notes": ""
+                        },
+                        {
+                            "Name": "Error",
+                            "Type": "string",
+                            "Notes": "Empty string indicates no errors were encountered"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "Order",
+            "Description": "Interact with storefront order data.",
+            "Actions": [
+                {
+                    "Name": "Process Order",
+                    "Description": "Submits an order placed on the store.",
+                    "Endpoint": "/order.svc/order/set/complete",
+                    "Verb": "POST",
+                    "Payload": [
+                        {
+                            "Name": "CultureCode",
+                            "Type": "string",
+                            "Notes": "Currently the only implemented option is: en-US",
+                            "Required": true
+                        },
+                        {
+                            "Name": "ShippingContactIdEncrypted",
+                            "Type": "string",
+                            "Notes": "",
+                            "Required": true
+                        },
+                        {
+                            "Name": "BillingContactIdEncrypted",
+                            "Type": "string",
+                            "Notes": "",
+                            "Required": true
+                        },
+                        {
+                            "Name": "CarrierShippingMethodId",
+                            "Type": "long",
+                            "Notes": "",
+                            "Required": true
+                        },
+                        {
+                            "Name": "PromotionIdEncrypted",
+                            "Type": "string",
+                            "Notes": "",
+                            "Required": false
+                        },
+                        {
+                            "Name": "PromoCode",
+                            "Type": "string",
+                            "Notes": "",
+                            "Required": false
+                        },
+                        {
+                            "Name": "PayPalPayerId",
+                            "Type": "string",
+                            "Notes": "",
+                            "Required": false
+                        },
+                        {
+                            "Name": "PayPalToken",
+                            "Type": "string",
+                            "Notes": "",
+                            "Required": false
+                        },
+                        {
+                            "Name": "CreditCardWalletIdEncrypted",
+                            "Type": "string",
+                            "Notes": "",
+                            "Required": false
+                        },
+                        {
+                            "Name": "CCOwnerName",
+                            "Type": "string",
+                            "Notes": "",
+                            "Required": false
+                        },
+                        {
+                            "Name": "CCNumber",
+                            "Type": "string",
+                            "Notes": "",
+                            "Required": false
+                        },
+                        {
+                            "Name": "CardType",
+                            "Type": "string",
+                            "Notes": "",
+                            "Required": false
+                        },
+                        {
+                            "Name": "CCExpirationMonth",
+                            "Type": "integer",
+                            "Notes": "",
+                            "Required": false
+                        },
+                        {
+                            "Name": "CCExpirationYear",
+                            "Type": "integer",
+                            "Notes": "",
+                            "Required": false
+                        },
+                        {
+                            "Name": "CCV",
+                            "Type": "string",
+                            "Notes": "",
+                            "Required": false
+                        },
+                        {
+                            "Name": "SpecialInstructions",
+                            "Type": "string",
+                            "Notes": "",
+                            "Required": false
+                        },
+                        {
+                            "Name": "VATId",
+                            "Type": "string",
+                            "Notes": "",
+                            "Required": false
+                        },
+                        {
+                            "Name": "ShoppingCartIdEncrypted",
+                            "Type": "string",
+                            "Notes": "",
+                            "Required": true
+                        },
+                        {
+                            "Name": "RegionId",
+                            "Type": "long",
+                            "Notes": "",
+                            "Required": true
+                        },
+                        {
+                            "Name": "ShopId",
+                            "Type": "long",
+                            "Notes": "",
+                            "Required": true
+                        },
+                        {
+                            "Name": "CurrencyCode",
+                            "Type": "string",
+                            "Notes": "",
+                            "Required": true
+                        }
+                    ],
+                    "Response": [
+                        {
+                            "Name": "OrderData",
+                            "Type": "object",
+                            "Notes": ""
+                        },
+                        {
+                            "Name": "Status",
+                            "Type": "integer",
+                            "Notes": "0 = Complete | 1 = Failed | 2 = PaymentComplete | 3 = PaymentCompleteWithIssues | 4 = PaymentFailed | 5 = Processing"
+                        },
+                        {
+                            "Name": "Error",
+                            "Type": "string",
+                            "Notes": "Empty string indicates no errors were encountered"
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }
