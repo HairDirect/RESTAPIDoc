@@ -249,14 +249,14 @@
                         {
                             "Name": "Contact",
                             "Type": "object",
-                            "Notes": ""
+                            "Notes": "{ 'Id': [[Value]], 'CustomerId': [[Value]], 'FirstName': [[Value]], 'LastName': [[Value]], 'Address': { 'AddressId': [[Value]], 'Street': [[Value]], 'Street2': [[Value]], 'City': [[Value]], 'PostalCode': [[Value]], 'State': [[Value]], 'StateCode': [[Value]], 'Country': [[Value]], 'CountryCode': [[Value]], 'CountryId': [[Value]], 'BackOfficeAddressId': [[Value]], 'CompanyName': [[Value]], 'RegionId': [[Value]] }, 'Email': [[Value]], 'Phone': [[Value]], 'Mobile': [[Value]], 'Fax': [[Value]], 'ShopId': [[Value]], 'IsCustomerDefault': [[Value]], 'IsBillingDefault': [[Value]], 'IsShippingDefault': [[Value]], 'SubscriptionType': [[Value]], 'subscriptionId': [[Value]], 'emailId': [[Value]], 'ContactType': [[Value]], 'SalesforceContactId': [[Value]] }"
                         }
                     ]
                 },
                 {
                     "Name": "Get Customer By Salesforce Account Id",
                     "Description": "Creates a website account for a customer to log into the website.",
-                    "Endpoint": "/account/svc/account/get/by-salesforce-account-id",
+                    "Endpoint": "/account.svc/account/get/by-salesforce-account-id",
                     "Verb": "POST",
                     "Payload": [
                         {
@@ -281,7 +281,7 @@
                         {
                             "Name": "Customer",
                             "Type": "object",
-                            "Notes": ""
+                            "Notes": "{ 'Id': [[Value]], 'ShopId': [[Value]], 'UserId': [[Value]], 'UserName': [[Value]], 'Password': [[Value]], 'SecretQuestion': [[Value]], 'SecretAnswer': [[Value]], 'IsActive': [[Value]], 'DefaultContact': { 'Id': [[Value]], 'CustomerId': [[Value]], 'FirstName': [[Value]], 'LastName': [[Value]], 'Address': { 'AddressId': [[Value]], 'Street': [[Value]], 'Street2': [[Value]], 'City': [[Value]], 'PostalCode': [[Value]], 'State': [[Value]], 'StateCode': [[Value]], 'Country': [[Value]], 'CountryCode': [[Value]], 'CountryId': [[Value]], 'BackOfficeAddressId': [[Value]], 'CompanyName': [[Value]], 'RegionId': [[Value]] }, 'Email': [[Value]], 'Phone': [[Value]], 'Mobile': [[Value]], 'Fax': [[Value]], 'ShopId': [[Value]], 'IsCustomerDefault': [[Value]], 'IsBillingDefault': [[Value]], 'IsShippingDefault': [[Value]], 'SubscriptionType': [[Value]], 'subscriptionId': [[Value]], 'emailId': [[Value]], 'ContactType': [[Value]], 'SalesforceContactId': [[Value]] }, 'ShippingContact': { 'Id': [[Value]], 'CustomerId': [[Value]], 'FirstName': [[Value]], 'LastName': [[Value]], 'Address': { 'AddressId': [[Value]], 'Street': [[Value]], 'Street2': [[Value]], 'City': [[Value]], 'PostalCode': [[Value]], 'State': [[Value]], 'StateCode': [[Value]], 'Country': [[Value]], 'CountryCode': [[Value]], 'CountryId': [[Value]], 'BackOfficeAddressId': [[Value]], 'CompanyName': [[Value]], 'RegionId': [[Value]] }, 'Email': [[Value]], 'Phone': [[Value]], 'Mobile': [[Value]], 'Fax': [[Value]], 'ShopId': [[Value]], 'IsCustomerDefault': [[Value]], 'IsBillingDefault': [[Value]], 'IsShippingDefault': [[Value]], 'SubscriptionType': [[Value]], 'subscriptionId': [[Value]], 'emailId': [[Value]], 'ContactType': [[Value]], 'SalesforceContactId': [[Value]] }, 'BillingContact': { 'Id': [[Value]], 'CustomerId': [[Value]], 'FirstName': [[Value]], 'LastName': [[Value]], 'Address': { 'AddressId': [[Value]], 'Street': [[Value]], 'Street2': [[Value]], 'City': [[Value]], 'PostalCode': [[Value]], 'State': [[Value]], 'StateCode': [[Value]], 'Country': [[Value]], 'CountryCode': [[Value]], 'CountryId': [[Value]], 'BackOfficeAddressId': [[Value]], 'CompanyName': [[Value]], 'RegionId': [[Value]] }, 'Email': [[Value]], 'Phone': [[Value]], 'Mobile': [[Value]], 'Fax': [[Value]], 'ShopId': [[Value]], 'IsCustomerDefault': [[Value]], 'IsBillingDefault': [[Value]], 'IsShippingDefault': [[Value]], 'SubscriptionType': [[Value]], 'subscriptionId': [[Value]], 'emailId': [[Value]], 'ContactType': [[Value]], 'SalesforceContactId': [[Value]] }, 'IsNewsletterSubscribed': [[Value]], 'BackOfficeCustomerID': [[Value]], 'BackOfficeCustomerClass': [[Value]], 'BackOfficeSalesPersonId': [[Value]], 'TrackingId': [[Value]], 'SalesforceAccountId': [[Value]], 'RegistrationId': [[Value]] }"
                         }
                     ]
                 }
@@ -313,7 +313,7 @@
                         {
                             "Name": "Address",
                             "Type": "object",
-                            "Notes": ""
+                            "Notes": "{ 'ContactIdEncrypted': [[Value]], 'BackOfficeAddressId': [[Value]], 'FirstName': [[Value]], 'LastName': [[Value]], 'CountryName': [[Value]], 'CountryCode': [[Value]], 'StreetAddress1': [[Value]], 'StreetAddress2': [[Value]], 'City': [[Value]], 'StateCode': [[Value]], 'StateName': [[Value]], 'PostalCode': [[Value]], 'Phone': [[Value]], 'Company': [[Value]], 'LocationId': [[Value]], 'IsShippingDefault': [[Value]], 'IsBillingDefault': [[Value]], 'SelectedShipping': [[Value]], 'SelectedBilling': [[Value]] }"
                         }
                     ]
                 },
@@ -357,7 +357,7 @@
                         {
                             "Name": "CustomerAddresses",
                             "Type": "object array",
-                            "Notes": ""
+                            "Notes": "[ { 'ContactIdEncrypted': [[Value]], 'BackOfficeAddressId': [[Value]], 'FirstName': [[Value]], 'LastName': [[Value]], 'CountryName': [[Value]], 'CountryCode': [[Value]], 'StreetAddress1': [[Value]], 'StreetAddress2': [[Value]], 'City': [[Value]], 'StateCode': [[Value]], 'StateName': [[Value]], 'PostalCode': [[Value]], 'Phone': [[Value]], 'Company': [[Value]], 'LocationId': [[Value]], 'IsShippingDefault': [[Value]], 'IsBillingDefault': [[Value]], 'SelectedShipping': [[Value]], 'SelectedBilling': [[Value]] } ]"
                         }
                     ],
                     "SampleCall": {
@@ -832,7 +832,7 @@
                         {
                             "Name": "Contact",
                             "Type": "object",
-                            "Notes": ""
+                            "Notes": "{ 'Id': [[Value]], 'CustomerId': [[Value]], 'FirstName': [[Value]], 'LastName': [[Value]], 'Address': { 'AddressId': [[Value]], 'Street': [[Value]], 'Street2': [[Value]], 'City': [[Value]], 'PostalCode': [[Value]], 'State': [[Value]], 'StateCode': [[Value]], 'Country': [[Value]], 'CountryCode': [[Value]], 'CountryId': [[Value]], 'BackOfficeAddressId': [[Value]], 'CompanyName': [[Value]], 'RegionId': [[Value]] }, 'Email': [[Value]], 'Phone': [[Value]], 'Mobile': [[Value]], 'Fax': [[Value]], 'ShopId': [[Value]], 'IsCustomerDefault': [[Value]], 'IsBillingDefault': [[Value]], 'IsShippingDefault': [[Value]], 'SubscriptionType': [[Value]], 'subscriptionId': [[Value]], 'emailId': [[Value]], 'ContactType': [[Value]], 'SalesforceContactId': [[Value]] }"
                         },
                         {
                             "Name": "Error",
@@ -1032,7 +1032,7 @@
                         {
                             "Name": "Customer",
                             "Type": "object",
-                            "Notes": ""
+                            "Notes": "{ 'SalesforceAccountId': [[Value]], 'BackOfficeCustomerId': [[Value]], 'FirstName': [[Value]], 'LastName': [[Value]], 'BackOfficeSalespersonId': [[Value]], 'Username': [[Value]], 'Email': [[Value]], 'ShippingContact': { 'ContactId': [[Value]], 'BackOfficeAddressId': [[Value]], 'SalesforceContactId': [[Value]], 'FirstName': [[Value]], 'LastName': [[Value]], 'CountryName': [[Value]], 'CountryCode': [[Value]], 'StreetAddress1': [[Value]], 'StreetAddress2': [[Value]], 'City': [[Value]], 'StateCode': [[Value]], 'StateName': [[Value]], 'PostalCode': [[Value]], 'Phone': [[Value]], 'Company': [[Value]] }, 'BillingContact': { 'ContactId': [[Value]], 'BackOfficeAddressId': [[Value]], 'SalesforceContactId': [[Value]], 'FirstName': [[Value]], 'LastName': [[Value]], 'CountryName': [[Value]], 'CountryCode': [[Value]], 'StreetAddress1': [[Value]], 'StreetAddress2': [[Value]], 'City': [[Value]], 'StateCode': [[Value]], 'StateName': [[Value]], 'PostalCode': [[Value]], 'Phone': [[Value]], 'Company': [[Value]] } }"
                         },
                         {
                             "Name": "Error",
@@ -1076,7 +1076,7 @@
                         {
                             "Name": "DepartmentLinks",
                             "Type": "object array",
-                            "Notes": ""
+                            "Notes": "[ { 'ParentName': [[Value]], 'DepartmentLinkChildren': [ { 'Name': [[Value]], 'Url': [[Value]], 'NumberOfProducts': [[Value]] } ] } ]"
                         },
                         {
                             "Name": "Error",
@@ -1299,7 +1299,7 @@
                         {
                             "Name": "Countries",
                             "Type": "object array",
-                            "Notes": ""
+                            "Notes": "[ { 'Id': [[Value]], 'Name': [[Value]], 'Code': [[Value]], 'FirstName': [[Value]], 'LastName': [[Value]], 'CountryName': [[Value]], 'CountryCode': [[Value]], 'RegionId': [[Value]] } ]"
                         },
                         {
                             "Name": "Error",
@@ -1331,7 +1331,7 @@
                         {
                             "Name": "Locations",
                             "Type": "object array",
-                            "Notes": ""
+                            "Notes": "[ { 'Code': [[Value]], 'Name': [[Value]] } ]"
                         },
                         {
                             "Name": "Error",
@@ -1502,7 +1502,7 @@
                         {
                             "Name": "ManufacturerLinks",
                             "Type": "object array",
-                            "Notes": ""
+                            "Notes": "[ { 'Name': [[Value]], 'Url': [[Value]], 'NumberOfProducts': [[Value]] } ]"
                         },
                         {
                             "Name": "Error",
@@ -1654,13 +1654,2046 @@
                         {
                             "Name": "OrderData",
                             "Type": "object",
-                            "Notes": ""
+                            "Notes": "{ 'OrderId': [[Value]], 'BackOfficeOrderNumber': [[Value]], 'CurrencyId': [[Value]], 'RegionTaxRate': [[Value]], 'OrderTaxRate': [[Value]], 'ExchangeRate': [[Value]], 'SpecialInstructions': [[Value]], 'ShippingContactId': [[Value]], 'BillingContactId': [[Value]], 'CarrierID': [[Value]], 'ShippingCharge': [[Value]], 'BackOfficeShippingMethod': [[Value]], 'PromoCode': [[Value]], 'PromotionSavings': [[Value]], 'OrderSubtotal': [[Value]], 'OrderTaxAmount': [[Value]], 'FreightTaxAmount': [[Value]], 'OrderGrandTotal': [[Value]], 'OrderStatusId': [[Value]], 'OrderItems': [ { 'SelectedItemId': [[Value]], 'ProductId': [[Value]], 'SKU': [[Value]], 'Department': [[Value]], 'Quantity': [[Value]], 'IsVariation': [[Value]], 'PromotionId': [[Value]], 'UnitPrice': [[Value]], 'UnitDiscount': [[Value]], 'TaxAmount': [[Value]], 'Description': [[Value]] } ] }"
                         },
                         {
                             "Name": "Status",
                             "Type": "integer",
                             "Notes": "0 = Complete | 1 = Failed | 2 = PaymentComplete | 3 = PaymentCompleteWithIssues | 4 = PaymentFailed | 5 = Processing"
                         },
+                        {
+                            "Name": "Error",
+                            "Type": "string",
+                            "Notes": "Empty string indicates no errors were encountered"
+                        }
+                    ]
+                },
+                {
+                    "Name": "Delete Order",
+                    "Description": "Deletes and order from the store.",
+                    "Endpoint": "/order.svc/order/set/delete",
+                    "Verb": "POST",
+                    "Payload": [
+                        {
+                            "Name": "CultureCode",
+                            "Type": "string",
+                            "Notes": "Currently the only implemented option is: en-US",
+                            "Required": true
+                        },
+                        {
+                            "Name": "ShoppingCartIdEncrypted",
+                            "Type": "string",
+                            "Notes": "",
+                            "Required": true
+                        }
+                    ],
+                    "Response": [
+                        {
+                            "Name": "Error",
+                            "Type": "string",
+                            "Notes": "Empty string indicates no errors were encountered"
+                        }
+                    ]
+                },
+                {
+                    "Name": "Get Pending Integration Queue Records",
+                    "Description": "Gets all integration queue records with a status of 'pending'.",
+                    "Endpoint": "/order.svc/order/get/pending-order-queue-records",
+                    "Verb": "POST",
+                    "Payload": [
+                        {
+                            "Name": "CreatedAfter",
+                            "Type": "string",
+                            "Notes": "A datetime string.",
+                            "Required": false
+                        }
+                    ],
+                    "Response": [
+                        {
+                            "Name": "Records",
+                            "Type": "object array",
+                            "Notes": "[ { 'Id': [[Value]], 'OrderQueueID': [[Value]], 'BatchId': [[Value]], 'Type': [[Value]], 'Params': [[Value]] } ]"
+                        },
+                        {
+                            "Name": "Error",
+                            "Type": "string",
+                            "Notes": "Empty string indicates no errors were encountered"
+                        }
+                    ]
+                },
+                {
+                    "Name": "Get Order Details",
+                    "Description": "Gets the details of an order.",
+                    "Endpoint": "/order.svc/order/get/order-details",
+                    "Verb": "POST",
+                    "Payload": [
+                        {
+                            "Name": "CultureCode",
+                            "Type": "string",
+                            "Notes": "Currently the only implemented option is: en-US",
+                            "Required": true
+                        },
+                        {
+                            "Name": "OrderId",
+                            "Type": "long",
+                            "Notes": "",
+                            "Required": true
+                        }
+                    ],
+                    "Response": [
+                        {
+                            "Name": "OrderDetail",
+                            "Type": "object",
+                            "Notes": "{ 'Summary':{ 'VATId': [[Value]], 'Id': [[Value]], 'ParentOrderId': [[Value]], 'ExternalId':' [[Value]]', 'CustomerId': [[Value]], 'OrderStatus': [[Value]], 'OrderDate': [[Value]], 'OrderCurrency': [[Value]], 'TaxRate': [[Value]], 'PromotionCode': [[Value]], 'PromotionSavings': [[Value]], 'ExchangeRate': [[Value]], 'Notes': [[Value]], 'OrderAmount': [[Value]], 'OrderTotal': [[Value]], 'CustomerName': [[Value]] }, 'DefaultBillingContact':{ 'Id': [[Value]], 'CustomerId': [[Value]], 'FirstName': [[Value]], 'LastName': [[Value]], 'Address':{ 'AddressId': [[Value]], 'Street': [[Value]], 'Street2': [[Value]], 'City': [[Value]], 'PostalCode': [[Value]], 'State': [[Value]], 'StateCode': [[Value]], 'Country': [[Value]], 'CountryCode': [[Value]], 'CountryId': [[Value]], 'BackOfficeAddressId': [[Value]], 'CompanyName': [[Value]], 'RegionId': [[Value]] }, 'Email': [[Value]], 'Phone': [[Value]], 'Mobile': [[Value]], 'Fax': [[Value]], 'ShopId': [[Value]], 'IsCustomerDefault': [[Value]], 'IsBillingDefault': [[Value]], 'IsShippingDefault': [[Value]], 'SubscriptionType': [[Value]], 'subscriptionId': [[Value]], 'emailId': [[Value]], 'ContactType': [[Value]], 'SalesforceContactId': [[Value]] }, 'DefaultShippingContact':{ 'Id': [[Value]], 'CustomerId': [[Value]], 'FirstName': [[Value]], 'LastName': [[Value]], 'Address':{ 'AddressId': [[Value]], 'Street': [[Value]], 'Street2': [[Value]], 'City': [[Value]], 'PostalCode': [[Value]], 'State': [[Value]], 'StateCode': [[Value]], 'Country': [[Value]], 'CountryCode': [[Value]], 'CountryId': [[Value]], 'BackOfficeAddressId': [[Value]], 'CompanyName': [[Value]], 'RegionId': [[Value]] }, 'Email': [[Value]], 'Phone': [[Value]], 'Mobile': [[Value]], 'Fax': [[Value]], 'ShopId': [[Value]], 'IsCustomerDefault': [[Value]], 'IsBillingDefault': [[Value]], 'IsShippingDefault': [[Value]], 'SubscriptionType': [[Value]], 'subscriptionId': [[Value]], 'emailId': [[Value]], 'ContactType': [[Value]], 'SalesforceContactId': [[Value]] }, 'LineItems':[ { 'ProductUrl': [[Value]], 'SKU': [[Value]], 'ItemId': [[Value]], 'ProductName': [[Value]], 'UnitListPrice': [[Value]], 'UnitSalePrice': [[Value]], 'Quantity': [[Value]], 'TotalPrice': [[Value]], 'Variations': [[Value]], 'Discount': [[Value]], 'ShippingInfo':{ 'LineItemId': [[Value]], 'ShipmentId': [[Value]], 'Amount': [[Value]], 'Contact':{ 'Id': [[Value]], 'CustomerId': [[Value]], 'FirstName': [[Value]], 'LastName': [[Value]], 'Address':{ 'AddressId': [[Value]], 'Street': [[Value]], 'Street2': [[Value]], 'City': [[Value]], 'PostalCode': [[Value]], 'State': [[Value]], 'StateCode': [[Value]], 'Country': [[Value]], 'CountryCode': [[Value]], 'CountryId': [[Value]], 'BackOfficeAddressId': [[Value]], 'CompanyName': [[Value]], 'RegionId': [[Value]] }, 'Email': [[Value]], 'Phone': [[Value]], 'Mobile': [[Value]], 'Fax': [[Value]], 'ShopId': [[Value]], 'IsCustomerDefault': [[Value]], 'IsBillingDefault': [[Value]], 'IsShippingDefault': [[Value]], 'SubscriptionType': [[Value]], 'subscriptionId': [[Value]], 'emailId': [[Value]], 'ContactType': [[Value]], 'SalesforceContactId': [[Value]] }, 'CarrierId': [[Value]], 'Carrier': [[Value]], 'ShippingTypeName': [[Value]], 'ShippingTypeCode': [[Value]], 'ExpectedShippingDate': [[Value]], 'TrackingNumber': [[Value]], 'ShipDate': [[Value]], 'LineItemStatus': [[Value]]', 'LineItemStatusId': [[Value]] }, 'DigitalDownlods': [[Value]], 'Collaterlas': [[Value]], 'BackOrderQuantity': [[Value]], 'ProductId': [[Value]], 'ModelNumber' [[Value]], 'Tax': [[Value]], 'IsRestricted': [[Value]], 'IsVariation': [[Value]] } ], 'AdditionalCharges':[ { 'Id': [[Value]], 'Name': [[Value]], 'Amount': [[Value]] } ], 'ShippingCharge': [[Value]], 'ExtraCharge': [[Value]], 'HandlingCharge': [[Value]], 'TaxCharge': [[Value]], 'FreightTaxCharge': [[Value]], 'Discounts':[ { 'Id': [[Value]], 'Name': [[Value]], 'Amount': [[Value]] } ], 'PriceDiscount': [[Value]], 'UserDiscount': [[Value]], 'CustomerDiscount': [[Value]], 'Payments':[ { 'AccountName': [[Value]], 'CardType': [[Value]], 'Csc': [[Value]], 'Expiry': [[Value]], 'BackOfficeCustomerId': [[Value]], 'CustomerProfileId': [[Value]], 'PaymentProfileId': [[Value]], 'Id': [[Value]], 'AccountNumber': [[Value]], 'Type': [[Value]], 'SubType': [[Value]], 'Amount': [[Value]], 'TotalTaxAmount': [[Value]],  'ShippingAmount': [[Value]], 'Status': [[Value]], 'Contact':{ 'Id': [[Value]], 'CustomerId': [[Value]], 'FirstName': [[Value]]', 'LastName': [[Value]], 'Address':{ 'AddressId': [[Value]], 'Street': [[Value]], 'Street2': [[Value]], 'City': [[Value]], 'PostalCode': [[Value]], 'State': [[Value]], 'StateCode': [[Value]], 'Country': [[Value]], 'CountryCode': [[Value]], 'CountryId': [[Value]], 'BackOfficeAddressId': [[Value]], 'CompanyName': [[Value]], 'RegionId': [[Value]] }, 'Email': [[Value]], 'Phone': [[Value]], 'Mobile': [[Value]], 'Fax': [[Value]], 'ShopId': [[Value]], 'IsCustomerDefault': [[Value]], 'IsBillingDefault': [[Value]], 'IsShippingDefault': [[Value]], 'SubscriptionType': [[Value]], 'subscriptionId': [[Value]], 'emailId': [[Value]], 'ContactType': [[Value]], 'SalesforceContactId': [[Value]] }, 'Comments': [[Value]], 'TransactionId': [[Value]], 'AuthorizationCode': [[Value]], 'CreditCardId': [[Value]], 'ResponseCode': [[Value]], 'Message': [[Value]], 'AvsResponse': [[Value]], 'CCVResponse': [[Value]], 'InWallet': [[Value]], 'Declined': [[Value]] } ], 'Customer':{ 'SalesforceAccountId': [[Value]], 'CustomerId': [[Value]], 'Contact':{ 'Id': [[Value]], 'CustomerId': [[Value]], 'FirstName': [[Value]], 'LastName': [[Value]], 'Address':{ 'AddressId': [[Value]], 'Street': [[Value]], 'Street2': [[Value]], 'City': [[Value]], 'PostalCode': [[Value]], 'State': [[Value]], 'StateCode': [[Value]], 'Country': [[Value]], 'CountryCode': [[Value]], 'CountryId': [[Value]], 'BackOfficeAddressId': [[Value]], 'CompanyName': [[Value]], 'RegionId': [[Value]] }, 'Email': [[Value]], 'Phone': [[Value]], 'Mobile': [[Value]], 'Fax': [[Value]], 'ShopId': [[Value]], 'IsCustomerDefault': [[Value]], 'IsBillingDefault': [[Value]], 'IsShippingDefault': [[Value]], 'SubscriptionType': [[Value]], 'subscriptionId': [[Value]], 'emailId': [[Value]], 'ContactType': [[Value]], 'SalesforceContactId': [[Value]] } }, 'CustomerGroupDiscount': [[Value]], 'ShippingMethod': [[Value]] }"
+                        },
+                        {
+                            "Name": "Error",
+                            "Type": "string",
+                            "Notes": "Empty string indicates no errors were encountered"
+                        }
+                    ]
+                },
+                {
+                    "Name": "Check Integration Queue Batch For Failures",
+                    "Description": "Checks to see if there is a failed integration queue record that is in the same batch as the supplied order queue record.",
+                    "Endpoint": "/order.svc/integration-queue/get/check-batch-for-errors",
+                    "Verb": "POST",
+                    "Payload": [
+                        {
+                            "Name": "BatchId",
+                            "Type": "long",
+                            "Notes": "",
+                            "Required": true
+                        },
+                        {
+                            "Name": "OrderQueueId",
+                            "Type": "long",
+                            "Notes": "",
+                            "Required": true
+                        }
+                    ],
+                    "Response": [
+                        {
+                            "Name": "failureExists",
+                            "Type": "boolean",
+                            "Notes": ""
+                        },
+                        {
+                            "Name": "Error",
+                            "Type": "string",
+                            "Notes": "Empty string indicates no errors were encountered"
+                        }
+                    ]
+                },
+                {
+                    "Name": "Update Integration Queue Record",
+                    "Description": "Updates the status and message on an integration queue record.",
+                    "Endpoint": "/order.svc/integration-queue/set/status-and-message",
+                    "Verb": "POST",
+                    "Payload": [
+                        {
+                            "Name": "OrderQueueId",
+                            "Type": "long",
+                            "Notes": "",
+                            "Required": true
+                        },
+                        {
+                            "Name": "Status",
+                            "Type": "integer",
+                            "Notes": "0 = Pending | 1 = Succeeded | 2 = Failed | 3 = Processing",
+                            "Required": true
+                        },
+                        {
+                            "Name": "Message",
+                            "Type": "long",
+                            "Notes": "",
+                            "Required": false
+                        }
+                    ],
+                    "Response": [
+                        {
+                            "Name": "OrderQueueId",
+                            "Type": "long",
+                            "Notes": ""
+                        },
+                        {
+                            "Name": "Error",
+                            "Type": "string",
+                            "Notes": "Empty string indicates no errors were encountered"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "Payment",
+            "Description": "Interact with storefront payment data.",
+            "Actions": [
+                {
+                    "Name": "Get Customer Credit Card Wallet",
+                    "Description": "Gets the credit cards stored on a customer's account.",
+                    "Endpoint": "/payment.svc/wallet/get/by-customer-id",
+                    "Verb": "POST",
+                    "Payload": [
+                        {
+                            "Name": "CultureCode",
+                            "Type": "string",
+                            "Notes": "Currently the only implemented option is: en-US",
+                            "Required": true
+                        },
+                        {
+                            "Name": "CustomerIdEncrypted",
+                            "Type": "string",
+                            "Notes": "",
+                            "Required": true
+                        },
+                        {
+                            "Name": "SelectedCardIdEncrypted",
+                            "Type": "string",
+                            "Notes": "",
+                            "Required": false
+                        }
+                    ],
+                    "Response": [
+                        {
+                            "Name": "Wallet",
+                            "Type": "object array",
+                            "Notes": "[ { 'PaymentProfileIdEncrypted': [[Value]], 'CustomerProfileId': [[Value]], 'LastFour': [[Value]], 'NameOnCard': [[Value]], 'ExpirationMonth': [[Value]], 'ExpirationYear': [[Value]], 'CardType': [[Value]], 'CardNumber': [[Value]], 'CCV': [[Value]], 'IsDefault': [[Value]], 'IsSelected': [[Value]] } ]"
+                        },
+                        {
+                            "Name": "Error",
+                            "Type": "string",
+                            "Notes": "Empty string indicates no errors were encountered"
+                        }
+                    ]
+                },
+                {
+                    "Name": "Add/Update Wallet Card",
+                    "Description": "Updates a card stored in a customer’s wallet.",
+                    "Endpoint": "/payment.svc/wallet/set/credit-card",
+                    "Verb": "POST",
+                    "Payload": [
+                        {
+                            "Name": "CultureCode",
+                            "Type": "string",
+                            "Notes": "Currently the only implemented option is: en-US",
+                            "Required": true
+                        },
+                        {
+                            "Name": "ContactIdEncrypted",
+                            "Type": "string",
+                            "Notes": "",
+                            "Required": true
+                        },
+                        {
+                            "Name": "CreditCard",
+                            "Type": "object",
+                            "Notes": "{ 'PaymentProfileIdEncrypted': [[Value]], 'CustomerProfileId': [[Value]], 'LastFour': [[Value]], 'NameOnCard': [[Value]], 'ExpirationMonth': [[Value]], 'ExpirationYear': [[Value]], 'CardType': [[Value]], 'CardNumber': [[Value]], 'CCV': [[Value]], 'IsDefault': [[Value]], 'IsSelected': [[Value]] }",
+                            "Required": true
+                        },
+                        {
+                            "Name": "Address",
+                            "Type": "object",
+                            "Notes": "{ 'FirstName': [[Value]], 'LastName': [[Value]], 'Country': [[Value]], 'StreetAddress': [[Value]], 'City': [[Value]], 'State': [[Value]], 'PostalCode': [[Value]], 'Phone': [[Value]] }",
+                            "Required": true
+                        }
+                    ],
+                    "Response": [
+                        {
+                            "Name": "CardIdEncrypted",
+                            "Type": "string",
+                            "Notes": ""
+                        },
+                        {
+                            "Name": "Error",
+                            "Type": "string",
+                            "Notes": "Empty string indicates no errors were encountered"
+                        }
+                    ]
+                },
+                {
+                    "Name": "Delete Wallet Card",
+                    "Description": "Deletes a card stored from customer’s wallet.",
+                    "Endpoint": "/payment.svc/wallet/delete/credit-card",
+                    "Verb": "POST",
+                    "Payload": [
+                        {
+                            "Name": "CultureCode",
+                            "Type": "string",
+                            "Notes": "Currently the only implemented option is: en-US",
+                            "Required": true
+                        },
+                        {
+                            "Name": "CardIdEncrypted",
+                            "Type": "string",
+                            "Notes": "",
+                            "Required": true
+                        }
+                    ],
+                    "Response": [
+                        {
+                            "Name": "Error",
+                            "Type": "string",
+                            "Notes": "Empty string indicates no errors were encountered"
+                        }
+                    ]
+                },
+                {
+                    "Name": "Get PayPal Express Checkout URL",
+                    "Description": "Gets a URL to initiate the express checkout process for a customer.",
+                    "Endpoint": "/payment.svc/paypal/get/express-checkout-url",
+                    "Verb": "POST",
+                    "Payload": [
+                        {
+                            "Name": "CultureCode",
+                            "Type": "string",
+                            "Notes": "Currently the only implemented option is: en-US",
+                            "Required": true
+                        },
+                        {
+                            "Name": "ShippingContactIdEncrypted",
+                            "Type": "string",
+                            "Notes": "",
+                            "Required": true
+                        },
+                        {
+                            "Name": "PromoCode",
+                            "Type": "string",
+                            "Notes": "",
+                            "Required": false
+                        },
+                        {
+                            "Name": "ShoppingCartIdEncrypted",
+                            "Type": "string",
+                            "Notes": "",
+                            "Required": true
+                        },
+                        {
+                            "Name": "RegionId",
+                            "Type": "long",
+                            "Notes": "",
+                            "Required": true
+                        },
+                        {
+                            "Name": "ShopIdEncrypted",
+                            "Type": "string",
+                            "Notes": "",
+                            "Required": true
+                        },
+                        {
+                            "Name": "CurrencyCode",
+                            "Type": "string",
+                            "Notes": "",
+                            "Required": true
+                        }
+                    ],
+                    "Response": [
+                        {
+                            "Name": "ExpressCheckoutUrl",
+                            "Type": "string",
+                            "Notes": ""
+                        },
+                        {
+                            "Name": "Error",
+                            "Type": "string",
+                            "Notes": "Empty string indicates no errors were encountered"
+                        }
+                    ]
+                },
+                {
+                    "Name": "Get PayPal Express Checkout Details",
+                    "Description": "Gets the details of the express checkout response.",
+                    "Endpoint": "/payment.svc/paypal/get/express-checkout-details",
+                    "Verb": "POST",
+                    "Payload": [
+                        {
+                            "Name": "CultureCode",
+                            "Type": "string",
+                            "Notes": "Currently the only implemented option is: en-US",
+                            "Required": true
+                        },
+                        {
+                            "Name": "Token",
+                            "Type": "string",
+                            "Notes": "",
+                            "Required": true
+                        },
+                        {
+                            "Name": "BatchId",
+                            "Type": "string",
+                            "Notes": "",
+                            "Required": false
+                        },
+                        {
+                            "Name": "CustomerIdEncrypted",
+                            "Type": "string",
+                            "Notes": "",
+                            "Required": true
+                        },
+                        {
+                            "Name": "ShopIdEncrypted",
+                            "Type": "string",
+                            "Notes": "",
+                            "Required": true
+                        }
+                    ],
+                    "Response": [
+                        {
+                            "Name": "Error",
+                            "Type": "string",
+                            "Notes": "Empty string indicates no errors were encountered"
+                        }
+                    ]
+                },
+                {
+                    "Name": "Get Credit Card Payment By Id",
+                    "Description": "Gets the details of a credit card payment.",
+                    "Endpoint": "/payment.svc/credit-card/get/payment-by-id",
+                    "Verb": "POST",
+                    "Payload": [
+                        {
+                            "Name": "paymentId",
+                            "Type": "long",
+                            "Notes": "",
+                            "Required": true
+                        }
+                    ],
+                    "Response": [
+                        {
+                            "Name": "Payment",
+                            "Type": "object",
+                            "Notes": "{ 'Id': [[Value]], 'AccountNumber': [[Value]], 'Type': [[Value]], 'SubType': [[Value]], 'Amount': [[Value]], 'TotalTaxAmount': [[Value]], 'ShippingAmount': [[Value]], 'Status': [[Value]], 'Contact': { 'Id': [[Value]], 'CustomerId': [[Value]], 'FirstName': [[Value]], 'LastName': [[Value]], 'Address': { 'AddressId': [[Value]], 'Street': [[Value]], 'Street2': [[Value]], 'City': [[Value]], 'PostalCode': [[Value]], 'State': [[Value]], 'StateCode': [[Value]], 'Country': [[Value]], 'CountryCode': [[Value]], 'CountryId': [[Value]], 'BackOfficeAddressId': [[Value]], 'CompanyName': [[Value]], 'RegionId': [[Value]] }, 'Email': [[Value]], 'Phone': [[Value]], 'Mobile': [[Value]], 'Fax': [[Value]], 'ShopId': [[Value]], 'IsCustomerDefault': [[Value]], 'IsBillingDefault': [[Value]], 'IsShippingDefault': [[Value]], 'SubscriptionType': [[Value]], 'subscriptionId': [[Value]], 'emailId': [[Value]], 'ContactType': [[Value]], 'SalesforceContactId': [[Value]] }, 'Comments': [[Value]], 'TransactionId': [[Value]], 'AuthorizationCode': [[Value]], 'CreditCardId': [[Value]], 'ResponseCode': [[Value]], 'Message': [[Value]], 'AvsResponse': [[Value]], 'CCVResponse': [[Value]], 'InWallet': [[Value]], 'Declined': [[Value]], 'CustomerProfileId': [[Value]], 'PaymentProfileId': [[Value]] }"
+                        },
+                        {
+                            "Name": "Error",
+                            "Type": "string",
+                            "Notes": "Empty string indicates no errors were encountered"
+                        }
+                    ]
+                },
+                {
+                    "Name": "Get Credit Card Details By Id",
+                    "Description": "Gets the details of a credit card used as payment on an order.",
+                    "Endpoint": "/payment.svc/credit-card/get/details-by-id",
+                    "Verb": "POST",
+                    "Payload": [
+                        {
+                            "Name": "CreditCardId",
+                            "Type": "long",
+                            "Notes": "",
+                            "Required": true
+                        }
+                    ],
+                    "Response": [
+                        {
+                            "Name": "CreditCard",
+                            "Type": "object",
+                            "Notes": "{ 'CardType': [[Value]], 'NameOnCard': [[Value]], 'ExpMonth': [[Value]], 'ExpYear': [[Value]], 'LastFour': [[Value]], 'ContactId': [[Value]] }"
+                        },
+                        {
+                            "Name": "Error",
+                            "Type": "string",
+                            "Notes": "Empty string indicates no errors were encountered"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "Product",
+            "Description": "Interact with storefront product data.",
+            "Actions": [
+                {
+                    "Name": "Get Featured Products",
+                    "Description": "Gets the current list of featured products.",
+                    "Endpoint": "/product.svc/products/get/featured",
+                    "Verb": "POST",
+                    "Payload": [
+                        {
+                            "Name": "CultureCode",
+                            "Type": "string",
+                            "Notes": "Currently the only implemented option is: en-US",
+                            "Required": true
+                        },
+                        {
+                            "Name": "RowsToReturn",
+                            "Type": "integer",
+                            "Notes": "",
+                            "Required": true
+                        },
+                        {
+                            "Name": "RegionId",
+                            "Type": "long",
+                            "Notes": "",
+                            "Required": true
+                        },
+                        {
+                            "Name": "ShopId",
+                            "Type": "long",
+                            "Notes": "",
+                            "Required": true
+                        },
+                        {
+                            "Name": "CurrencyCode",
+                            "Type": "string",
+                            "Notes": "",
+                            "Required": true
+                        },
+                        {
+                            "Name": "RegionTax",
+                            "Type": "decimal",
+                            "Notes": "",
+                            "Required": false
+                        },
+                        {
+                            "Name": "CountryCode",
+                            "Type": "long",
+                            "Notes": "",
+                            "Required": false
+                        }
+                    ],
+                    "Response": [
+                        {
+                            "Name": "Products",
+                            "Type": "object array",
+                            "Notes": "[ { 'Id': [[Value]], 'Name': [[Value]], 'Url': [[Value]], 'Img': [[Value]], 'Rating': [[Value]], 'List': [[Value]], 'Selling': [[Value]], 'MnfrName': [[Value]], 'MnfrUrl': [[Value]], 'HasVariation': [[Value]], 'Options': [[Value]], 'Tag': [[Value]], 'Orderable': [[Value]] } ]"
+                        },
+                        {
+                            "Name": "Error",
+                            "Type": "string",
+                            "Notes": "Empty string indicates no errors were encountered"
+                        }
+                    ]
+                },
+                {
+                    "Name": "Get Related Products",
+                    "Description": "Gets related products for a specific product.",
+                    "Endpoint": "/product.svc/product/get/related",
+                    "Verb": "POST",
+                    "Payload": [
+                        {
+                            "Name": "CultureCode",
+                            "Type": "string",
+                            "Notes": "Currently the only implemented option is: en-US",
+                            "Required": true
+                        },
+                        {
+                            "Name": "ProductId",
+                            "Type": "long",
+                            "Notes": "",
+                            "Required": true
+                        },
+                        {
+                            "Name": "RegionId",
+                            "Type": "long",
+                            "Notes": "",
+                            "Required": true
+                        },
+                        {
+                            "Name": "ShopId",
+                            "Type": "long",
+                            "Notes": "",
+                            "Required": true
+                        },
+                        {
+                            "Name": "CurrencyCode",
+                            "Type": "string",
+                            "Notes": "",
+                            "Required": true
+                        },
+                        {
+                            "Name": "RegionTax",
+                            "Type": "decimal",
+                            "Notes": "",
+                            "Required": false
+                        },
+                        {
+                            "Name": "CountryCode",
+                            "Type": "long",
+                            "Notes": "",
+                            "Required": false
+                        }
+                    ],
+                    "Response": [
+                        {
+                            "Name": "Products",
+                            "Type": "object array",
+                            "Notes": "[ { 'Id': [[Value]], 'Name': [[Value]], 'Url': [[Value]], 'Img': [[Value]], 'Rating': [[Value]], 'List': [[Value]], 'Selling': [[Value]], 'MnfrName': [[Value]], 'MnfrUrl': [[Value]], 'HasVariation': [[Value]], 'Options': [[Value]], 'Tag': [[Value]], 'Orderable': [[Value]] } ]"
+                        },
+                        {
+                            "Name": "Error",
+                            "Type": "string",
+                            "Notes": "Empty string indicates no errors were encountered"
+                        }
+                    ]
+                },
+                {
+                    "Name": "Get Alternate Products",
+                    "Description": "Gets alternate products for a specific product.",
+                    "Endpoint": "/product.svc/product/get/alternate",
+                    "Verb": "POST",
+                    "Payload": [
+                        {
+                            "Name": "CultureCode",
+                            "Type": "string",
+                            "Notes": "Currently the only implemented option is: en-US",
+                            "Required": true
+                        },
+                        {
+                            "Name": "ProductId",
+                            "Type": "long",
+                            "Notes": "",
+                            "Required": true
+                        },
+                        {
+                            "Name": "RegionId",
+                            "Type": "long",
+                            "Notes": "",
+                            "Required": true
+                        },
+                        {
+                            "Name": "ShopId",
+                            "Type": "long",
+                            "Notes": "",
+                            "Required": true
+                        },
+                        {
+                            "Name": "CurrencyCode",
+                            "Type": "string",
+                            "Notes": "",
+                            "Required": true
+                        },
+                        {
+                            "Name": "RegionTax",
+                            "Type": "decimal",
+                            "Notes": "",
+                            "Required": false
+                        },
+                        {
+                            "Name": "CountryCode",
+                            "Type": "long",
+                            "Notes": "",
+                            "Required": false
+                        }
+                    ],
+                    "Response": [
+                        {
+                            "Name": "Products",
+                            "Type": "object array",
+                            "Notes": "[ { 'Id': [[Value]], 'Name': [[Value]], 'Url': [[Value]], 'Img': [[Value]], 'Rating': [[Value]], 'List': [[Value]], 'Selling': [[Value]], 'MnfrName': [[Value]], 'MnfrUrl': [[Value]], 'HasVariation': [[Value]], 'Options': [[Value]], 'Tag': [[Value]], 'Orderable': [[Value]] } ]"
+                        },
+                        {
+                            "Name": "Error",
+                            "Type": "string",
+                            "Notes": "Empty string indicates no errors were encountered"
+                        }
+                    ]
+                },
+                {
+                    "Name": "Get Product Downloads",
+                    "Description": "Gets digital downloads for a specific product.",
+                    "Endpoint": "/product.svc/product/get/downloads",
+                    "Verb": "POST",
+                    "Payload": [
+                        {
+                            "Name": "CultureCode",
+                            "Type": "string",
+                            "Notes": "Currently the only implemented option is: en-US",
+                            "Required": true
+                        },
+                        {
+                            "Name": "ProductId",
+                            "Type": "long",
+                            "Notes": "",
+                            "Required": true
+                        }
+                    ],
+                    "Response": [
+                        {
+                            "Name": "Downloads",
+                            "Type": "object array",
+                            "Notes": "[ { 'Url': [[Value]], 'Name': [[Value]] } ]"
+                        },
+                        {
+                            "Name": "Error",
+                            "Type": "string",
+                            "Notes": "Empty string indicates no errors were encountered"
+                        }
+                    ]
+                },
+                {
+                    "Name": "Get Product Messages",
+                    "Description": "Gets custom messaging for a specific product.",
+                    "Endpoint": "/product.svc/product/get/messages",
+                    "Verb": "POST",
+                    "Payload": [
+                        {
+                            "Name": "CultureCode",
+                            "Type": "string",
+                            "Notes": "Currently the only implemented option is: en-US",
+                            "Required": true
+                        },
+                        {
+                            "Name": "ProductId",
+                            "Type": "long",
+                            "Notes": "",
+                            "Required": true
+                        }
+                    ],
+                    "Response": [
+                        {
+                            "Name": "Messages",
+                            "Type": "object array",
+                            "Notes": "[ { 'Message': [[Value]] } ]"
+                        },
+                        {
+                            "Name": "Error",
+                            "Type": "string",
+                            "Notes": "Empty string indicates no errors were encountered"
+                        }
+                    ]
+                },
+                {
+                    "Name": "Get Product Images",
+                    "Description": "Gets the images for a specific product.",
+                    "Endpoint": "/product.svc/product/get/images",
+                    "Verb": "POST",
+                    "Payload": [
+                        {
+                            "Name": "CultureCode",
+                            "Type": "string",
+                            "Notes": "Currently the only implemented option is: en-US",
+                            "Required": true
+                        },
+                        {
+                            "Name": "ProductId",
+                            "Type": "long",
+                            "Notes": "",
+                            "Required": true
+                        },
+                        {
+                            "Name": "VariationId",
+                            "Type": "long",
+                            "Notes": "",
+                            "Required": false
+                        }
+                    ],
+                    "Response": [
+                        {
+                            "Name": "Images",
+                            "Type": "object array",
+                            "Notes": "[ { 'URL': [[Value]], 'AltText': [[Value]], 'IsDefault': [[Value]] } ]"
+                        },
+                        {
+                            "Name": "Error",
+                            "Type": "string",
+                            "Notes": "Empty string indicates no errors were encountered"
+                        }
+                    ]
+                },
+                {
+                    "Name": "Get Product Videos",
+                    "Description": "Gets the videos for a specific product.",
+                    "Endpoint": "/product.svc/product/get/videos",
+                    "Verb": "POST",
+                    "Payload": [
+                        {
+                            "Name": "CultureCode",
+                            "Type": "string",
+                            "Notes": "Currently the only implemented option is: en-US",
+                            "Required": true
+                        },
+                        {
+                            "Name": "ProductId",
+                            "Type": "long",
+                            "Notes": "",
+                            "Required": true
+                        }
+                    ],
+                    "Response": [
+                        {
+                            "Name": "Videos",
+                            "Type": "object array",
+                            "Notes": "[ { 'Name': [[Value]], 'VideoSourceId': [[Value]], 'IsDefault': [[Value]] } ]"
+                        },
+                        {
+                            "Name": "Error",
+                            "Type": "string",
+                            "Notes": "Empty string indicates no errors were encountered"
+                        }
+                    ]
+                },
+                {
+                    "Name": "Get Product Specifications",
+                    "Description": "Gets the various specifications setup for a specific product.",
+                    "Endpoint": "/product.svc/product/get/specs",
+                    "Verb": "POST",
+                    "Payload": [
+                        {
+                            "Name": "CultureCode",
+                            "Type": "string",
+                            "Notes": "Currently the only implemented option is: en-US",
+                            "Required": true
+                        },
+                        {
+                            "Name": "ProductId",
+                            "Type": "long",
+                            "Notes": "",
+                            "Required": true
+                        }
+                    ],
+                    "Response": [
+                        {
+                            "Name": "Specs",
+                            "Type": "object array",
+                            "Notes": "[ { 'Name': [[Value]], 'Value': [[Value]] } ]"
+                        },
+                        {
+                            "Name": "Error",
+                            "Type": "string",
+                            "Notes": "Empty string indicates no errors were encountered"
+                        }
+                    ]
+                },
+                {
+                    "Name": "Get Product Prices",
+                    "Description": "Gets the various specifications setup for a specific product.",
+                    "Endpoint": "/product.svc/product/get/prices",
+                    "Verb": "POST",
+                    "Payload": [
+                        {
+                            "Name": "CultureCode",
+                            "Type": "string",
+                            "Notes": "Currently the only implemented option is: en-US",
+                            "Required": true
+                        },
+                        {
+                            "Name": "ProductId",
+                            "Type": "long",
+                            "Notes": "",
+                            "Required": true
+                        },
+                        {
+                            "Name": "RegionId",
+                            "Type": "long",
+                            "Notes": "",
+                            "Required": true
+                        },
+                        {
+                            "Name": "ShopId",
+                            "Type": "long",
+                            "Notes": "",
+                            "Required": true
+                        },
+                        {
+                            "Name": "CurrencyCode",
+                            "Type": "string",
+                            "Notes": "",
+                            "Required": true
+                        }
+                    ],
+                    "Response": [
+                        {
+                            "Name": "Prices",
+                            "Type": "object",
+                            "Notes": "{ 'List': [[Value]], 'Selling': [[Value]], 'Promotional': [[Value]], 'PromotionId': [[Value]], 'High': [[Value]], 'Low': [[Value]] }"
+                        },
+                        {
+                            "Name": "Error",
+                            "Type": "string",
+                            "Notes": "Empty string indicates no errors were encountered"
+                        }
+                    ]
+                },
+                {
+                    "Name": "Get Product Detail Data",
+                    "Description": "Gets product details data.",
+                    "Endpoint": "/product.svc/product/get/details",
+                    "Verb": "POST",
+                    "Payload": [
+                        {
+                            "Name": "CultureCode",
+                            "Type": "string",
+                            "Notes": "Currently the only implemented option is: en-US",
+                            "Required": true
+                        },
+                        {
+                            "Name": "ProductId",
+                            "Type": "long",
+                            "Notes": "",
+                            "Required": true
+                        },
+                        {
+                            "Name": "ShopId",
+                            "Type": "long",
+                            "Notes": "",
+                            "Required": true
+                        }
+                    ],
+                    "Response": [
+                        {
+                            "Name": "Details",
+                            "Type": "object",
+                            "Notes": "{ 'Id': [[Value]], 'Name': [[Value]], 'SKU': [[Value]], 'Active': [[Value]], 'AllowBackorder': [[Value]], 'DepartmentId': [[Value]], 'CollectionId': [[Value]], 'ManufacturerId': [[Value]], 'ManufacturerName': [[Value]], 'URL': [[Value]], 'RelCanonical': [[Value]], 'SEOTitle': [[Value]], 'SEOKeywords': [[Value]], 'SEODescription': [[Value]], 'Summary': [[Value]], 'Description': [[Value]], 'Directions': [[Value]], 'Ingredients': [[Value]], 'HowTo': [[Value]] }"
+                        },
+                        {
+                            "Name": "Error",
+                            "Type": "string",
+                            "Notes": "Empty string indicates no errors were encountered"
+                        }
+                    ]
+                },
+                {
+                    "Name": "Get Product Inventory",
+                    "Description": "Gets inventory data for a product.",
+                    "Endpoint": "/product.svc/product/get/inventory",
+                    "Verb": "POST",
+                    "Payload": [
+                        {
+                            "Name": "CultureCode",
+                            "Type": "string",
+                            "Notes": "Currently the only implemented option is: en-US",
+                            "Required": true
+                        },
+                        {
+                            "Name": "ProductId",
+                            "Type": "long",
+                            "Notes": "",
+                            "Required": true
+                        },
+                        {
+                            "Name": "AllowBackorder",
+                            "Type": "boolean",
+                            "Notes": "",
+                            "Required": true
+                        },
+                        {
+                            "Name": "ShopId",
+                            "Type": "long",
+                            "Notes": "",
+                            "Required": true
+                        }
+                    ],
+                    "Response": [
+                        {
+                            "Name": "InventoryData",
+                            "Type": "object",
+                            "Notes": "{ 'InventoryStatus': [[Value]], 'InventoryMessage': [[Value]], 'Orderable': [[Value]], 'Quantity': [[Value]] }"
+                        },
+                        {
+                            "Name": "Error",
+                            "Type": "string",
+                            "Notes": "Empty string indicates no errors were encountered"
+                        }
+                    ]
+                },
+                {
+                    "Name": "Update Product Inventory",
+                    "Description": "Updates the quantity of a product.",
+                    "Endpoint": "/product.svc/product/set/inventory",
+                    "Verb": "POST",
+                    "Payload": [
+                        {
+                            "Name": "ProductId",
+                            "Type": "long",
+                            "Notes": "",
+                            "Required": true
+                        },
+                        {
+                            "Name": "WarehouseId",
+                            "Type": "long",
+                            "Notes": "",
+                            "Required": true
+                        },
+                        {
+                            "Name": "Quantity",
+                            "Type": "integer",
+                            "Notes": "",
+                            "Required": true
+                        }
+                    ],
+                    "Response": [
+                        {
+                            "Name": "Error",
+                            "Type": "string",
+                            "Notes": "Empty string indicates no errors were encountered"
+                        }
+                    ]
+                },
+                {
+                    "Name": "Get Product Special Status",
+                    "Description": "Gets the product’s special status (when applicable). These include hot, sale, and new.",
+                    "Endpoint": "/product.svc/product/get/special-status",
+                    "Verb": "POST",
+                    "Payload": [
+                        {
+                            "Name": "ProductId",
+                            "Type": "long",
+                            "Notes": "",
+                            "Required": true
+                        },
+                        {
+                            "Name": "DepartmentId",
+                            "Type": "long",
+                            "Notes": "",
+                            "Required": true
+                        },
+                        {
+                            "Name": "RegionId",
+                            "Type": "long",
+                            "Notes": "",
+                            "Required": true
+                        },
+                        {
+                            "Name": "CultureCode",
+                            "Type": "string",
+                            "Notes": "Currently the only implemented option is: en-US",
+                            "Required": true
+                        },
+                        {
+                            "Name": "ShopId",
+                            "Type": "long",
+                            "Notes": "",
+                            "Required": true
+                        },
+                        {
+                            "Name": "PromotionalPrice",
+                            "Type": "decimal",
+                            "Notes": "",
+                            "Required": true
+                        },
+                        {
+                            "Name": "SellingPrice",
+                            "Type": "decimal",
+                            "Notes": "",
+                            "Required": true
+                        }
+                    ],
+                    "Response": [
+                        {
+                            "Name": "SpecialStatus",
+                            "Type": "string",
+                            "Notes": ""
+                        },
+                        {
+                            "Name": "Error",
+                            "Type": "string",
+                            "Notes": "Empty string indicates no errors were encountered"
+                        }
+                    ]
+                },
+                {
+                    "Name": "Update Product Price for Currency",
+                    "Description": "Updates the price of a product for a specific currency.",
+                    "Endpoint": "/product.svc/product/set/price-for-currency",
+                    "Verb": "POST",
+                    "Payload": [
+                        {
+                            "Name": "ProductId",
+                            "Type": "long",
+                            "Notes": "",
+                            "Required": true
+                        },
+                        {
+                            "Name": "CurrencyCode",
+                            "Type": "string",
+                            "Notes": "",
+                            "Required": true
+                        },
+                        {
+                            "Name": "ShopId",
+                            "Type": "long",
+                            "Notes": "",
+                            "Required": true
+                        },
+                        {
+                            "Name": "List",
+                            "Type": "decimal",
+                            "Notes": "",
+                            "Required": true
+                        },
+                        {
+                            "Name": "Selling",
+                            "Type": "decimal",
+                            "Notes": "",
+                            "Required": true
+                        },
+                        {
+                            "Name": "Cost",
+                            "Type": "decimal",
+                            "Notes": "",
+                            "Required": true
+                        }
+                    ],
+                    "Response": [
+                        {
+                            "Name": "Error",
+                            "Type": "string",
+                            "Notes": "Empty string indicates no errors were encountered"
+                        }
+                    ]
+                },
+                {
+                    "Name": "Add Product Price for Currency",
+                    "Description": "Adds a price for product for a specific currency.",
+                    "Endpoint": "/product.svc/product/set/add-price-for-currency",
+                    "Verb": "POST",
+                    "Payload": [
+                        {
+                            "Name": "ProductId",
+                            "Type": "long",
+                            "Notes": "",
+                            "Required": true
+                        },
+                        {
+                            "Name": "CurrencyCode",
+                            "Type": "string",
+                            "Notes": "",
+                            "Required": true
+                        },
+                        {
+                            "Name": "ShopId",
+                            "Type": "long",
+                            "Notes": "",
+                            "Required": true
+                        },
+                        {
+                            "Name": "List",
+                            "Type": "decimal",
+                            "Notes": "",
+                            "Required": true
+                        },
+                        {
+                            "Name": "Selling",
+                            "Type": "decimal",
+                            "Notes": "",
+                            "Required": true
+                        },
+                        {
+                            "Name": "Cost",
+                            "Type": "decimal",
+                            "Notes": "",
+                            "Required": true
+                        }
+                    ],
+                    "Response": [
+                        {
+                            "Name": "Error",
+                            "Type": "string",
+                            "Notes": "Empty string indicates no errors were encountered"
+                        }
+                    ]
+                },
+                {
+                    "Name": "Delete Prices for Product",
+                    "Description": "Removes all pricing records for a specified product.",
+                    "Endpoint": "/product.svc/product/delete/product-prices",
+                    "Verb": "POST",
+                    "Payload": [
+                        {
+                            "Name": "ProductId",
+                            "Type": "long",
+                            "Notes": "",
+                            "Required": true
+                        }
+                    ],
+                    "Response": [
+                        {
+                            "Name": "Error",
+                            "Type": "string",
+                            "Notes": "Empty string indicates no errors were encountered"
+                        }
+                    ]
+                },
+                {
+                    "Name": "Get Price for Product and Currency",
+                    "Description": "Gets the pricing record for a specified product and currency.",
+                    "Endpoint": "/product.svc/product/get/product-prices",
+                    "Verb": "POST",
+                    "Payload": [
+                        {
+                            "Name": "ProductId",
+                            "Type": "long",
+                            "Notes": "",
+                            "Required": true
+                        },
+                        {
+                            "Name": "CurrencyCode",
+                            "Type": "string",
+                            "Notes": "",
+                            "Required": true
+                        }
+                    ],
+                    "Response": [
+                        {
+                            "Name": "Price",
+                            "Type": "object",
+                            "Notes": "{ 'CurrencyCode': [[Value]], 'CustomerGroupName': [[Value]], 'PriceTierName': [[Value]], 'List': [[Value]], 'Selling': [[Value]], 'Bulk': [[Value]], 'Cost': [[Value]], 'Recurring': [[Value]] }"
+                        },
+                        {
+                            "Name": "Error",
+                            "Type": "string",
+                            "Notes": "Empty string indicates no errors were encountered"
+                        }
+                    ]
+                },
+                {
+                    "Name": "Update Product From Integration",
+                    "Description": "Updates product data from the back office system.",
+                    "Endpoint": "/product.svc/product/set/integration-update",
+                    "Verb": "POST",
+                    "Payload": [
+                        {
+                            "Name": "SKU",
+                            "Type": "string",
+                            "Notes": "",
+                            "Required": true
+                        },
+                        {
+                            "Name": "ShopId",
+                            "Type": "long",
+                            "Notes": "",
+                            "Required": true
+                        },
+                        {
+                            "Name": "Weight",
+                            "Type": "decimal",
+                            "Notes": "",
+                            "Required": true
+                        },
+                        {
+                            "Name": "ProductName",
+                            "Type": "string",
+                            "Notes": "",
+                            "Required": true
+                        },
+                        {
+                            "Name": "IsRestricted",
+                            "Type": "boolean",
+                            "Notes": "",
+                            "Required": true
+                        },
+                        {
+                            "Name": "AllowBackorder",
+                            "Type": "boolean",
+                            "Notes": "",
+                            "Required": true
+                        }
+                    ],
+                    "Response": [
+                        {
+                            "Name": "Error",
+                            "Type": "string",
+                            "Notes": "Empty string indicates no errors were encountered"
+                        }
+                    ]
+                },
+                {
+                    "Name": "Create Product From Integration",
+                    "Description": "Creates a new product in the store that was created in the back office system.",
+                    "Endpoint": "/product.svc/product/set/integration-create",
+                    "Verb": "POST",
+                    "Payload": [
+                        {
+                            "Name": "SKU",
+                            "Type": "string",
+                            "Notes": "",
+                            "Required": true
+                        },
+                        {
+                            "Name": "ModelNumber",
+                            "Type": "string",
+                            "Notes": "",
+                            "Required": true
+                        },
+                        {
+                            "Name": "ManufacturerId",
+                            "Type": "long",
+                            "Notes": "",
+                            "Required": true
+                        },
+                        {
+                            "Name": "Name",
+                            "Type": "string",
+                            "Notes": "",
+                            "Required": true
+                        },
+                        {
+                            "Name": "ShopId",
+                            "Type": "long",
+                            "Notes": "",
+                            "Required": true
+                        },
+                        {
+                            "Name": "Weight",
+                            "Type": "decimal",
+                            "Notes": "",
+                            "Required": true
+                        },
+                        {
+                            "Name": "Height",
+                            "Type": "decimal",
+                            "Notes": "",
+                            "Required": false
+                        },
+                        {
+                            "Name": "Length",
+                            "Type": "decimal",
+                            "Notes": "",
+                            "Required": false
+                        },
+                        {
+                            "Name": "Breadth",
+                            "Type": "decimal",
+                            "Notes": "",
+                            "Required": false
+                        },
+                        {
+                            "Name": "IsRestricted",
+                            "Type": "boolean",
+                            "Notes": "",
+                            "Required": true
+                        },
+                        {
+                            "Name": "AllowBackorder",
+                            "Type": "boolean",
+                            "Notes": "",
+                            "Required": true
+                        }
+                    ],
+                    "Response": [
+                        {
+                            "Name": "ProductId",
+                            "Type": "long",
+                            "Notes": ""
+                        },
+                        {
+                            "Name": "Error",
+                            "Type": "string",
+                            "Notes": "Empty string indicates no errors were encountered"
+                        }
+                    ]
+                },
+                {
+                    "Name": "Get Product Id By SKU",
+                    "Description": "Gets the product id for the specified SKU.",
+                    "Endpoint": "/product.svc/product/get/id-by-sku",
+                    "Verb": "POST",
+                    "Payload": [
+                        {
+                            "Name": "SKU",
+                            "Type": "string",
+                            "Notes": "",
+                            "Required": true
+                        },
+                        {
+                            "Name": "ShopId",
+                            "Type": "long",
+                            "Notes": "",
+                            "Required": true
+                        }
+                    ],
+                    "Response": [
+                        {
+                            "Name": "ProductId",
+                            "Type": "long",
+                            "Notes": ""
+                        },
+                        {
+                            "Name": "Error",
+                            "Type": "string",
+                            "Notes": "Empty string indicates no errors were encountered"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "Promotion",
+            "Description": "Interact with storefront promotion data.",
+            "Actions": [
+                {
+                    "Name": "Get Free Shipping Amount",
+                    "Description": "Gets amount needed for an order to qualify for free shipping.",
+                    "Endpoint": "/promotion.svc/promotions/get/free-shipping-amount",
+                    "Verb": "POST",
+                    "Payload": [
+                        {
+                            "Name": "CultureCode",
+                            "Type": "string",
+                            "Notes": "Currently the only implemented option is: en-US",
+                            "Required": true
+                        },
+                        {
+                            "Name": "ShopIdEncrypted",
+                            "Type": "string",
+                            "Notes": "",
+                            "Required": true
+                        },
+                        {
+                            "Name": "CurrencyCode",
+                            "Type": "string",
+                            "Notes": "",
+                            "Required": true
+                        }
+                    ],
+                    "Response": [
+                        {
+                            "Name": "Amount",
+                            "Type": "decimal",
+                            "Notes": ""
+                        },
+                        {
+                            "Name": "Error",
+                            "Type": "string",
+                            "Notes": "Empty string indicates no errors were encountered"
+                        }
+                    ]
+                },
+                {
+                    "Name": "Get Discount Amount For Promo Code",
+                    "Description": "Gets the discount details for a supplied promo code.",
+                    "Endpoint": "/promotion.svc/promotions/get/promo-code-discount-for-order",
+                    "Verb": "POST",
+                    "Payload": [
+                        {
+                            "Name": "CultureCode",
+                            "Type": "string",
+                            "Notes": "Currently the only implemented option is: en-US",
+                            "Required": true
+                        },
+                        {
+                            "Name": "ShopIdEncrypted",
+                            "Type": "string",
+                            "Notes": "",
+                            "Required": true
+                        },
+                        {
+                            "Name": "CurrencyCode",
+                            "Type": "string",
+                            "Notes": "",
+                            "Required": true
+                        },
+                        {
+                            "Name": "ShoppingCartIdEncrypted",
+                            "Type": "string",
+                            "Notes": "",
+                            "Required": true
+                        },
+                        {
+                            "Name": "CustomerIdEncrypted",
+                            "Type": "string",
+                            "Notes": "",
+                            "Required": true
+                        },
+                        {
+                            "Name": "PromoCode",
+                            "Type": "string",
+                            "Notes": "",
+                            "Required": true
+                        }
+                    ],
+                    "Response": [
+                        {
+                            "Name": "DiscountAmount",
+                            "Type": "decimal",
+                            "Notes": ""
+                        },
+                        {
+                            "Name": "PromoCode",
+                            "Type": "string",
+                            "Notes": ""
+                        },
+                        {
+                            "Name": "PromotionIdEncrypted",
+                            "Type": "string",
+                            "Notes": ""
+                        },
+                        {
+                            "Name": "PromoError",
+                            "Type": "integer",
+                            "Notes": "0 = None | 1 = InvalidCode | 2 = NoUsesLeft | 3 = OrderDoesNotQualify | 4 = DiscountAmountZero"
+                        },
+                        {
+                            "Name": "Error",
+                            "Type": "string",
+                            "Notes": "Empty string indicates no errors were encountered"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "Shipping",
+            "Description": "Interact with the shipping rates api.",
+            "Actions": [
+                {
+                    "Name": "Get Shipping Options For Address",
+                    "Description": "Gets shipping options and rates for the supplied shopping cart and shipping address.",
+                    "Endpoint": "/shipping.svc/options/get/by-address",
+                    "Verb": "POST",
+                    "Payload": [
+                        {
+                            "Name": "CultureCode",
+                            "Type": "string",
+                            "Notes": "Currently the only implemented option is: en-US",
+                            "Required": true
+                        },
+                        {
+                            "Name": "ShopIdEncrypted",
+                            "Type": "string",
+                            "Notes": "",
+                            "Required": true
+                        },
+                        {
+                            "Name": "CurrencyCode",
+                            "Type": "string",
+                            "Notes": "",
+                            "Required": true
+                        },
+                        {
+                            "Name": "ShoppingCartIdEncrypted",
+                            "Type": "string",
+                            "Notes": "",
+                            "Required": true
+                        },
+                        {
+                            "Name": "RegionId",
+                            "Type": "long",
+                            "Notes": "",
+                            "Required": true
+                        },
+                        {
+                            "Name": "CountryCode",
+                            "Type": "string",
+                            "Notes": "",
+                            "Required": true
+                        },
+                        {
+                            "Name": "City",
+                            "Type": "string",
+                            "Notes": "",
+                            "Required": true
+                        },
+                        {
+                            "Name": "PostalCode",
+                            "Type": "string",
+                            "Notes": "",
+                            "Required": true
+                        },
+                        {
+                            "Name": "SelectedCarrierShippingMethodId",
+                            "Type": "long",
+                            "Notes": "",
+                            "Required": false
+                        }
+                    ],
+                    "Response": [
+                        {
+                            "Name": "Options",
+                            "Type": "object array",
+                            "Notes": "[ { 'CarrierShippingMethodId': [[Value]], 'CarrierId': [[Value]], 'CarrierName': [[Value]], 'MethodName': [[Value]], 'ServiceCode': [[Value]], 'DeliveryRangeStart': [[Value]], 'DeliveryRangeEnd': [[Value]], 'Price': [[Value]], 'PriceEncrypted': [[Value]], 'FreeShippingAllowed': [[Value]], 'IsFree': [[Value]] } ]"
+                        },
+                        {
+                            "Name": "WarehouseCity",
+                            "Type": "string",
+                            "Notes": ""
+                        },
+                        {
+                            "Name": "WarehouseStateOrCountry",
+                            "Type": "string",
+                            "Notes": ""
+                        },
+                        {
+                            "Name": "StockDisclaimer",
+                            "Type": "string",
+                            "Notes": ""
+                        },
+                        {
+                            "Name": "Error",
+                            "Type": "string",
+                            "Notes": "Empty string indicates no errors were encountered"
+                        }
+                    ]
+                },
+                {
+                    "Name": "Get Shipping Options For Contact Id",
+                    "Description": "Gets shipping options and rates for the supplied shopping cart and contact id.",
+                    "Endpoint": "/shipping.svc/options/get/by-contact-id",
+                    "Verb": "POST",
+                    "Payload": [
+                        {
+                            "Name": "CultureCode",
+                            "Type": "string",
+                            "Notes": "Currently the only implemented option is: en-US",
+                            "Required": true
+                        },
+                        {
+                            "Name": "ShopIdEncrypted",
+                            "Type": "string",
+                            "Notes": "",
+                            "Required": true
+                        },
+                        {
+                            "Name": "CurrencyCode",
+                            "Type": "string",
+                            "Notes": "",
+                            "Required": true
+                        },
+                        {
+                            "Name": "ShoppingCartIdEncrypted",
+                            "Type": "string",
+                            "Notes": "",
+                            "Required": true
+                        },
+                        {
+                            "Name": "RegionId",
+                            "Type": "long",
+                            "Notes": "",
+                            "Required": true
+                        },
+                        {
+                            "Name": "ContactIdEncrypted",
+                            "Type": "string",
+                            "Notes": "",
+                            "Required": true
+                        },
+                        {
+                            "Name": "SelectedCarrierShippingMethodId",
+                            "Type": "long",
+                            "Notes": "",
+                            "Required": false
+                        }
+                    ],
+                    "Response": [
+                        {
+                            "Name": "Options",
+                            "Type": "object array",
+                            "Notes": "[ { 'CarrierShippingMethodId': [[Value]], 'CarrierId': [[Value]], 'CarrierName': [[Value]], 'MethodName': [[Value]], 'ServiceCode': [[Value]], 'DeliveryRangeStart': [[Value]], 'DeliveryRangeEnd': [[Value]], 'Price': [[Value]], 'PriceEncrypted': [[Value]], 'FreeShippingAllowed': [[Value]], 'IsFree': [[Value]] } ]"
+                        },
+                        {
+                            "Name": "WarehouseCity",
+                            "Type": "string",
+                            "Notes": ""
+                        },
+                        {
+                            "Name": "WarehouseStateOrCountry",
+                            "Type": "string",
+                            "Notes": ""
+                        },
+                        {
+                            "Name": "StockDisclaimer",
+                            "Type": "string",
+                            "Notes": ""
+                        },
+                        {
+                            "Name": "Error",
+                            "Type": "string",
+                            "Notes": "Empty string indicates no errors were encountered"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "Shopping Cart",
+            "Description": "Interact with shopping cart data.",
+            "Actions": [
+                {
+                    "Name": "Get Shopping Cart",
+                    "Description": "Gets the cart items in a shopping cart for the supplied shopping cart id.",
+                    "Endpoint": "/shoppingcart/get/by-id",
+                    "Verb": "POST",
+                    "Payload": [
+                        {
+                            "Name": "CultureCode",
+                            "Type": "string",
+                            "Notes": "Currently the only implemented option is: en-US",
+                            "Required": true
+                        },
+                        {
+                            "Name": "CurrencyCode",
+                            "Type": "string",
+                            "Notes": "",
+                            "Required": true
+                        },
+                        {
+                            "Name": "ShoppingCartIdEncrypted",
+                            "Type": "string",
+                            "Notes": "",
+                            "Required": true
+                        }
+                    ],
+                    "Response": [
+                        {
+                            "Name": "CartItems",
+                            "Type": "object array",
+                            "Notes": "[ { 'SelectedItemIdEncrypted': [[Value]], 'Quantity': [[Value]], 'Description': [[Value]], 'VariationDescription': [[Value]], 'ImagePath': [[Value]], 'ImageAlt': [[Value]], 'UnitPrice': [[Value]], 'ListPrice': [[Value]], 'SKU': [[Value]], 'OnSale': [[Value]] } ]"
+                        },
+                        {
+                            "Name": "Subtotal",
+                            "Type": "decimal",
+                            "Notes": ""
+                        },
+                        {
+                            "Name": "Error",
+                            "Type": "string",
+                            "Notes": "Empty string indicates no errors were encountered"
+                        }
+                    ]
+                },
+                {
+                    "Name": "Update Cart Item Quantity",
+                    "Description": "Updates the quanity of a single cart item.",
+                    "Endpoint": "/shoppingcart/set/cart-item-quantity",
+                    "Verb": "POST",
+                    "Payload": [
+                        {
+                            "Name": "CultureCode",
+                            "Type": "string",
+                            "Notes": "Currently the only implemented option is: en-US",
+                            "Required": true
+                        },
+                        {
+                            "Name": "LineItemIdEncrypted",
+                            "Type": "string",
+                            "Notes": "",
+                            "Required": true
+                        },
+                        {
+                            "Name": "Quantity",
+                            "Type": "integer",
+                            "Notes": "",
+                            "Required": true
+                        },
+                        {
+                            "Name": "RegionId",
+                            "Type": "long",
+                            "Notes": "",
+                            "Required": true
+                        }
+                    ],
+                    "Response": [
+                        {
+                            "Name": "RequestedQuantity",
+                            "Type": "integer",
+                            "Notes": ""
+                        },
+                        {
+                            "Name": "ActualUpdatedQuantity",
+                            "Type": "integer",
+                            "Notes": ""
+                        },
+                        {
+                            "Name": "Subtotal",
+                            "Type": "decimal",
+                            "Notes": ""
+                        },
+                        {
+                            "Name": "Error",
+                            "Type": "string",
+                            "Notes": "Empty string indicates no errors were encountered"
+                        }
+                    ]
+                },
+                {
+                    "Name": "Change Shopping Cart Region",
+                    "Description": "Sets the current region on a shopping cart.",
+                    "Endpoint": "/shoppingcart/set/region",
+                    "Verb": "POST",
+                    "Payload": [
+                        {
+                            "Name": "CultureCode",
+                            "Type": "string",
+                            "Notes": "Currently the only implemented option is: en-US",
+                            "Required": true
+                        },
+                        {
+                            "Name": "ShoppingCartIdEncrypted",
+                            "Type": "string",
+                            "Notes": "",
+                            "Required": true
+                        },
+                        {
+                            "Name": "ShopIdEncrypted",
+                            "Type": "string",
+                            "Notes": "",
+                            "Required": true
+                        },
+                        {
+                            "Name": "CurrencyCode",
+                            "Type": "string",
+                            "Notes": "",
+                            "Required": true
+                        },
+                        {
+                            "Name": "RegionId",
+                            "Type": "long",
+                            "Notes": "",
+                            "Required": true
+                        },
+                        {
+                            "Name": "VATId",
+                            "Type": "string",
+                            "Notes": "",
+                            "Required": false
+                        }
+                    ],
+                    "Response": [
+                        {
+                            "Name": "CurrencyCode",
+                            "Type": "string",
+                            "Notes": ""
+                        },
+                        {
+                            "Name": "Error",
+                            "Type": "string",
+                            "Notes": "Empty string indicates no errors were encountered"
+                        }
+                    ]
+                },
+                {
+                    "Name": "Set Shipping Charge on Shopping Cart",
+                    "Description": "Sets the shipping charge for a shopping cart.",
+                    "Endpoint": "/shoppingcart/set/shipping-charge",
+                    "Verb": "POST",
+                    "Payload": [
+                        {
+                            "Name": "CultureCode",
+                            "Type": "string",
+                            "Notes": "Currently the only implemented option is: en-US",
+                            "Required": true
+                        },
+                        {
+                            "Name": "ShoppingCartIdEncrypted",
+                            "Type": "string",
+                            "Notes": "",
+                            "Required": true
+                        },
+                        {
+                            "Name": "PriceEncrypted",
+                            "Type": "string",
+                            "Notes": "",
+                            "Required": true
+                        },
+                        {
+                            "Name": "ShippingOptionId",
+                            "Type": "string",
+                            "Notes": "",
+                            "Required": false
+                        }
+                    ],
+                    "Response": [
+                        {
+                            "Name": "Error",
+                            "Type": "string",
+                            "Notes": "Empty string indicates no errors were encountered"
+                        }
+                    ]
+                },
+                {
+                    "Name": "Remove Shipping Charge from Shopping Cart",
+                    "Description": "Removes the shipping charge from a shopping cart.",
+                    "Endpoint": "/shoppingcart/set/remove-shipping-charge",
+                    "Verb": "POST",
+                    "Payload": [
+                        {
+                            "Name": "CultureCode",
+                            "Type": "string",
+                            "Notes": "Currently the only implemented option is: en-US",
+                            "Required": true
+                        },
+                        {
+                            "Name": "ShoppingCartIdEncrypted",
+                            "Type": "string",
+                            "Notes": "",
+                            "Required": true
+                        }
+                    ],
+                    "Response": [
+                        {
+                            "Name": "Error",
+                            "Type": "string",
+                            "Notes": "Empty string indicates no errors were encountered"
+                        }
+                    ]
+                },
+                {
+                    "Name": "Remove Promotional Discount from Shopping Cart",
+                    "Description": "Removes the promotion discount from a shopping cart.",
+                    "Endpoint": "/shoppingcart/set/remove-promo-discount",
+                    "Verb": "POST",
+                    "Payload": [
+                        {
+                            "Name": "CultureCode",
+                            "Type": "string",
+                            "Notes": "Currently the only implemented option is: en-US",
+                            "Required": true
+                        },
+                        {
+                            "Name": "ShoppingCartIdEncrypted",
+                            "Type": "string",
+                            "Notes": "",
+                            "Required": true
+                        }
+                    ],
+                    "Response": [
+                        {
+                            "Name": "Error",
+                            "Type": "string",
+                            "Notes": "Empty string indicates no errors were encountered"
+                        }
+                    ]
+                },
+                {
+                    "Name": "Get Stock System Disclaimer for Shopping Cart",
+                    "Description": "Gets a disclaimer message if a stock system is in the user's shopping cart.",
+                    "Endpoint": "/shoppingcart/get/stock-disclaimer",
+                    "Verb": "POST",
+                    "Payload": [
+                        {
+                            "Name": "CultureCode",
+                            "Type": "string",
+                            "Notes": "Currently the only implemented option is: en-US",
+                            "Required": true
+                        },
+                        {
+                            "Name": "ShoppingCartIdEncrypted",
+                            "Type": "string",
+                            "Notes": "",
+                            "Required": true
+                        }
+                    ],
+                    "Response": [
+                        {
+                            "Name": "Message",
+                            "Type": "string",
+                            "Notes": ""
+                        },
+                        {
+                            "Name": "Error",
+                            "Type": "string",
+                            "Notes": "Empty string indicates no errors were encountered"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "Tax",
+            "Description": "Interact with tax data from the storefront.",
+            "Actions": [
+                {
+                    "Name": "Get Tax Rate for Shipping Address",
+                    "Description": "Gets the tax rate based on a shipping address' location.",
+                    "Endpoint": "/tax/get/by-shipping-address",
+                    "Verb": "POST",
+                    "Payload": [
+                        {
+                            "Name": "CultureCode",
+                            "Type": "string",
+                            "Notes": "Currently the only implemented option is: en-US",
+                            "Required": true
+                        },
+                        {
+                            "Name": "ContactIdEncrypted",
+                            "Type": "string",
+                            "Notes": "",
+                            "Required": true
+                        },
+                        {
+                            "Name": "VATId",
+                            "Type": "string",
+                            "Notes": "",
+                            "Required": false
+                        }
+                    ],
+                    "Response": [
+                        {
+                            "Name": "FreightTaxRate",
+                            "Type": "decimal",
+                            "Notes": ""
+                        },
+                        {
+                            "Name": "OrderTaxRate",
+                            "Type": "decimal",
+                            "Notes": ""
+                        },
+                        {
+                            "Name": "OrderTaxRateEncrypted",
+                            "Type": "string",
+                            "Notes": ""
+                        },
+                        {
+                            "Name": "Error",
+                            "Type": "string",
+                            "Notes": "Empty string indicates no errors were encountered"
+                        }
+                    ]
+                },
+                {
+                    "Name": "Validate VAT Id",
+                    "Description": "Validates a VAT Id to ensure it can be used on the order.",
+                    "Endpoint": "/tax/get/vat-id-validation",
+                    "Verb": "POST",
+                    "Payload": [
+                        {
+                            "Name": "CultureCode",
+                            "Type": "string",
+                            "Notes": "Currently the only implemented option is: en-US",
+                            "Required": true
+                        },
+                        {
+                            "Name": "ShoppingCartIdEncrypted",
+                            "Type": "string",
+                            "Notes": "",
+                            "Required": true
+                        },
+                        {
+                            "Name": "VATId",
+                            "Type": "string",
+                            "Notes": "",
+                            "Required": true
+                        }
+                    ],
+                    "Response": [
+                        {
+                            "Name": "Success",
+                            "Type": "boolean",
+                            "Notes": ""
+                        },
+                        {
+                            "Name": "Message",
+                            "Type": "string",
+                            "Notes": ""
+                        },
+                        {
+                            "Name": "Error",
+                            "Type": "string",
+                            "Notes": "Empty string indicates no errors were encountered"
+                        }
+                    ]
+                },
+                {
+                    "Name": "Set Region Tax for Shopping Cart",
+                    "Description": "Determines what tax rate a shopping cart is subject to, and sets the rate on the shopping cart record.",
+                    "Endpoint": "/tax/set/region-tax",
+                    "Verb": "POST",
+                    "Payload": [
+                        {
+                            "Name": "RegionId",
+                            "Type": "long",
+                            "Notes": "",
+                            "Required": true
+                        },
+                        {
+                            "Name": "ShoppingCartIdEncrypted",
+                            "Type": "string",
+                            "Notes": "",
+                            "Required": true
+                        }
+                    ],
+                    "Response": [
                         {
                             "Name": "Error",
                             "Type": "string",
