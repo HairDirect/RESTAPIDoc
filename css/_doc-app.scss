@@ -9,6 +9,6 @@
 
 [data-label=Notes] > code {
     display: block;
-    @include rem-attribute('max-height', 3);
+    @include rem-attribute('max-height', 6);
     overflow-y: auto;
 }
