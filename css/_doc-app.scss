@@ -6,3 +6,9 @@
 #category-list {
     @include rem-attribute('padding', 1);
 }
+
+[data-label=Notes] > code {
+    display: block;
+    @include rem-attribute('max-height', 3);
+    overflow-y: auto;
+}
