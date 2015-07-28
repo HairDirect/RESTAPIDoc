@@ -13,7 +13,7 @@
 		Data: null,
 		Settings: {
 			"amountScrolled": 300,
-			"animationDuration": 600
+			"scrollDuration": 1000
 		},
 		Loaded: false,
 		Boot: function () {
@@ -46,16 +46,16 @@
 				var $btt = $('a.back-to-top');
 				$(window).scroll(function () {
 					if ($(window).scrollTop() > DocApp.Settings.amountScrolled) {
-						$btt.fadeIn(DocApp.Settings.animationDuration);
+						$btt.fadeIn(DocApp.Settings.scrollDuration);
 					} else {
-						$btt.fadeOut(DocApp.Settings.animationDuration);
+						$btt.fadeOut(DocApp.Settings.scrollDuration);
 					}
 				});
 
 				$btt.click(function () {
 					$('html,body').animate({
 						scrollTop: 0
-					}, DocApp.Settings.animationDuration);
+					}, DocApp.Settings.scrollDuration);
 					return false;
 				});
 			},
@@ -65,7 +65,7 @@
 					if (target.length) {
 						$('html,body').animate({
 							scrollTop: target.offset().top
-						}, DocApp.Settings.animationDuration);
+						}, DocApp.Settings.scrollDuration);
 						return false;
 					}
 				});
