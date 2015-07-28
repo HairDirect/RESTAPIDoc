@@ -5,7 +5,7 @@
 		"click #toggle-menu": "toggleMenuClicked"
 	},
 	appContext: null,
-	template: Handlebars.templates["primary-navigation"],
+	template: DAT["primary-navigation"],
 	render: function (categories) {
 		var view = this;
 		view.$el.html(view.template(categories));

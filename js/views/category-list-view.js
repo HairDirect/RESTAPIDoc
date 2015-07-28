@@ -7,7 +7,7 @@ var CategoryListView = Backbone.View.extend({
 		"click .action .btn--secondary": "actionSecondaryClicked"
 	},
 	appContext: null,
-	template: Handlebars.templates["category-list"],
+	template: DAT["category-list"],
 	render: function (categories) {
 		var view = this;
 		view.$el.html(view.template(categories));

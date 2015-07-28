@@ -1,1 +1,31 @@
-!function(){var a=Handlebars.template,e=Handlebars.templates=Handlebars.templates||{};e["category-list"]=a({1:function(a,e,n,t){var r;return'<li id="category-'+this.escapeExpression((e.toLower||a&&a.toLower||e.helperMissing).call(a,null!=a?a.Name:a,{name:"toLower",hash:{},data:t}))+'" class="category">'+(null!=(r=this.invokePartial(n["p-category"],a,{name:"p-category",data:t,helpers:e,partials:n}))?r:"")+"</li>"},compiler:[6,">= 2.0.0-beta.1"],main:function(a,e,n,t){var r;return null!=(r=e.each.call(a,a,{name:"each",hash:{},fn:this.program(1,t,0),inverse:this.noop,data:t}))?r:""},usePartial:!0,useData:!0}),e["primary-navigation"]=a({1:function(a,e,n,t){var r,l=e.helperMissing,o=this.escapeExpression;return'        <li><a href="#category-'+o((e.toLower||a&&a.toLower||l).call(a,null!=a?a.Name:a,{name:"toLower",hash:{},data:t}))+'">'+o((r=null!=(r=e.Name||(null!=a?a.Name:a))?r:l,"function"==typeof r?r.call(a,{name:"Name",hash:{},data:t}):r))+"</a></li>\r\n"},compiler:[6,">= 2.0.0-beta.1"],main:function(a,e,n,t){var r;return'<label for="toggle-menu" class="toggle-menu" data-show-text="Show Menu" data-hide-text="Hide Menu">Show Menu</label>\r\n<input type="checkbox" id="toggle-menu" role="button">\r\n<nav id="primary-navigation">\r\n    <ul id="menu">\r\n'+(null!=(r=e.each.call(a,a,{name:"each",hash:{},fn:this.program(1,t,0),inverse:this.noop,data:t}))?r:"")+"    </ul>\r\n</nav>"},useData:!0})}();
+this["DAT"] = this["DAT"] || {};
+
+this["DAT"]["category-list"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {
+    var stack1;
+
+  return "<li id=\"category-"
+    + this.escapeExpression((helpers.toLower || (depth0 && depth0.toLower) || helpers.helperMissing).call(depth0,(depth0 != null ? depth0.Name : depth0),{"name":"toLower","hash":{},"data":data}))
+    + "\" class=\"category\">"
+    + ((stack1 = this.invokePartial(partials['p-category'],depth0,{"name":"p-category","data":data,"helpers":helpers,"partials":partials})) != null ? stack1 : "")
+    + "</li>";
+},"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
+    var stack1;
+
+  return ((stack1 = helpers.each.call(depth0,depth0,{"name":"each","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "");
+},"usePartial":true,"useData":true});
+
+this["DAT"]["primary-navigation"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {
+    var helper, alias1=helpers.helperMissing, alias2=this.escapeExpression;
+
+  return "        <li><a href=\"#category-"
+    + alias2((helpers.toLower || (depth0 && depth0.toLower) || alias1).call(depth0,(depth0 != null ? depth0.Name : depth0),{"name":"toLower","hash":{},"data":data}))
+    + "\">"
+    + alias2(((helper = (helper = helpers.Name || (depth0 != null ? depth0.Name : depth0)) != null ? helper : alias1),(typeof helper === "function" ? helper.call(depth0,{"name":"Name","hash":{},"data":data}) : helper)))
+    + "</a></li>\r\n";
+},"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
+    var stack1;
+
+  return "<label for=\"toggle-menu\" class=\"toggle-menu\" data-show-text=\"Show Menu\" data-hide-text=\"Hide Menu\">Show Menu</label>\r\n<input type=\"checkbox\" id=\"toggle-menu\" role=\"button\">\r\n<nav id=\"primary-navigation\">\r\n    <ul id=\"menu\">\r\n"
+    + ((stack1 = helpers.each.call(depth0,depth0,{"name":"each","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + "    </ul>\r\n</nav>";
+},"useData":true});

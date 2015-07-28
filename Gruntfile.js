@@ -10,6 +10,21 @@ module.exports = function (grunt) {
 		},
 		banner: '',
 		// Task configuration.
+		handlebars: {
+			compile: {
+				options: {
+					namespace: 'DAT', // Doc App Templates
+					processName: function (filePath) {
+						return filePath.replace('templates/', '').replace('.handlebars', '');
+					},
+					partialRegex: /^p-/
+				},
+				files: {
+					"js/hb-partials.js": ["templates/p-category.handlebars", "templates/p-action.handlebars", "templates/p-payload.handlebars", "templates/p-response.handlebars"],
+					"js/hb-templates.js": ["templates/category-list.handlebars", "templates/primary-navigation.handlebars"]
+				}
+			}
+		},
 		concat: {
 			options: {
 				banner: '<%= banner %>',
@@ -45,11 +60,12 @@ module.exports = function (grunt) {
 	});
 
 	// These plugins provide necessary tasks.
+	grunt.loadNpmTasks('grunt-contrib-handlebars');
 	grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-contrib-uglify')
 	grunt.loadNpmTasks('grunt-contrib-cssmin');
 	// Default task.
-	grunt.registerTask('default', ['concat', 'uglify', 'cssmin']);
+	grunt.registerTask('default', ['handlebars', 'concat', 'uglify', 'cssmin']);
 	grunt.registerTask('logvar', function () {
 		grunt.log.writeln(grunt.config.get('logvar').data);
 	});
