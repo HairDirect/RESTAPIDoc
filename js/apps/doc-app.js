@@ -13,7 +13,7 @@
 		Data: null,
 		Settings: {
 			"amountScrolled": 300,
-			"animationDuration": 300
+			"animationDuration": 600
 		},
 		Loaded: false,
 		Boot: function () {
@@ -60,18 +60,6 @@
 				});
 			},
 			InitSmoothScroll: function () {
-				//$('a[href*=#]:not([href=#])').click(function () {
-				//	if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-				//		var target = $(this.hash);
-				//		target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-				//		if (target.length) {
-				//			$('html,body').animate({
-				//				scrollTop: target.offset().top
-				//			}, DocApp.Settings.animationDuration);
-				//			return false;
-				//		}
-				//	}
-				//});
 				$('a[href*=#]:not([href=#])').click(function () {
 					var target = $(this.hash);
 					if (target.length) {
