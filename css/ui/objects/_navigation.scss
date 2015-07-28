@@ -3,9 +3,6 @@
 \*------------------------------------*/
 
 .navigation {
-    nav {
-        @include rem-attribute('min-height', 3.125);
-    }
     /*Strip the ul of padding and list styling*/
     ul li, li a {
         width: 100%;
@@ -18,17 +15,15 @@
         position: static;
         display: none;
         /*Create a horizontal list with spacing*/
-        li {
+        > li {
             display: inline-block;
-            /*float: left;*/
-            margin-right: 1px;
-            margin-bottom: 1px;
+            margin-right: 0;
+            border-bottom: 1px solid $darker-gray-blue;
             /*Style for menu links*/
-            a {
+            > a {
                 display: block;
                 @include rem-attribute('min-width', 8.75);
-                @include rem-attribute('height', 3.125);
-                @include rem-attribute('line-height', 3.125);
+                @include rem-attribute('padding', .5);
                 text-align: center;
                 font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
                 color: $white;
@@ -36,50 +31,11 @@
                 text-decoration: none;
                 text-shadow: 0 1px 0 $darker-gray-blue;
             }
-            /*Hide dropdown links until they are needed*/
-            li {
-                ul {
-                    display: none;
-                    /*Make dropdown links vertical*/
-                    li {
-                        display: block;
-                        /*float: none;*/
-                        /*Prevent text wrapping*/
-                        a {
-                            width: auto;
-                            @include rem-attribute('min-width', 6.25);
-                            padding-top: 0;
-                            padding-bottom: 0;
-                            @include rem-attribute('padding-left', 1.25);
-                            @include rem-attribute('padding-right', 1.25);
-                            /*Display the dropdown on hover*/
-                            &:hover + .hidden, .hidden:hover {
-                                display: block;
-                            }
-                        }
-                    }
-                }
-            }
-
+            
             &:hover {
-                a {
+                > a {
                     /*Hover state for top level links*/
                     background-color: $dark-gray-blue;
-                }
-
-                ul {
-                    /*Style for dropdown links*/
-                    a {
-                        background-color: $medium-gray-blue;
-                        color: $darkest-gray-blue;
-                        @include rem-attribute('height', 2.5);
-                        @include rem-attribute('line-height', 2.5);
-                        /*Hover state for dropdown links*/
-                        &:hover {
-                            background-color: $dark-gray-blue;
-                            color: $white;
-                        }
-                    }
                 }
             }
         }
@@ -110,17 +66,19 @@
     }
     /*Responsive Styles*/
     @media #{$lap} {
-        ul {
-            position: absolute;
-            display: block;
-        }
-
-        li {
-            margin-bottom: 0;
-        }
         /* Make all menu standard width */
         ul li, li a {
             width: auto;
+        }
+
+        ul {
+            display: block;
+
+            > li {
+                border: none;
+                margin-bottom: 0;
+                @include rem-attribute('margin-bottom', .188);
+            }
         }
         /* Hide 'show menu' link */
         .toggle-menu {
