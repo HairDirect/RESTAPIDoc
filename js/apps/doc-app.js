@@ -24,12 +24,13 @@
 				if (data && data.Categories) {
 					DocApp.Functions.ProcessCategories(data.Categories);
 				}
-			}); 
+			});
 		},
 		Functions: {
 			ProcessCategories: function (categories) {
 				DocApp.Views.Navigation.render(categories);
 				DocApp.Views.CategoryList.render(categories);
+				DocApp.Functions.InitSmoothScroll();
 			},
 			ExecuteAjax: function (host, endpoint, verb, data) {
 				return jQuery.ajax({
@@ -56,6 +57,29 @@
 						scrollTop: 0
 					}, DocApp.Settings.animationDuration);
 					return false;
+				});
+			},
+			InitSmoothScroll: function () {
+				//$('a[href*=#]:not([href=#])').click(function () {
+				//	if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+				//		var target = $(this.hash);
+				//		target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+				//		if (target.length) {
+				//			$('html,body').animate({
+				//				scrollTop: target.offset().top
+				//			}, DocApp.Settings.animationDuration);
+				//			return false;
+				//		}
+				//	}
+				//});
+				$('a[href*=#]:not([href=#])').click(function () {
+					var target = $(this.hash);
+					if (target.length) {
+						$('html,body').animate({
+							scrollTop: target.offset().top
+						}, DocApp.Settings.animationDuration);
+						return false;
+					}
 				});
 			}
 		}
