@@ -60,7 +60,7 @@
 				});
 			},
 			InitSmoothScroll: function () {
-				$('a[href*=#]:not([href=#modal])').click(function () {
+				$('a[href*=#]:not([data-type=example-response])').click(function () {
 					var target = $(this.hash);
 					if (target.length) {
 						$('html,body').animate({

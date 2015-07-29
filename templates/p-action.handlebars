@@ -18,7 +18,7 @@
             </tbody>
         </table>
     </div>
-    <h4>Response</h4>
+    <h4>Response</h4><a data-type="example-response" href="#action-{{toLower Category.Name}}{{@index}}-response">Example</a>
     <div class="table-wrapper">
         <table class="table--bordered table--striped table--data">
             <thead>
@@ -38,4 +38,16 @@
     <button class="btn btn--gamma btn--positive btn--primary" data-endpoint="{{Endpoint}}" data-verb="{{Verb}}" data-sample='{{stringifyJSON SampleCall}}'>Execute</button>
     <h5>Result</h5>
     <code></code>
+    <div id="action-{{toLower Category.Name}}{{@index}}-response" class="modal">
+        <section>
+            <header>
+                <h2>Sample Response</h2><a href="#" title="Close modal">Close</a>
+            </header>
+            <article>
+                {{prettifyJSON SampleResponse}}
+            </article>
+        </section>
+        <div class="overlay"></div>
+    </div>
 </div>
+                

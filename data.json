@@ -16,7 +16,7 @@
             "Actions": [
                 {
                     "Name": "Update Primary Contact",
-                    "Description": "Updates data for the primary contact on the customer’s account.",
+                    "Description": "Updates data for the primary contact on the customer's account.",
                     "Endpoint": "/account.svc/account/set/update-default",
                     "Verb": "POST",
                     "Payload": [
@@ -100,7 +100,7 @@
                 },
                 {
                     "Name": "Set Salesforce Contact Id",
-                    "Description": "Sets the Salesforce contact id for the customer’s primary contact record",
+                    "Description": "Sets the Salesforce contact id for the customer's primary contact record",
                     "Endpoint": "/account.svc/account/set/salesforce-contact-id",
                     "Verb": "POST",
                     "Payload": [
@@ -363,6 +363,32 @@
                     "SampleCall": {
                         "CustomerIdEncrypted": "Q4hc46Lf2xJzlzsq+HrtPg==",
                         "CultureCode": "en-US"
+                    },
+                    "SampleResponse": {
+                        "Error": null,
+                        "CustomerAddresses": [
+                            {
+                                "ContactIdEncrypted": null,
+                                "BackOfficeAddressId": null,
+                                "FirstName": null,
+                                "LastName": null,
+                                "CountryName": null,
+                                "CountryCode": null,
+                                "StreetAddress1": null,
+                                "StreetAddress2": null,
+                                "City": null,
+                                "StateCode": null,
+                                "StateName": null,
+                                "PostalCode": null,
+                                "Phone": null,
+                                "Company": null,
+                                "LocationId": null,
+                                "IsShippingDefault": null,
+                                "IsBillingDefault": null,
+                                "SelectedShipping": null,
+                                "SelectedBilling": null
+                            } 
+                        ]
                     }
                 },
                 {
@@ -824,7 +850,7 @@
                         {
                             "Name": "AddToIntegrationQueue",
                             "Type": "boolean",
-                            "Notes": "Irrelevant to this function. Doesn’t need to be provided.",
+                            "Notes": "Irrelevant to this function. Doesn't need to be provided.",
                             "Required": false
                         }
                     ],
@@ -843,7 +869,7 @@
                 },
                 {
                     "Name": "Create Address From Salesforce",
-                    "Description": "Updates data for the primary contact on the customer’s account.",
+                    "Description": "Updates data for the primary contact on the customer's account.",
                     "Endpoint": "/address.svc/address/set/add-from-salesforce",
                     "Verb": "POST",
                     "Payload": [
@@ -1869,7 +1895,7 @@
                 },
                 {
                     "Name": "Add/Update Wallet Card",
-                    "Description": "Updates a card stored in a customer’s wallet.",
+                    "Description": "Updates a card stored in a customer's wallet.",
                     "Endpoint": "/payment.svc/wallet/set/credit-card",
                     "Verb": "POST",
                     "Payload": [
@@ -1913,7 +1939,7 @@
                 },
                 {
                     "Name": "Delete Wallet Card",
-                    "Description": "Deletes a card stored from customer’s wallet.",
+                    "Description": "Deletes a card stored from customer's wallet.",
                     "Endpoint": "/payment.svc/wallet/delete/credit-card",
                     "Verb": "POST",
                     "Payload": [
@@ -2622,7 +2648,7 @@
                 },
                 {
                     "Name": "Get Product Special Status",
-                    "Description": "Gets the product’s special status (when applicable). These include hot, sale, and new.",
+                    "Description": "Gets the product's special status (when applicable). These include hot, sale, and new.",
                     "Endpoint": "/product.svc/product/get/special-status",
                     "Verb": "POST",
                     "Payload": [

@@ -55,7 +55,10 @@ Handlebars.registerPartial("p-action", Handlebars.template({"1":function(depth0,
     + alias2(((helper = (helper = helpers.Verb || (depth0 != null ? depth0.Verb : depth0)) != null ? helper : alias1),(typeof helper === alias3 ? helper.call(depth0,{"name":"Verb","hash":{},"data":data}) : helper)))
     + "</span>\r\n    <h4>Payload</h4>\r\n    <div class=\"table-wrapper\">\r\n        <table class=\"table--bordered table--striped table--data\">\r\n            <thead>\r\n                <tr><th>Name</th><th>Type</th><th>Notes</th></tr>\r\n            </thead>\r\n            <tbody>\r\n"
     + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.Payload : depth0),{"name":"each","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
-    + "            </tbody>\r\n        </table>\r\n    </div>\r\n    <h4>Response</h4>\r\n    <div class=\"table-wrapper\">\r\n        <table class=\"table--bordered table--striped table--data\">\r\n            <thead>\r\n                <tr><th>Name</th><th>Type</th><th>Notes</th></tr>\r\n            </thead>\r\n            <tbody>\r\n"
+    + "            </tbody>\r\n        </table>\r\n    </div>\r\n    <h4>Response</h4><a data-type=\"example-response\" href=\"#action-"
+    + alias2((helpers.toLower || (depth0 && depth0.toLower) || alias1).call(depth0,((stack1 = (depth0 != null ? depth0.Category : depth0)) != null ? stack1.Name : stack1),{"name":"toLower","hash":{},"data":data}))
+    + alias2(((helper = (helper = helpers.index || (data && data.index)) != null ? helper : alias1),(typeof helper === alias3 ? helper.call(depth0,{"name":"index","hash":{},"data":data}) : helper)))
+    + "-response\">Example</a>\r\n    <div class=\"table-wrapper\">\r\n        <table class=\"table--bordered table--striped table--data\">\r\n            <thead>\r\n                <tr><th>Name</th><th>Type</th><th>Notes</th></tr>\r\n            </thead>\r\n            <tbody>\r\n"
     + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.Response : depth0),{"name":"each","hash":{},"fn":this.program(3, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
     + "            </tbody>\r\n        </table>\r\n    </div>\r\n    <h4>Test it</h4>\r\n    <button class=\"btn btn--gamma btn--secondary\">Clear</button>\r\n    <button class=\"btn btn--gamma btn--positive btn--primary\" data-endpoint=\""
     + alias2(((helper = (helper = helpers.Endpoint || (depth0 != null ? depth0.Endpoint : depth0)) != null ? helper : alias1),(typeof helper === alias3 ? helper.call(depth0,{"name":"Endpoint","hash":{},"data":data}) : helper)))
@@ -63,7 +66,12 @@ Handlebars.registerPartial("p-action", Handlebars.template({"1":function(depth0,
     + alias2(((helper = (helper = helpers.Verb || (depth0 != null ? depth0.Verb : depth0)) != null ? helper : alias1),(typeof helper === alias3 ? helper.call(depth0,{"name":"Verb","hash":{},"data":data}) : helper)))
     + "\" data-sample='"
     + alias2((helpers.stringifyJSON || (depth0 && depth0.stringifyJSON) || alias1).call(depth0,(depth0 != null ? depth0.SampleCall : depth0),{"name":"stringifyJSON","hash":{},"data":data}))
-    + "'>Execute</button>\r\n    <h5>Result</h5>\r\n    <code></code>\r\n</div>";
+    + "'>Execute</button>\r\n    <h5>Result</h5>\r\n    <code></code>\r\n    <div id=\"action-"
+    + alias2((helpers.toLower || (depth0 && depth0.toLower) || alias1).call(depth0,((stack1 = (depth0 != null ? depth0.Category : depth0)) != null ? stack1.Name : stack1),{"name":"toLower","hash":{},"data":data}))
+    + alias2(((helper = (helper = helpers.index || (data && data.index)) != null ? helper : alias1),(typeof helper === alias3 ? helper.call(depth0,{"name":"index","hash":{},"data":data}) : helper)))
+    + "-response\" class=\"modal\">\r\n        <section>\r\n            <header>\r\n                <h2>Sample Response</h2><a href=\"#\" title=\"Close modal\">Close</a>\r\n            </header>\r\n            <article>\r\n                "
+    + alias2((helpers.prettifyJSON || (depth0 && depth0.prettifyJSON) || alias1).call(depth0,(depth0 != null ? depth0.SampleResponse : depth0),{"name":"prettifyJSON","hash":{},"data":data}))
+    + "\r\n            </article>\r\n        </section>\r\n        <div class=\"overlay\"></div>\r\n    </div>\r\n</div>\r\n                ";
 },"usePartial":true,"useData":true}));
 
 Handlebars.registerPartial("p-payload", Handlebars.template({"1":function(depth0,helpers,partials,data) {
