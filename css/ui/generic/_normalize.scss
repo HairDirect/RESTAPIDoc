@@ -9,6 +9,10 @@ samp {
     @include rem-attribute('font-size', 1);
 }
 
+code span {
+    font-family: monospace, serif;
+}
+
 header {
     @include rem-attribute('padding-left', 1);
     @include rem-attribute('padding-right', 1);
