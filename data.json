@@ -387,7 +387,7 @@
                                 "IsBillingDefault": null,
                                 "SelectedShipping": null,
                                 "SelectedBilling": null
-                            } 
+                            }
                         ]
                     }
                 },
@@ -1777,7 +1777,153 @@
                             "Type": "string",
                             "Notes": "Empty string indicates no errors were encountered"
                         }
-                    ]
+                    ],
+                    "SampleResponse": {
+                        "Error": null,
+                        "OrderDetail": {
+                            "Customer": {
+                                "CustomerId": null,
+                                "SalesforceAccountId": null
+
+                            },
+                            "DefaultBillingContact": {
+                                "Address": {
+                                    "AddressId": null,
+                                    "BackOfficeAddressId": null,
+                                    "City": null,
+                                    "CompanyName": null,
+                                    "Country": null,
+                                    "CountryCode": null,
+                                    "CountryId": null,
+                                    "PostalCode": null,
+                                    "RegionId": null,
+                                    "State": null,
+                                    "StateCode": null,
+                                    "Street": null,
+                                    "Street2": null
+                                },
+                                "ContactType": null,
+                                "CustomerId": null,
+                                "Email": null,
+                                "Fax": null,
+                                "FirstName": null,
+                                "Id": null,
+                                "IsBillingDefault": null,
+                                "IsCustomerDefault": null,
+                                "IsShippingDefault": null,
+                                "LastName": null,
+                                "Mobile": null,
+                                "Phone": null,
+                                "SalesforceContactId": null,
+                                "ShopId": null,
+                                "SubscriptionType": null,
+                                "emailId": null,
+                                "subscriptionId": null
+                            },
+                            "DefaultShippingContact": {
+                                "Address": {
+                                    "AddressId": null,
+                                    "BackOfficeAddressId": null,
+                                    "City": null,
+                                    "CompanyName": null,
+                                    "Country": null,
+                                    "CountryCode": null,
+                                    "CountryId": null,
+                                    "PostalCode": null,
+                                    "RegionId": null,
+                                    "State": null,
+                                    "StateCode": null,
+                                    "Street": null,
+                                    "Street2": null
+                                },
+                                "ContactType": null,
+                                "CustomerId": null,
+                                "Email": null,
+                                "Fax": null,
+                                "FirstName": null,
+                                "Id": null,
+                                "IsBillingDefault": null,
+                                "IsCustomerDefault": null,
+                                "IsShippingDefault": null,
+                                "LastName": null,
+                                "Mobile": null,
+                                "Phone": null,
+                                "SalesforceContactId": null,
+                                "ShopId": null,
+                                "SubscriptionType": null,
+                                "emailId": null,
+                                "subscriptionId": null
+                            },
+                            "DiscountAmount": null,
+                            "ExtraCharge": null,
+                            "FreightTaxCharge": null,
+                            "HandlingCharge": null,
+                            "LineItems": [
+                                {
+                                    "BackOrderQuantity": null,
+                                    "Discount": null,
+                                    "IsRestricted": null,
+                                    "IsVariation": null,
+                                    "ItemId": null,
+                                    "ModelNumber": null,
+                                    "ProductId": null,
+                                    "ProductName": null,
+                                    "ProductUrl": null,
+                                    "Quantity": null,
+                                    "SKU": null,
+                                    "Tax": null,
+                                    "TotalPrice": null,
+                                    "UnitListPrice": null,
+                                    "UnitSalePrice": null,
+                                    "Variations": null
+                                }
+                            ],
+                            "Payment": {
+                                "AccountName": null,
+                                "Amount": null,
+                                "AuthorizationCode": null,
+                                "AvsResponse": null,
+                                "CCVResponse": null,
+                                "CardType": null,
+                                "Comments": null,
+                                "CreditCardId": null,
+                                "CustomerProfileId": null,
+                                "Declined": null,
+                                "Expiry": null,
+                                "Id": null,
+                                "InWallet": null,
+                                "Message": null,
+                                "PaymentProfileId": null,
+                                "ResponseCode": null,
+                                "ShippingAmount": null,
+                                "Status": null,
+                                "TotalTaxAmount": null,
+                                "TransactionId": null,
+                                "Type": null
+                            },
+                            "ShippingCharge": null,
+                            "ShippingMethod": null,
+                            "Summary": {
+                                "CustomerId": null,
+                                "CustomerName": null,
+                                "ExchangeRate": null,
+                                "ExternalId": null,
+                                "Id": null,
+                                "Notes": null,
+                                "OrderAmount": null,
+                                "OrderCurrency": null,
+                                "OrderDate": null,
+                                "OrderStatus": null,
+                                "OrderTotal": null,
+                                "ParentOrderId": null,
+                                "PromotionCode": null,
+                                "PromotionSavings": null,
+                                "TaxRate": null,
+                                "VATId": null
+                            },
+                            "TaxCharge": null
+                        }
+                    }
                 },
                 {
                     "Name": "Check Integration Queue Batch For Failures",
