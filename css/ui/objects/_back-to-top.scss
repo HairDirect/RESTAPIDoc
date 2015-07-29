@@ -3,31 +3,8 @@
 \*------------------------------------*/
 a.back-to-top {
     display: none;
-    @include rem-attribute('width', 3);
-    @include rem-attribute('height', 3);
-    /*text-indent: -9999px;*/
     position: fixed;
     z-index: 999;
     @include rem-attribute('right', 1.5);
     @include rem-attribute('bottom', 1.5);
-    @include rem-attribute('border-radius', 3);
-    @include rem-attribute('font-size', 2);
-    text-decoration: none;
-    background-color: $dark-gray-blue;
-    color: $darkest-gray-blue;
-    box-shadow: 0 1px 2px 0 $darkest-gray-blue;
-    &:hover {
-        background-color: $medium-gray-blue;
-        color: $darker-gray-blue;
-        border-color: $darker-gray-blue;
-        > span{
-            text-shadow: 1px 1px 1px $dark-gray-blue;
-        }
-    }
-    > span {
-        position: absolute;
-        top: 10%;
-        left: 34%;
-        text-shadow: 1px 1px 1px $medium-gray-blue;
-    }
 }

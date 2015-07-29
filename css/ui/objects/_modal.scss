@@ -1,0 +1,128 @@
+/*------------------------------------*\
+    $MODAL
+\*------------------------------------*/
+/* Normal styles for the modal */
+.modal {
+    left: 50%;
+    margin-left: -40%;
+    @include rem-attribute('margin-top', -20);
+    opacity: 0;
+    position: absolute;
+    top: -50%;
+    visibility: hidden;
+    width: 80%;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -moz-transition: top 0.4s ease-in-out;
+    -o-transition: top 0.4s ease-in-out;
+    -webkit-transition: top 0.4s ease-in-out;
+    transition: top 0.4s ease-in-out;
+    /* Make the modal appear when targeted */
+    &:target {
+        opacity: 1;
+        top: 50%;
+        visibility: visible;
+    }
+
+    section {
+        background-color: $white;
+        z-index: 20;
+        height: 100%;
+        left: 0;
+        position: fixed;
+        top: 0;
+        width: 100%;
+
+        header, article {
+            @include rem-attribute('padding', 1);
+        }
+
+        header {
+            border-bottom: 1px solid $dark-gray-blue;
+            height: 10%;
+            background-color: $medium-gray-blue;
+
+            h2 {
+                display: inline-block;
+                margin: 0;
+                border: none;
+                color: $white;
+                text-shadow: 0 1px 0 $dark-gray-blue;
+            }
+
+            a {
+                position: absolute;
+                top: 0;
+                display: block;
+                background-color: $white;
+                right: 0;
+                @include rem-attribute('padding', .25);
+                border-bottom-left-radius: 5px;
+                box-shadow: 0 1px 1px 0 $darker-gray-blue;
+                text-decoration: none;
+                color: $darker-gray-blue;
+                text-shadow: 0 1px 0 $dark-gray-blue;
+
+                &:hover {
+                    color: $white;
+                    text-shadow: 0 1px 0 $dark-gray-blue;
+                    background-color: $medium-gray-blue;
+                }
+            }
+        }
+
+        article {
+            height: 90%;
+            overflow-y: auto;
+            background: $white;
+        }
+    }
+
+    .overlay {
+        display: none;
+    }
+}
+
+
+@media #{$lap} {
+    .modal {
+        box-shadow: 0 3px 7px $shade-overlay-light;
+        -moz-transition: all 0.4s ease-in-out;
+        -o-transition: all 0.4s ease-in-out;
+        -webkit-transition: all 0.4s ease-in-out;
+        transition: all 0.4s ease-in-out;
+
+        .overlay {
+            display: block;
+            background-color: $darkest-gray-blue;
+            background: $shade-overlay-medium;
+            height: 100%;
+            left: 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 10;
+        }
+
+        section {
+            position: relative;
+            z-index: 20;
+            border-radius: 5px;
+
+            header {
+                border-top-left-radius: 5px;
+                border-top-right-radius: 5px;
+
+                a {
+                    border-top-right-radius: 5px;
+                }
+            }
+
+            article {
+                border-bottom-left-radius: 5px;
+                border-bottom-right-radius: 5px;
+            }
+        }
+    }
+}

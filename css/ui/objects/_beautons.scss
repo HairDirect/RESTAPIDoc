@@ -3,4 +3,33 @@
         background-color: $darkest-gray-blue;
         color: $light-gray-blue;
     }
+
+    .btn--round {
+        @include rem-attribute('width', 3);
+        @include rem-attribute('height', 3);
+        @include rem-attribute('border-radius', 3);
+        @include rem-attribute('font-size', 2);
+        position: relative;
+        text-decoration: none;
+        background-color: $dark-gray-blue;
+        color: $darkest-gray-blue;
+        box-shadow: 0 1px 2px 0 $darkest-gray-blue;
+
+        &:hover {
+            background-color: $medium-gray-blue;
+            color: $darker-gray-blue;
+            border-color: $darker-gray-blue;
+
+            > span {
+                text-shadow: 1px 1px 1px $dark-gray-blue;
+            }
+        }
+
+        > span {
+            position: absolute;
+            top: 10%;
+            left: 34%;
+            text-shadow: 1px 1px 1px $medium-gray-blue;
+        }
+    }
 }
