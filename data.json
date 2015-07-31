@@ -333,9 +333,131 @@
                         {
                             "Name": "Customer",
                             "Type": "object",
-                            "Notes": "{ 'Id': [[Value]], 'ShopId': [[Value]], 'UserId': [[Value]], 'UserName': [[Value]], 'Password': [[Value]], 'SecretQuestion': [[Value]], 'SecretAnswer': [[Value]], 'IsActive': [[Value]], 'DefaultContact': { 'Id': [[Value]], 'CustomerId': [[Value]], 'FirstName': [[Value]], 'LastName': [[Value]], 'Address': { 'AddressId': [[Value]], 'Street': [[Value]], 'Street2': [[Value]], 'City': [[Value]], 'PostalCode': [[Value]], 'State': [[Value]], 'StateCode': [[Value]], 'Country': [[Value]], 'CountryCode': [[Value]], 'CountryId': [[Value]], 'BackOfficeAddressId': [[Value]], 'CompanyName': [[Value]], 'RegionId': [[Value]] }, 'Email': [[Value]], 'Phone': [[Value]], 'Mobile': [[Value]], 'Fax': [[Value]], 'ShopId': [[Value]], 'IsCustomerDefault': [[Value]], 'IsBillingDefault': [[Value]], 'IsShippingDefault': [[Value]], 'SubscriptionType': [[Value]], 'subscriptionId': [[Value]], 'emailId': [[Value]], 'ContactType': [[Value]], 'SalesforceContactId': [[Value]] }, 'ShippingContact': { 'Id': [[Value]], 'CustomerId': [[Value]], 'FirstName': [[Value]], 'LastName': [[Value]], 'Address': { 'AddressId': [[Value]], 'Street': [[Value]], 'Street2': [[Value]], 'City': [[Value]], 'PostalCode': [[Value]], 'State': [[Value]], 'StateCode': [[Value]], 'Country': [[Value]], 'CountryCode': [[Value]], 'CountryId': [[Value]], 'BackOfficeAddressId': [[Value]], 'CompanyName': [[Value]], 'RegionId': [[Value]] }, 'Email': [[Value]], 'Phone': [[Value]], 'Mobile': [[Value]], 'Fax': [[Value]], 'ShopId': [[Value]], 'IsCustomerDefault': [[Value]], 'IsBillingDefault': [[Value]], 'IsShippingDefault': [[Value]], 'SubscriptionType': [[Value]], 'subscriptionId': [[Value]], 'emailId': [[Value]], 'ContactType': [[Value]], 'SalesforceContactId': [[Value]] }, 'BillingContact': { 'Id': [[Value]], 'CustomerId': [[Value]], 'FirstName': [[Value]], 'LastName': [[Value]], 'Address': { 'AddressId': [[Value]], 'Street': [[Value]], 'Street2': [[Value]], 'City': [[Value]], 'PostalCode': [[Value]], 'State': [[Value]], 'StateCode': [[Value]], 'Country': [[Value]], 'CountryCode': [[Value]], 'CountryId': [[Value]], 'BackOfficeAddressId': [[Value]], 'CompanyName': [[Value]], 'RegionId': [[Value]] }, 'Email': [[Value]], 'Phone': [[Value]], 'Mobile': [[Value]], 'Fax': [[Value]], 'ShopId': [[Value]], 'IsCustomerDefault': [[Value]], 'IsBillingDefault': [[Value]], 'IsShippingDefault': [[Value]], 'SubscriptionType': [[Value]], 'subscriptionId': [[Value]], 'emailId': [[Value]], 'ContactType': [[Value]], 'SalesforceContactId': [[Value]] }, 'IsNewsletterSubscribed': [[Value]], 'BackOfficeCustomerID': [[Value]], 'BackOfficeCustomerClass': [[Value]], 'BackOfficeSalesPersonId': [[Value]], 'TrackingId': [[Value]], 'SalesforceAccountId': [[Value]], 'RegistrationId': [[Value]] }"
+                            "Notes": ""
                         }
-                    ]
+                    ],
+                    "SampleResponse": {
+                        "Error": null,
+                        "Customer": {
+                            "Id": null,
+                            "ShopId": null,
+                            "UserId": null,
+                            "UserName": null,
+                            "Password": null,
+                            "SecretQuestion": null,
+                            "SecretAnswer": null,
+                            "IsActive": null,
+                            "DefaultContact": {
+                                "Id": null,
+                                "CustomerId": null,
+                                "FirstName": null,
+                                "LastName": null,
+                                "Address": {
+                                    "AddressId": null,
+                                    "Street": null,
+                                    "Street2": null,
+                                    "City": null,
+                                    "PostalCode": null,
+                                    "State": null,
+                                    "StateCode": null,
+                                    "Country": null,
+                                    "CountryCode": null,
+                                    "CountryId": null,
+                                    "BackOfficeAddressId": null,
+                                    "CompanyName": null,
+                                    "RegionId": null
+                                },
+                                "Email": null,
+                                "Phone": null,
+                                "Mobile": null,
+                                "Fax": null,
+                                "ShopId": null,
+                                "IsCustomerDefault": null,
+                                "IsBillingDefault": null,
+                                "IsShippingDefault": null,
+                                "SubscriptionType": null,
+                                "subscriptionId": null,
+                                "emailId": null,
+                                "ContactType": null,
+                                "SalesforceContactId": null
+                            },
+                            "ShippingContact": {
+                                "Id": null,
+                                "CustomerId": null,
+                                "FirstName": null,
+                                "LastName": null,
+                                "Address": {
+                                    "AddressId": null,
+                                    "Street": null,
+                                    "Street2": null,
+                                    "City": null,
+                                    "PostalCode": null,
+                                    "State": null,
+                                    "StateCode": null,
+                                    "Country": null,
+                                    "CountryCode": null,
+                                    "CountryId": null,
+                                    "BackOfficeAddressId": null,
+                                    "CompanyName": null,
+                                    "RegionId": null
+                                },
+                                "Email": null,
+                                "Phone": null,
+                                "Mobile": null,
+                                "Fax": null,
+                                "ShopId": null,
+                                "IsCustomerDefault": null,
+                                "IsBillingDefault": null,
+                                "IsShippingDefault": null,
+                                "SubscriptionType": null,
+                                "subscriptionId": null,
+                                "emailId": null,
+                                "ContactType": null,
+                                "SalesforceContactId": null
+                            },
+                            "BillingContact": {
+                                "Id": null,
+                                "CustomerId": null,
+                                "FirstName": null,
+                                "LastName": null,
+                                "Address": {
+                                    "AddressId": null,
+                                    "Street": null,
+                                    "Street2": null,
+                                    "City": null,
+                                    "PostalCode": null,
+                                    "State": null,
+                                    "StateCode": null,
+                                    "Country": null,
+                                    "CountryCode": null,
+                                    "CountryId": null,
+                                    "BackOfficeAddressId": null,
+                                    "CompanyName": null,
+                                    "RegionId": null
+                                },
+                                "Email": null,
+                                "Phone": null,
+                                "Mobile": null,
+                                "Fax": null,
+                                "ShopId": null,
+                                "IsCustomerDefault": null,
+                                "IsBillingDefault": null,
+                                "IsShippingDefault": null,
+                                "SubscriptionType": null,
+                                "subscriptionId": null,
+                                "emailId": null,
+                                "ContactType": null,
+                                "SalesforceContactId": null
+                            },
+                            "IsNewsletterSubscribed": null,
+                            "BackOfficeCustomerID": null,
+                            "BackOfficeCustomerClass": null,
+                            "BackOfficeSalesPersonId": null,
+                            "TrackingId": null,
+                            "SalesforceAccountId": null,
+                            "RegistrationId": null
+                        }
+                    }
                 }
             ]
         },
@@ -365,9 +487,33 @@
                         {
                             "Name": "Address",
                             "Type": "object",
-                            "Notes": "{ 'ContactIdEncrypted': [[Value]], 'BackOfficeAddressId': [[Value]], 'FirstName': [[Value]], 'LastName': [[Value]], 'CountryName': [[Value]], 'CountryCode': [[Value]], 'StreetAddress1': [[Value]], 'StreetAddress2': [[Value]], 'City': [[Value]], 'StateCode': [[Value]], 'StateName': [[Value]], 'PostalCode': [[Value]], 'Phone': [[Value]], 'Company': [[Value]], 'LocationId': [[Value]], 'IsShippingDefault': [[Value]], 'IsBillingDefault': [[Value]], 'SelectedShipping': [[Value]], 'SelectedBilling': [[Value]] }"
+                            "Notes": ""
                         }
-                    ]
+                    ],
+                    "SampleResponse": {
+                        "Error": null,
+                        "Address": {
+                            "ContactIdEncrypted": null,
+                            "BackOfficeAddressId": null,
+                            "FirstName": null,
+                            "LastName": null,
+                            "CountryName": null,
+                            "CountryCode": null,
+                            "StreetAddress1": null,
+                            "StreetAddress2": null,
+                            "City": null,
+                            "StateCode": null,
+                            "StateName": null,
+                            "PostalCode": null,
+                            "Phone": null,
+                            "Company": null,
+                            "LocationId": null,
+                            "IsShippingDefault": null,
+                            "IsBillingDefault": null,
+                            "SelectedShipping": null,
+                            "SelectedBilling": null
+                        }
+                    }
                 },
                 {
                     "Name": "Get Customer Addresses",
@@ -562,7 +708,12 @@
                             "Type": "string",
                             "Notes": ""
                         }
-                    ]
+                    ],
+                    "SampleResponse": {
+                        "Error": null,
+                        "ContactIdEncrypted": null,
+                        "BackOfficeAddressId": null
+                    }
                 },
                 {
                     "Name": "Update Address",
@@ -683,7 +834,12 @@
                             "Type": "string",
                             "Notes": ""
                         }
-                    ]
+                    ],
+                    "SampleResponse": {
+                        "Error": null,
+                        "ContactIdEncrypted": null,
+                        "BackOfficeAddressId": null
+                    }
                 },
                 {
                     "Name": "Update Contact",
@@ -810,7 +966,12 @@
                             "Type": "string",
                             "Notes": ""
                         }
-                    ]
+                    ],
+                    "SampleResponse": {
+                        "Error": null,
+                        "ContactId": null,
+                        "Message": null
+                    }
                 },
                 {
                     "Name": "Delete Contact",
@@ -831,7 +992,10 @@
                             "Type": "string",
                             "Notes": "Empty string indicates no errors were encountered"
                         }
-                    ]
+                    ],
+                    "SampleResponse": {
+                        "Error": null
+                    }
                 },
                 {
                     "Name": "Set Customer Default Shipping Address",
@@ -858,7 +1022,10 @@
                             "Type": "string",
                             "Notes": "Empty string indicates no errors were encountered"
                         }
-                    ]
+                    ],
+                    "SampleResponse": {
+                        "Error": null
+                    }
                 },
                 {
                     "Name": "Set Customer Default Billing Address",
@@ -885,7 +1052,10 @@
                             "Type": "string",
                             "Notes": "Empty string indicates no errors were encountered"
                         }
-                    ]
+                    ],
+                    "SampleResponse": {
+                        "Error": null
+                    }
                 },
                 {
                     "Name": "Get Contact",
@@ -910,14 +1080,51 @@
                         {
                             "Name": "Contact",
                             "Type": "object",
-                            "Notes": "{ 'Id': [[Value]], 'CustomerId': [[Value]], 'FirstName': [[Value]], 'LastName': [[Value]], 'Address': { 'AddressId': [[Value]], 'Street': [[Value]], 'Street2': [[Value]], 'City': [[Value]], 'PostalCode': [[Value]], 'State': [[Value]], 'StateCode': [[Value]], 'Country': [[Value]], 'CountryCode': [[Value]], 'CountryId': [[Value]], 'BackOfficeAddressId': [[Value]], 'CompanyName': [[Value]], 'RegionId': [[Value]] }, 'Email': [[Value]], 'Phone': [[Value]], 'Mobile': [[Value]], 'Fax': [[Value]], 'ShopId': [[Value]], 'IsCustomerDefault': [[Value]], 'IsBillingDefault': [[Value]], 'IsShippingDefault': [[Value]], 'SubscriptionType': [[Value]], 'subscriptionId': [[Value]], 'emailId': [[Value]], 'ContactType': [[Value]], 'SalesforceContactId': [[Value]] }"
+                            "Notes": ""
                         },
                         {
                             "Name": "Error",
                             "Type": "string",
                             "Notes": "Empty string indicates no errors were encountered"
                         }
-                    ]
+                    ],
+                    "SampleResponse": {
+                        "Error": null,
+                        "Contact": {
+                            "Id": null,
+                            "CustomerId": null,
+                            "FirstName": null,
+                            "LastName": null,
+                            "Address": {
+                                "AddressId": null,
+                                "Street": null,
+                                "Street2": null,
+                                "City": null,
+                                "PostalCode": null,
+                                "State": null,
+                                "StateCode": null,
+                                "Country": null,
+                                "CountryCode": null,
+                                "CountryId": null,
+                                "BackOfficeAddressId": null,
+                                "CompanyName": null,
+                                "RegionId": null
+                            },
+                            "Email": null,
+                            "Phone": null,
+                            "Mobile": null,
+                            "Fax": null,
+                            "ShopId": null,
+                            "IsCustomerDefault": null,
+                            "IsBillingDefault": null,
+                            "IsShippingDefault": null,
+                            "SubscriptionType": null,
+                            "subscriptionId": null,
+                            "emailId": null,
+                            "ContactType": null,
+                            "SalesforceContactId": null
+                        }
+                    }
                 },
                 {
                     "Name": "Create Address From Salesforce",
@@ -1040,7 +1247,10 @@
                             "Type": "string",
                             "Notes": "Empty string indicates no errors were encountered"
                         }
-                    ]
+                    ],
+                    "SampleResponse": {
+                        "Error": null
+                    }
                 }
             ]
         },
@@ -1091,7 +1301,10 @@
                             "Type": "string",
                             "Notes": "Empty string indicates no errors were encountered"
                         }
-                    ]
+                    ],
+                    "SampleResponse": {
+                        "Error": null
+                    }
                 },
                 {
                     "Name": "Get Customer For Integration",
@@ -1110,14 +1323,60 @@
                         {
                             "Name": "Customer",
                             "Type": "object",
-                            "Notes": "{ 'SalesforceAccountId': [[Value]], 'BackOfficeCustomerId': [[Value]], 'FirstName': [[Value]], 'LastName': [[Value]], 'BackOfficeSalespersonId': [[Value]], 'Username': [[Value]], 'Email': [[Value]], 'ShippingContact': { 'ContactId': [[Value]], 'BackOfficeAddressId': [[Value]], 'SalesforceContactId': [[Value]], 'FirstName': [[Value]], 'LastName': [[Value]], 'CountryName': [[Value]], 'CountryCode': [[Value]], 'StreetAddress1': [[Value]], 'StreetAddress2': [[Value]], 'City': [[Value]], 'StateCode': [[Value]], 'StateName': [[Value]], 'PostalCode': [[Value]], 'Phone': [[Value]], 'Company': [[Value]] }, 'BillingContact': { 'ContactId': [[Value]], 'BackOfficeAddressId': [[Value]], 'SalesforceContactId': [[Value]], 'FirstName': [[Value]], 'LastName': [[Value]], 'CountryName': [[Value]], 'CountryCode': [[Value]], 'StreetAddress1': [[Value]], 'StreetAddress2': [[Value]], 'City': [[Value]], 'StateCode': [[Value]], 'StateName': [[Value]], 'PostalCode': [[Value]], 'Phone': [[Value]], 'Company': [[Value]] } }"
+                            "Notes": ""
                         },
                         {
                             "Name": "Error",
                             "Type": "string",
                             "Notes": "Empty string indicates no errors were encountered"
                         }
-                    ]
+                    ],
+                    "SampleResponse": {
+                        "Error": null,
+                        "Customer": {
+                            "SalesforceAccountId": null,
+                            "BackOfficeCustomerId": null,
+                            "FirstName": null,
+                            "LastName": null,
+                            "BackOfficeSalespersonId": null,
+                            "Username": null,
+                            "Email": null,
+                            "ShippingContact": {
+                                "ContactId": null,
+                                "BackOfficeAddressId": null,
+                                "SalesforceContactId": null,
+                                "FirstName": null,
+                                "LastName": null,
+                                "CountryName": null,
+                                "CountryCode": null,
+                                "StreetAddress1": null,
+                                "StreetAddress2": null,
+                                "City": null,
+                                "StateCode": null,
+                                "StateName": null,
+                                "PostalCode": null,
+                                "Phone": null,
+                                "Company": null
+                            },
+                            "BillingContact": {
+                                "ContactId": null,
+                                "BackOfficeAddressId": null,
+                                "SalesforceContactId": null,
+                                "FirstName": null,
+                                "LastName": null,
+                                "CountryName": null,
+                                "CountryCode": null,
+                                "StreetAddress1": null,
+                                "StreetAddress2": null,
+                                "City": null,
+                                "StateCode": null,
+                                "StateName": null,
+                                "PostalCode": null,
+                                "Phone": null,
+                                "Company": null
+                            }
+                        }
+                    }
                 }
             ]
         },
@@ -1154,14 +1413,29 @@
                         {
                             "Name": "DepartmentLinks",
                             "Type": "object array",
-                            "Notes": "[ { 'ParentName': [[Value]], 'DepartmentLinkChildren': [ { 'Name': [[Value]], 'Url': [[Value]], 'NumberOfProducts': [[Value]] } ] } ]"
+                            "Notes": ""
                         },
                         {
                             "Name": "Error",
                             "Type": "string",
                             "Notes": "Empty string indicates no errors were encountered"
                         }
-                    ]
+                    ],
+                    "SampleReponse": {
+                        "Error": null,
+                        "DepartmentLinks": [
+                            {
+                                "ParentName": null,
+                                "DepartmentLinkChildren": [
+                                    {
+                                        "Name": null,
+                                        "Url": null,
+                                        "NumberOfProducts": null
+                                    }
+                                ]
+                            }
+                        ]
+                    }
                 }
             ]
         },
@@ -1283,7 +1557,11 @@
                             "Type": "string",
                             "Notes": "Empty string indicates no errors were encountered"
                         }
-                    ]
+                    ],
+                    "SampleResponse": {
+                        "Error": null,
+                        "Successful": null
+                    }
                 },
                 {
                     "Name": "Send Order Confirmation Email",
@@ -1352,7 +1630,10 @@
                             "Type": "string",
                             "Notes": "Empty string indicates no errors were encountered."
                         }
-                    ]
+                    ],
+                    "SampleResponse": {
+                        "Error": null
+                    }
                 }
             ]
         },
@@ -1377,14 +1658,29 @@
                         {
                             "Name": "Countries",
                             "Type": "object array",
-                            "Notes": "[ { 'Id': [[Value]], 'Name': [[Value]], 'Code': [[Value]], 'FirstName': [[Value]], 'LastName': [[Value]], 'CountryName': [[Value]], 'CountryCode': [[Value]], 'RegionId': [[Value]] } ]"
+                            "Notes": ""
                         },
                         {
                             "Name": "Error",
                             "Type": "string",
                             "Notes": "Empty string indicates no errors were encountered"
                         }
-                    ]
+                    ],
+                    "SampleResponse": {
+                        "Error": null,
+                        "Countries": [
+                            {
+                                "Id": null,
+                                "Name": null,
+                                "Code": null,
+                                "FirstName": null,
+                                "LastName": null,
+                                "CountryName": null,
+                                "CountryCode": null,
+                                "RegionId": null
+                            }
+                        ]
+                    }
                 },
                 {
                     "Name": "Get States For Country",
@@ -1409,14 +1705,23 @@
                         {
                             "Name": "Locations",
                             "Type": "object array",
-                            "Notes": "[ { 'Code': [[Value]], 'Name': [[Value]] } ]"
+                            "Notes": ""
                         },
                         {
                             "Name": "Error",
                             "Type": "string",
                             "Notes": "Empty string indicates no errors were encountered."
                         }
-                    ]
+                    ],
+                    "SampleResponse": {
+                        "Error": null,
+                        "Locations": [
+                            {
+                                "Code": null,
+                                "Name": null
+                            }
+                        ]
+                    }
                 },
                 {
                     "Name": "Get Warehouse For Region",
@@ -1453,7 +1758,12 @@
                             "Type": "string",
                             "Notes": "Empty string indicates no errors were encountered."
                         }
-                    ]
+                    ],
+                    "SampleResponse": {
+                        "Error": null,
+                        "City": null,
+                        "StateOrCountry": null
+                    }
                 },
                 {
                     "Name": "Get Warehouse Id for Back Office Location Code",
@@ -1479,7 +1789,11 @@
                             "Type": "string",
                             "Notes": "Empty string indicates no errors were encountered."
                         }
-                    ]
+                    ],
+                    "SampleResponse": {
+                        "Error": null,
+                        "WareHouseId": null
+                    }
                 },
                 {
                     "Name": "Get Location Id For Type And Code",
@@ -1511,7 +1825,11 @@
                             "Type": "string",
                             "Notes": "Empty string indicates no errors were encountered."
                         }
-                    ]
+                    ],
+                    "SampleResponse": {
+                        "Error": null,
+                        "LocationId": null
+                    }
                 },
                 {
                     "Name": "Get State Name For Code",
@@ -1543,7 +1861,11 @@
                             "Type": "string",
                             "Notes": "Empty string indicates no errors were encountered."
                         }
-                    ]
+                    ],
+                    "SampleResponse": {
+                        "Error": null,
+                        "StateName": null
+                    }
                 }
             ]
         },
@@ -1580,14 +1902,24 @@
                         {
                             "Name": "ManufacturerLinks",
                             "Type": "object array",
-                            "Notes": "[ { 'Name': [[Value]], 'Url': [[Value]], 'NumberOfProducts': [[Value]] } ]"
+                            "Notes": ""
                         },
                         {
                             "Name": "Error",
                             "Type": "string",
                             "Notes": "Empty string indicates no errors were encountered"
                         }
-                    ]
+                    ],
+                    "SampleResponse": {
+                        "Error": null,
+                        "ManufacturerLinks": [
+                            {
+                                "Name": null,
+                                "Url": null,
+                                "NumberOfProducts": null
+                            }
+                        ]
+                    }
                 }
             ]
         },
@@ -1732,7 +2064,7 @@
                         {
                             "Name": "OrderData",
                             "Type": "object",
-                            "Notes": "{ 'OrderId': [[Value]], 'BackOfficeOrderNumber': [[Value]], 'CurrencyId': [[Value]], 'RegionTaxRate': [[Value]], 'OrderTaxRate': [[Value]], 'ExchangeRate': [[Value]], 'SpecialInstructions': [[Value]], 'ShippingContactId': [[Value]], 'BillingContactId': [[Value]], 'CarrierID': [[Value]], 'ShippingCharge': [[Value]], 'BackOfficeShippingMethod': [[Value]], 'PromoCode': [[Value]], 'PromotionSavings': [[Value]], 'OrderSubtotal': [[Value]], 'OrderTaxAmount': [[Value]], 'FreightTaxAmount': [[Value]], 'OrderGrandTotal': [[Value]], 'OrderStatusId': [[Value]], 'OrderItems': [ { 'SelectedItemId': [[Value]], 'ProductId': [[Value]], 'SKU': [[Value]], 'Department': [[Value]], 'Quantity': [[Value]], 'IsVariation': [[Value]], 'PromotionId': [[Value]], 'UnitPrice': [[Value]], 'UnitDiscount': [[Value]], 'TaxAmount': [[Value]], 'Description': [[Value]] } ] }"
+                            "Notes": ""
                         },
                         {
                             "Name": "Status",
@@ -1744,7 +2076,47 @@
                             "Type": "string",
                             "Notes": "Empty string indicates no errors were encountered"
                         }
-                    ]
+                    ],
+                    "SampleResponse": {
+                        "Error": null,
+                        "OrderData": {
+                            "OrderId": null,
+                            "BackOfficeOrderNumber": null,
+                            "CurrencyId": null,
+                            "RegionTaxRate": null,
+                            "OrderTaxRate": null,
+                            "ExchangeRate": null,
+                            "SpecialInstructions": null,
+                            "ShippingContactId": null,
+                            "BillingContactId": null,
+                            "CarrierID": null,
+                            "ShippingCharge": null,
+                            "BackOfficeShippingMethod": null,
+                            "PromoCode": null,
+                            "PromotionSavings": null,
+                            "OrderSubtotal": null,
+                            "OrderTaxAmount": null,
+                            "FreightTaxAmount": null,
+                            "OrderGrandTotal": null,
+                            "OrderStatusId": null,
+                            "OrderItems": [
+                                {
+                                    "SelectedItemId": null,
+                                    "ProductId": null,
+                                    "SKU": null,
+                                    "Department": null,
+                                    "Quantity": null,
+                                    "IsVariation": null,
+                                    "PromotionId": null,
+                                    "UnitPrice": null,
+                                    "UnitDiscount": null,
+                                    "TaxAmount": null,
+                                    "Description": null
+                                }
+                            ]
+                        },
+                        "Status": null
+                    }
                 },
                 {
                     "Name": "Delete Order",
@@ -1771,7 +2143,10 @@
                             "Type": "string",
                             "Notes": "Empty string indicates no errors were encountered"
                         }
-                    ]
+                    ],
+                    "SampleResponse": {
+                        "Error": null
+                    }
                 },
                 {
                     "Name": "Get Pending Integration Queue Records",
@@ -1790,14 +2165,26 @@
                         {
                             "Name": "Records",
                             "Type": "object array",
-                            "Notes": "[ { 'Id': [[Value]], 'OrderQueueID': [[Value]], 'BatchId': [[Value]], 'Type': [[Value]], 'Params': [[Value]] } ]"
+                            "Notes": ""
                         },
                         {
                             "Name": "Error",
                             "Type": "string",
                             "Notes": "Empty string indicates no errors were encountered"
                         }
-                    ]
+                    ],
+                    "SampleResponse": {
+                        "Error": null,
+                        "Records": [
+                            {
+                                "Id": null,
+                                "OrderQueueID": null,
+                                "BatchId": null,
+                                "Type": null,
+                                "Params": null
+                            }
+                        ]
+                    }
                 },
                 {
                     "Name": "Get Order Details",
@@ -2007,7 +2394,11 @@
                             "Type": "string",
                             "Notes": "Empty string indicates no errors were encountered"
                         }
-                    ]
+                    ],
+                    "SampleResponse": {
+                        "Error": null,
+                        "failureExists": null
+                    }
                 },
                 {
                     "Name": "Update Integration Queue Record",
@@ -2045,7 +2436,11 @@
                             "Type": "string",
                             "Notes": "Empty string indicates no errors were encountered"
                         }
-                    ]
+                    ],
+                    "SampleResponse": {
+                        "Error": null,
+                        "OrderQueueId": null
+                    }
                 }
             ]
         },
@@ -2082,14 +2477,32 @@
                         {
                             "Name": "Wallet",
                             "Type": "object array",
-                            "Notes": "[ { 'PaymentProfileIdEncrypted': [[Value]], 'CustomerProfileId': [[Value]], 'LastFour': [[Value]], 'NameOnCard': [[Value]], 'ExpirationMonth': [[Value]], 'ExpirationYear': [[Value]], 'CardType': [[Value]], 'CardNumber': [[Value]], 'CCV': [[Value]], 'IsDefault': [[Value]], 'IsSelected': [[Value]] } ]"
+                            "Notes": ""
                         },
                         {
                             "Name": "Error",
                             "Type": "string",
                             "Notes": "Empty string indicates no errors were encountered"
                         }
-                    ]
+                    ],
+                    "SampleResponse": {
+                        "Error": null,
+                        "Wallet": [
+                            {
+                                "PaymentProfileIdEncrypted": null,
+                                "CustomerProfileId": null,
+                                "LastFour": null,
+                                "NameOnCard": null,
+                                "ExpirationMonth": null,
+                                "ExpirationYear": null,
+                                "CardType": null,
+                                "CardNumber": null,
+                                "CCV": null,
+                                "IsDefault": null,
+                                "IsSelected": null
+                            }
+                        ]
+                    }
                 },
                 {
                     "Name": "Add/Update Wallet Card",
@@ -2133,7 +2546,11 @@
                             "Type": "string",
                             "Notes": "Empty string indicates no errors were encountered"
                         }
-                    ]
+                    ],
+                    "SampleResponse": {
+                        "Error": null,
+                        "CardIdEncrypted": null
+                    }
                 },
                 {
                     "Name": "Delete Wallet Card",
@@ -2160,7 +2577,10 @@
                             "Type": "string",
                             "Notes": "Empty string indicates no errors were encountered"
                         }
-                    ]
+                    ],
+                    "SampleResponse": {
+                        "Error": null
+                    }
                 },
                 {
                     "Name": "Get PayPal Express Checkout URL",
@@ -2222,7 +2642,11 @@
                             "Type": "string",
                             "Notes": "Empty string indicates no errors were encountered"
                         }
-                    ]
+                    ],
+                    "SampleResponse": {
+                        "Error": null,
+                        "ExpressCheckoutUrl": null
+                    }
                 },
                 {
                     "Name": "Get PayPal Express Checkout Details",
@@ -2267,7 +2691,10 @@
                             "Type": "string",
                             "Notes": "Empty string indicates no errors were encountered"
                         }
-                    ]
+                    ],
+                    "SampleResponse": {
+                        "Error": null
+                    }
                 },
                 {
                     "Name": "Get Credit Card Payment By Id",
@@ -2286,14 +2713,73 @@
                         {
                             "Name": "Payment",
                             "Type": "object",
-                            "Notes": "{ 'Id': [[Value]], 'AccountNumber': [[Value]], 'Type': [[Value]], 'SubType': [[Value]], 'Amount': [[Value]], 'TotalTaxAmount': [[Value]], 'ShippingAmount': [[Value]], 'Status': [[Value]], 'Contact': { 'Id': [[Value]], 'CustomerId': [[Value]], 'FirstName': [[Value]], 'LastName': [[Value]], 'Address': { 'AddressId': [[Value]], 'Street': [[Value]], 'Street2': [[Value]], 'City': [[Value]], 'PostalCode': [[Value]], 'State': [[Value]], 'StateCode': [[Value]], 'Country': [[Value]], 'CountryCode': [[Value]], 'CountryId': [[Value]], 'BackOfficeAddressId': [[Value]], 'CompanyName': [[Value]], 'RegionId': [[Value]] }, 'Email': [[Value]], 'Phone': [[Value]], 'Mobile': [[Value]], 'Fax': [[Value]], 'ShopId': [[Value]], 'IsCustomerDefault': [[Value]], 'IsBillingDefault': [[Value]], 'IsShippingDefault': [[Value]], 'SubscriptionType': [[Value]], 'subscriptionId': [[Value]], 'emailId': [[Value]], 'ContactType': [[Value]], 'SalesforceContactId': [[Value]] }, 'Comments': [[Value]], 'TransactionId': [[Value]], 'AuthorizationCode': [[Value]], 'CreditCardId': [[Value]], 'ResponseCode': [[Value]], 'Message': [[Value]], 'AvsResponse': [[Value]], 'CCVResponse': [[Value]], 'InWallet': [[Value]], 'Declined': [[Value]], 'CustomerProfileId': [[Value]], 'PaymentProfileId': [[Value]] }"
+                            "Notes": ""
                         },
                         {
                             "Name": "Error",
                             "Type": "string",
                             "Notes": "Empty string indicates no errors were encountered"
                         }
-                    ]
+                    ],
+                    "SampleResponse": {
+                        "Error": null,
+                        "Payment": {
+                            "Id": null,
+                            "AccountNumber": null,
+                            "Type": null,
+                            "SubType": null,
+                            "Amount": null,
+                            "TotalTaxAmount": null,
+                            "ShippingAmount": null,
+                            "Status": null,
+                            "Contact": {
+                                "Id": null,
+                                "CustomerId": null,
+                                "FirstName": null,
+                                "LastName": null,
+                                "Address": {
+                                    "AddressId": null,
+                                    "Street": null,
+                                    "Street2": null,
+                                    "City": null,
+                                    "PostalCode": null,
+                                    "State": null,
+                                    "StateCode": null,
+                                    "Country": null,
+                                    "CountryCode": null,
+                                    "CountryId": null,
+                                    "BackOfficeAddressId": null,
+                                    "CompanyName": null,
+                                    "RegionId": null
+                                },
+                                "Email": null,
+                                "Phone": null,
+                                "Mobile": null,
+                                "Fax": null,
+                                "ShopId": null,
+                                "IsCustomerDefault": null,
+                                "IsBillingDefault": null,
+                                "IsShippingDefault": null,
+                                "SubscriptionType": null,
+                                "subscriptionId": null,
+                                "emailId": null,
+                                "ContactType": null,
+                                "SalesforceContactId": null
+                            },
+                            "Comments": null,
+                            "TransactionId": null,
+                            "AuthorizationCode": null,
+                            "CreditCardId": null,
+                            "ResponseCode": null,
+                            "Message": null,
+                            "AvsResponse": null,
+                            "CCVResponse": null,
+                            "InWallet": null,
+                            "Declined": null,
+                            "CustomerProfileId": null,
+                            "PaymentProfileId": null
+                        }
+                    }
                 },
                 {
                     "Name": "Get Credit Card Details By Id",
@@ -2312,14 +2798,25 @@
                         {
                             "Name": "CreditCard",
                             "Type": "object",
-                            "Notes": "{ 'CardType': [[Value]], 'NameOnCard': [[Value]], 'ExpMonth': [[Value]], 'ExpYear': [[Value]], 'LastFour': [[Value]], 'ContactId': [[Value]] }"
+                            "Notes": ""
                         },
                         {
                             "Name": "Error",
                             "Type": "string",
                             "Notes": "Empty string indicates no errors were encountered"
                         }
-                    ]
+                    ],
+                    "SampleResponse": {
+                        "Error": null,
+                        "CreditCard": {
+                            "CardType": null,
+                            "NameOnCard": null,
+                            "ExpMonth": null,
+                            "ExpYear": null,
+                            "LastFour": null,
+                            "ContactId": null
+                        }
+                    }
                 }
             ]
         },
@@ -2380,14 +2877,34 @@
                         {
                             "Name": "Products",
                             "Type": "object array",
-                            "Notes": "[ { 'Id': [[Value]], 'Name': [[Value]], 'Url': [[Value]], 'Img': [[Value]], 'Rating': [[Value]], 'List': [[Value]], 'Selling': [[Value]], 'MnfrName': [[Value]], 'MnfrUrl': [[Value]], 'HasVariation': [[Value]], 'Options': [[Value]], 'Tag': [[Value]], 'Orderable': [[Value]] } ]"
+                            "Notes": ""
                         },
                         {
                             "Name": "Error",
                             "Type": "string",
                             "Notes": "Empty string indicates no errors were encountered"
                         }
-                    ]
+                    ],
+                    "SampleResponse": {
+                        "Error": null,
+                        "Products": [
+                            {
+                                "Id": null,
+                                "Name": null,
+                                "Url": null,
+                                "Img": null,
+                                "Rating": null,
+                                "List": null,
+                                "Selling": null,
+                                "MnfrName": null,
+                                "MnfrUrl": null,
+                                "HasVariation": null,
+                                "Options": null,
+                                "Tag": null,
+                                "Orderable": null
+                            }
+                        ]
+                    }
                 },
                 {
                     "Name": "Get Related Products",
@@ -2442,14 +2959,34 @@
                         {
                             "Name": "Products",
                             "Type": "object array",
-                            "Notes": "[ { 'Id': [[Value]], 'Name': [[Value]], 'Url': [[Value]], 'Img': [[Value]], 'Rating': [[Value]], 'List': [[Value]], 'Selling': [[Value]], 'MnfrName': [[Value]], 'MnfrUrl': [[Value]], 'HasVariation': [[Value]], 'Options': [[Value]], 'Tag': [[Value]], 'Orderable': [[Value]] } ]"
+                            "Notes": ""
                         },
                         {
                             "Name": "Error",
                             "Type": "string",
                             "Notes": "Empty string indicates no errors were encountered"
                         }
-                    ]
+                    ],
+                    "SampleResponse": {
+                        "Error": null,
+                        "Products": [
+                            {
+                                "Id": null,
+                                "Name": null,
+                                "Url": null,
+                                "Img": null,
+                                "Rating": null,
+                                "List": null,
+                                "Selling": null,
+                                "MnfrName": null,
+                                "MnfrUrl": null,
+                                "HasVariation": null,
+                                "Options": null,
+                                "Tag": null,
+                                "Orderable": null
+                            }
+                        ]
+                    }
                 },
                 {
                     "Name": "Get Alternate Products",
@@ -2511,7 +3048,27 @@
                             "Type": "string",
                             "Notes": "Empty string indicates no errors were encountered"
                         }
-                    ]
+                    ],
+                    "SampleResponse": {
+                        "Error": null,
+                        "Products": [
+                            {
+                                "Id": null,
+                                "Name": null,
+                                "Url": null,
+                                "Img": null,
+                                "Rating": null,
+                                "List": null,
+                                "Selling": null,
+                                "MnfrName": null,
+                                "MnfrUrl": null,
+                                "HasVariation": null,
+                                "Options": null,
+                                "Tag": null,
+                                "Orderable": null
+                            }
+                        ]
+                    }
                 },
                 {
                     "Name": "Get Product Downloads",
@@ -2536,14 +3093,23 @@
                         {
                             "Name": "Downloads",
                             "Type": "object array",
-                            "Notes": "[ { 'Url': [[Value]], 'Name': [[Value]] } ]"
+                            "Notes": ""
                         },
                         {
                             "Name": "Error",
                             "Type": "string",
                             "Notes": "Empty string indicates no errors were encountered"
                         }
-                    ]
+                    ],
+                    "SampleResponse": {
+                        "Error": null,
+                        "Downloads": [
+                            {
+                                "Url": null,
+                                "Name": null
+                            }
+                        ]
+                    }
                 },
                 {
                     "Name": "Get Product Messages",
@@ -2575,7 +3141,15 @@
                             "Type": "string",
                             "Notes": "Empty string indicates no errors were encountered"
                         }
-                    ]
+                    ],
+                    "SampleResponse": {
+                        "Error": null,
+                        "Messages": [
+                            {
+                                "Message": null
+                            }
+                        ]
+                    }
                 },
                 {
                     "Name": "Get Product Images",
@@ -2606,14 +3180,24 @@
                         {
                             "Name": "Images",
                             "Type": "object array",
-                            "Notes": "[ { 'URL': [[Value]], 'AltText': [[Value]], 'IsDefault': [[Value]] } ]"
+                            "Notes": ""
                         },
                         {
                             "Name": "Error",
                             "Type": "string",
                             "Notes": "Empty string indicates no errors were encountered"
                         }
-                    ]
+                    ],
+                    "SampleResponse": {
+                        "Error": null,
+                        "Images": [
+                            {
+                                "URL": null,
+                                "AltText": null,
+                                "IsDefault": null
+                            }
+                        ]
+                    }
                 },
                 {
                     "Name": "Get Product Videos",
@@ -2645,7 +3229,17 @@
                             "Type": "string",
                             "Notes": "Empty string indicates no errors were encountered"
                         }
-                    ]
+                    ],
+                    "SampleResponse": {
+                        "Error": null,
+                        "Videos": [
+                            {
+                                "Name": null,
+                                "VideoSourceId": null,
+                                "IsDefault": null
+                            }
+                        ]
+                    }
                 },
                 {
                     "Name": "Get Product Specifications",
@@ -2677,7 +3271,16 @@
                             "Type": "string",
                             "Notes": "Empty string indicates no errors were encountered"
                         }
-                    ]
+                    ],
+                    "SampleResponse": {
+                        "Error": null,
+                        "Specs": [
+                            {
+                                "Name": null,
+                                "Value": null
+                            }
+                        ]
+                    }
                 },
                 {
                     "Name": "Get Product Prices",
@@ -2720,14 +3323,25 @@
                         {
                             "Name": "Prices",
                             "Type": "object",
-                            "Notes": "{ 'List': [[Value]], 'Selling': [[Value]], 'Promotional': [[Value]], 'PromotionId': [[Value]], 'High': [[Value]], 'Low': [[Value]] }"
+                            "Notes": ""
                         },
                         {
                             "Name": "Error",
                             "Type": "string",
                             "Notes": "Empty string indicates no errors were encountered"
                         }
-                    ]
+                    ],
+                    "SampleResponse": {
+                        "Error": null,
+                        "Prices": {
+                            "List": null,
+                            "Selling": null,
+                            "Promotional": null,
+                            "PromotionId": null,
+                            "High": null,
+                            "Low": null
+                        }
+                    }
                 },
                 {
                     "Name": "Get Product Detail Data",
@@ -2758,14 +3372,38 @@
                         {
                             "Name": "Details",
                             "Type": "object",
-                            "Notes": "{ 'Id': [[Value]], 'Name': [[Value]], 'SKU': [[Value]], 'Active': [[Value]], 'AllowBackorder': [[Value]], 'DepartmentId': [[Value]], 'CollectionId': [[Value]], 'ManufacturerId': [[Value]], 'ManufacturerName': [[Value]], 'URL': [[Value]], 'RelCanonical': [[Value]], 'SEOTitle': [[Value]], 'SEOKeywords': [[Value]], 'SEODescription': [[Value]], 'Summary': [[Value]], 'Description': [[Value]], 'Directions': [[Value]], 'Ingredients': [[Value]], 'HowTo': [[Value]] }"
+                            "Notes": ""
                         },
                         {
                             "Name": "Error",
                             "Type": "string",
                             "Notes": "Empty string indicates no errors were encountered"
                         }
-                    ]
+                    ],
+                    "SampleResponse": {
+                        "Error": null,
+                        "Details": {
+                            "Id": null,
+                            "Name": null,
+                            "SKU": null,
+                            "Active": null,
+                            "AllowBackorder": null,
+                            "DepartmentId": null,
+                            "CollectionId": null,
+                            "ManufacturerId": null,
+                            "ManufacturerName": null,
+                            "URL": null,
+                            "RelCanonical": null,
+                            "SEOTitle": null,
+                            "SEOKeywords": null,
+                            "SEODescription": null,
+                            "Summary": null,
+                            "Description": null,
+                            "Directions": null,
+                            "Ingredients": null,
+                            "HowTo": null
+                        }
+                    }
                 },
                 {
                     "Name": "Get Product Inventory",
@@ -2802,14 +3440,23 @@
                         {
                             "Name": "InventoryData",
                             "Type": "object",
-                            "Notes": "{ 'InventoryStatus': [[Value]], 'InventoryMessage': [[Value]], 'Orderable': [[Value]], 'Quantity': [[Value]] }"
+                            "Notes": ""
                         },
                         {
                             "Name": "Error",
                             "Type": "string",
                             "Notes": "Empty string indicates no errors were encountered"
                         }
-                    ]
+                    ],
+                    "SampleResponse": {
+                        "Error": null,
+                        "InventoryData": {
+                            "InventoryStatus": null,
+                            "InventoryMessage": null,
+                            "Orderable": null,
+                            "Quantity": null
+                        }
+                    }
                 },
                 {
                     "Name": "Update Product Inventory",
@@ -2842,7 +3489,10 @@
                             "Type": "string",
                             "Notes": "Empty string indicates no errors were encountered"
                         }
-                    ]
+                    ],
+                    "SampleResponse": {
+                        "Error": null
+                    }
                 },
                 {
                     "Name": "Get Product Special Status",
@@ -2904,7 +3554,11 @@
                             "Type": "string",
                             "Notes": "Empty string indicates no errors were encountered"
                         }
-                    ]
+                    ],
+                    "SampleResponse": {
+                        "Error": null,
+                        "SpecialStatus": null
+                    }
                 },
                 {
                     "Name": "Update Product Price for Currency",
@@ -2955,7 +3609,10 @@
                             "Type": "string",
                             "Notes": "Empty string indicates no errors were encountered"
                         }
-                    ]
+                    ],
+                    "SampleResponse": {
+                        "Error": null
+                    }
                 },
                 {
                     "Name": "Add Product Price for Currency",
@@ -3006,7 +3663,10 @@
                             "Type": "string",
                             "Notes": "Empty string indicates no errors were encountered"
                         }
-                    ]
+                    ],
+                    "SampleResponse": {
+                        "Error": null
+                    }
                 },
                 {
                     "Name": "Delete Prices for Product",
@@ -3027,7 +3687,10 @@
                             "Type": "string",
                             "Notes": "Empty string indicates no errors were encountered"
                         }
-                    ]
+                    ],
+                    "SampleResponse": {
+                        "Error": null
+                    }
                 },
                 {
                     "Name": "Get Price for Product and Currency",
@@ -3052,14 +3715,27 @@
                         {
                             "Name": "Price",
                             "Type": "object",
-                            "Notes": "{ 'CurrencyCode': [[Value]], 'CustomerGroupName': [[Value]], 'PriceTierName': [[Value]], 'List': [[Value]], 'Selling': [[Value]], 'Bulk': [[Value]], 'Cost': [[Value]], 'Recurring': [[Value]] }"
+                            "Notes": ""
                         },
                         {
                             "Name": "Error",
                             "Type": "string",
                             "Notes": "Empty string indicates no errors were encountered"
                         }
-                    ]
+                    ],
+                    "SampleResponse": {
+                        "Error": null,
+                        "Price": {
+                            "CurrencyCode": null,
+                            "CustomerGroupName": null,
+                            "PriceTierName": null,
+                            "List": null,
+                            "Selling": null,
+                            "Bulk": null,
+                            "Cost": null,
+                            "Recurring": null
+                        }
+                    }
                 },
                 {
                     "Name": "Update Product From Integration",
@@ -3110,7 +3786,10 @@
                             "Type": "string",
                             "Notes": "Empty string indicates no errors were encountered"
                         }
-                    ]
+                    ],
+                    "SampleResponse": {
+                        "Error": null
+                    }
                 },
                 {
                     "Name": "Create Product From Integration",
@@ -3196,7 +3875,11 @@
                             "Type": "string",
                             "Notes": "Empty string indicates no errors were encountered"
                         }
-                    ]
+                    ],
+                    "SampleResponse": {
+                        "Error": null,
+                        "ProductId": null
+                    }
                 },
                 {
                     "Name": "Get Product Id By SKU",
@@ -3228,7 +3911,11 @@
                             "Type": "string",
                             "Notes": "Empty string indicates no errors were encountered"
                         }
-                    ]
+                    ],
+                    "SampleResponse": {
+                        "Error": null,
+                        "ProductId": null
+                    }
                 }
             ]
         },
@@ -3272,7 +3959,11 @@
                             "Type": "string",
                             "Notes": "Empty string indicates no errors were encountered"
                         }
-                    ]
+                    ],
+                    "SampleResponse": {
+                        "Error": null,
+                        "Amount": null
+                    }
                 },
                 {
                     "Name": "Get Discount Amount For Promo Code",
@@ -3343,7 +4034,14 @@
                             "Type": "string",
                             "Notes": "Empty string indicates no errors were encountered"
                         }
-                    ]
+                    ],
+                    "SampleResponse": {
+                        "Error": null,
+                        "DiscountAmount": null,
+                        "PromoCode": null,
+                        "PromotionIdEncrypted": null,
+                        "PromoError": null
+                    }
                 }
             ]
         },
@@ -3416,7 +4114,7 @@
                         {
                             "Name": "Options",
                             "Type": "object array",
-                            "Notes": "[ { 'CarrierShippingMethodId': [[Value]], 'CarrierId': [[Value]], 'CarrierName': [[Value]], 'MethodName': [[Value]], 'ServiceCode': [[Value]], 'DeliveryRangeStart': [[Value]], 'DeliveryRangeEnd': [[Value]], 'Price': [[Value]], 'PriceEncrypted': [[Value]], 'FreeShippingAllowed': [[Value]], 'IsFree': [[Value]] } ]"
+                            "Notes": ""
                         },
                         {
                             "Name": "WarehouseCity",
@@ -3438,7 +4136,28 @@
                             "Type": "string",
                             "Notes": "Empty string indicates no errors were encountered"
                         }
-                    ]
+                    ],
+                    "SampleResponse": {
+                        "Error": null,
+                        "Options": [
+                            {
+                                "CarrierShippingMethodId": null,
+                                "CarrierId": null,
+                                "CarrierName": null,
+                                "MethodName": null,
+                                "ServiceCode": null,
+                                "DeliveryRangeStart": null,
+                                "DeliveryRangeEnd": null,
+                                "Price": null,
+                                "PriceEncrypted": null,
+                                "FreeShippingAllowed": null,
+                                "IsFree": null
+                            }
+                        ],
+                        "WarehouseCity": null,
+                        "WarehouseStateOrCountry": null,
+                        "StockDisclaimer": null
+                    }
                 },
                 {
                     "Name": "Get Shipping Options For Contact Id",
@@ -3515,7 +4234,28 @@
                             "Type": "string",
                             "Notes": "Empty string indicates no errors were encountered"
                         }
-                    ]
+                    ],
+                    "SampleResponse": {
+                        "Error": null,
+                        "Options": [
+                            {
+                                "CarrierShippingMethodId": null,
+                                "CarrierId": null,
+                                "CarrierName": null,
+                                "MethodName": null,
+                                "ServiceCode": null,
+                                "DeliveryRangeStart": null,
+                                "DeliveryRangeEnd": null,
+                                "Price": null,
+                                "PriceEncrypted": null,
+                                "FreeShippingAllowed": null,
+                                "IsFree": null
+                            }
+                        ],
+                        "WarehouseCity": null,
+                        "WarehouseStateOrCountry": null,
+                        "StockDisclaimer": null
+                    }
                 }
             ]
         },
@@ -3552,7 +4292,7 @@
                         {
                             "Name": "CartItems",
                             "Type": "object array",
-                            "Notes": "[ { 'SelectedItemIdEncrypted': [[Value]], 'Quantity': [[Value]], 'Description': [[Value]], 'VariationDescription': [[Value]], 'ImagePath': [[Value]], 'ImageAlt': [[Value]], 'UnitPrice': [[Value]], 'ListPrice': [[Value]], 'SKU': [[Value]], 'OnSale': [[Value]] } ]"
+                            "Notes": ""
                         },
                         {
                             "Name": "Subtotal",
@@ -3564,7 +4304,25 @@
                             "Type": "string",
                             "Notes": "Empty string indicates no errors were encountered"
                         }
-                    ]
+                    ],
+                    "SampleResponse": {
+                        "Error": null,
+                        "CartItems": [
+                            {
+                                "SelectedItemIdEncrypted": null,
+                                "Quantity": null,
+                                "Description": null,
+                                "VariationDescription": null,
+                                "ImagePath": null,
+                                "ImageAlt": null,
+                                "UnitPrice": null,
+                                "ListPrice": null,
+                                "SKU": null,
+                                "OnSale": null
+                            }
+                        ],
+                        "Subtotal": null
+                    }
                 },
                 {
                     "Name": "Update Cart Item Quantity",
@@ -3618,7 +4376,13 @@
                             "Type": "string",
                             "Notes": "Empty string indicates no errors were encountered"
                         }
-                    ]
+                    ],
+                    "SampleResponse": {
+                        "Error": null,
+                        "RequestedQuantity": null,
+                        "ActualUpdatedQuantity": null,
+                        "Subtotal": null
+                    }
                 },
                 {
                     "Name": "Change Shopping Cart Region",
@@ -3674,7 +4438,11 @@
                             "Type": "string",
                             "Notes": "Empty string indicates no errors were encountered"
                         }
-                    ]
+                    ],
+                    "SampleResponse": {
+                        "Error": null,
+                        "CurrencyCode": null
+                    }
                 },
                 {
                     "Name": "Set Shipping Charge on Shopping Cart",
@@ -3713,7 +4481,10 @@
                             "Type": "string",
                             "Notes": "Empty string indicates no errors were encountered"
                         }
-                    ]
+                    ],
+                    "SampleResponse": {
+                        "Error": null
+                    }
                 },
                 {
                     "Name": "Remove Shipping Charge from Shopping Cart",
@@ -3740,7 +4511,10 @@
                             "Type": "string",
                             "Notes": "Empty string indicates no errors were encountered"
                         }
-                    ]
+                    ],
+                    "SampleResponse": {
+                        "Error": null
+                    }
                 },
                 {
                     "Name": "Remove Promotional Discount from Shopping Cart",
@@ -3767,7 +4541,10 @@
                             "Type": "string",
                             "Notes": "Empty string indicates no errors were encountered"
                         }
-                    ]
+                    ],
+                    "SampleResponse": {
+                        "Error": null
+                    }
                 },
                 {
                     "Name": "Get Stock System Disclaimer for Shopping Cart",
@@ -3799,7 +4576,11 @@
                             "Type": "string",
                             "Notes": "Empty string indicates no errors were encountered"
                         }
-                    ]
+                    ],
+                    "SampleResponse": {
+                        "Error": null,
+                        "Message": null
+                    }
                 }
             ]
         },
@@ -3853,7 +4634,13 @@
                             "Type": "string",
                             "Notes": "Empty string indicates no errors were encountered"
                         }
-                    ]
+                    ],
+                    "SampleResponse": {
+                        "Error": null,
+                        "FreightTaxRate": null,
+                        "OrderTaxRate": null,
+                        "OrderTaxRateEncrypted": null
+                    }
                 },
                 {
                     "Name": "Validate VAT Id",
@@ -3896,7 +4683,12 @@
                             "Type": "string",
                             "Notes": "Empty string indicates no errors were encountered"
                         }
-                    ]
+                    ],
+                    "SampleResponse": {
+                        "Error": null,
+                        "Success": null,
+                        "Message": null
+                    }
                 },
                 {
                     "Name": "Set Region Tax for Shopping Cart",
@@ -3923,7 +4715,10 @@
                             "Type": "string",
                             "Notes": "Empty string indicates no errors were encountered"
                         }
-                    ]
+                    ],
+                    "SampleResponse": {
+                        "Error": null
+                    }
                 }
             ]
         }
