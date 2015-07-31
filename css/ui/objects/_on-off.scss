@@ -14,6 +14,7 @@
 
         &:checked + label {
             border-color: $darker-gray-blue;
+
             > .inner {
                 margin-left: 0;
             }
@@ -21,6 +22,7 @@
             > .switch {
                 background-color: $darker-gray-blue;
                 right: 0;
+                box-shadow: -2px 1px 4px 0px #253237;
             }
         }
     }
@@ -38,7 +40,7 @@
             margin-left: -100%;
             -moz-transition: all 0.3s ease-in 0s;
             -o-transition: all 0.3s ease-in 0s;
-            -webkit-transition: all 0.3s ease-in 0s; 
+            -webkit-transition: all 0.3s ease-in 0s;
             transition: all 0.3s ease-in 0s;
 
             &:before, &:after {
@@ -82,6 +84,7 @@
             -moz-transition: all 0.3s ease-in 0s;
             -o-transition: all 0.3s ease-in 0s;
             -webkit-transition: all 0.3s ease-in 0s;
+            box-shadow: 2px 1px 4px 0px #999;
             transition: all 0.3s ease-in 0s;
         }
     }
