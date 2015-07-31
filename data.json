@@ -63,7 +63,10 @@
                             "Type": "string",
                             "Notes": "Empty string indicates no errors were encountered"
                         }
-                    ]
+                    ],
+                    "SampleResponse": {
+                        "Error": null
+                    }
                 },
                 {
                     "Name": "Set Salesforce Account Id",
@@ -96,7 +99,10 @@
                             "Type": "string",
                             "Notes": "Empty string indicates no errors were encountered"
                         }
-                    ]
+                    ],
+                    "SampleResponse": {
+                        "Error": null
+                    }
                 },
                 {
                     "Name": "Set Salesforce Contact Id",
@@ -129,7 +135,10 @@
                             "Type": "string",
                             "Notes": "Empty string indicates no errors were encountered"
                         }
-                    ]
+                    ],
+                    "SampleResponse": {
+                        "Error": null
+                    }
                 },
                 {
                     "Name": "Set Customer Email",
@@ -162,7 +171,10 @@
                             "Type": "string",
                             "Notes": "Empty string indicates no errors were encountered"
                         }
-                    ]
+                    ],
+                    "SampleResponse": {
+                        "Error": null
+                    }
                 },
                 {
                     "Name": "Create Website Account For Customer",
@@ -219,7 +231,10 @@
                             "Type": "string",
                             "Notes": "Empty string indicates no errors were encountered"
                         }
-                    ]
+                    ],
+                    "SampleResponse": {
+                        "Error": null
+                    }
                 },
                 {
                     "Name": "Get Contact By Salesforce Contact Id",
@@ -249,9 +264,46 @@
                         {
                             "Name": "Contact",
                             "Type": "object",
-                            "Notes": "{ 'Id': [[Value]], 'CustomerId': [[Value]], 'FirstName': [[Value]], 'LastName': [[Value]], 'Address': { 'AddressId': [[Value]], 'Street': [[Value]], 'Street2': [[Value]], 'City': [[Value]], 'PostalCode': [[Value]], 'State': [[Value]], 'StateCode': [[Value]], 'Country': [[Value]], 'CountryCode': [[Value]], 'CountryId': [[Value]], 'BackOfficeAddressId': [[Value]], 'CompanyName': [[Value]], 'RegionId': [[Value]] }, 'Email': [[Value]], 'Phone': [[Value]], 'Mobile': [[Value]], 'Fax': [[Value]], 'ShopId': [[Value]], 'IsCustomerDefault': [[Value]], 'IsBillingDefault': [[Value]], 'IsShippingDefault': [[Value]], 'SubscriptionType': [[Value]], 'subscriptionId': [[Value]], 'emailId': [[Value]], 'ContactType': [[Value]], 'SalesforceContactId': [[Value]] }"
+                            "Notes": ""
                         }
-                    ]
+                    ],
+                    "SampleResponse": {
+                        "Error": null,
+                        "Contact": {
+                            "Id": null,
+                            "CustomerId": null,
+                            "FirstName": null,
+                            "LastName": null,
+                            "Address": {
+                                "AddressId": null,
+                                "Street": null,
+                                "Street2": null,
+                                "City": null,
+                                "PostalCode": null,
+                                "State": null,
+                                "StateCode": null,
+                                "Country": null,
+                                "CountryCode": null,
+                                "CountryId": null,
+                                "BackOfficeAddressId": null,
+                                "CompanyName": null,
+                                "RegionId": null
+                            },
+                            "Email": null,
+                            "Phone": null,
+                            "Mobile": null,
+                            "Fax": null,
+                            "ShopId": null,
+                            "IsCustomerDefault": null,
+                            "IsBillingDefault": null,
+                            "IsShippingDefault": null,
+                            "SubscriptionType": null,
+                            "subscriptionId": null,
+                            "emailId": null,
+                            "ContactType": null,
+                            "SalesforceContactId": null
+                        }
+                    }
                 },
                 {
                     "Name": "Get Customer By Salesforce Account Id",
@@ -357,7 +409,7 @@
                         {
                             "Name": "CustomerAddresses",
                             "Type": "object array",
-                            "Notes": "[ { 'ContactIdEncrypted': [[Value]], 'BackOfficeAddressId': [[Value]], 'FirstName': [[Value]], 'LastName': [[Value]], 'CountryName': [[Value]], 'CountryCode': [[Value]], 'StreetAddress1': [[Value]], 'StreetAddress2': [[Value]], 'City': [[Value]], 'StateCode': [[Value]], 'StateName': [[Value]], 'PostalCode': [[Value]], 'Phone': [[Value]], 'Company': [[Value]], 'LocationId': [[Value]], 'IsShippingDefault': [[Value]], 'IsBillingDefault': [[Value]], 'SelectedShipping': [[Value]], 'SelectedBilling': [[Value]] } ]"
+                            "Notes": ""
                         }
                     ],
                     "SampleCall": {
