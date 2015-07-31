@@ -4,7 +4,8 @@ var CategoryListView = Backbone.View.extend({
 	el: "#category-list",
 	events: {
 		"click .action .btn--primary": "actionPrimaryClicked",
-		"click .action .btn--secondary": "actionSecondaryClicked"
+		"click .action .btn--secondary": "actionSecondaryClicked",
+		"change .action .sample-response input[type=checkbox]": "toggleSampleResponseClicked"
 	},
 	appContext: null,
 	template: DAT["category-list"],
@@ -32,5 +33,13 @@ var CategoryListView = Backbone.View.extend({
 	},
 	actionSecondaryClicked: function () {
 		$(event.target).siblings("code").html("");
+	},
+	toggleSampleResponseClicked: function (event) {
+		var $this = $(event.target),
+			$pre = $this.parent().siblings("pre");
+
+		if ($pre && $pre.length && $pre.length > 0) {
+			$pre.slideToggle("slow");
+		}
 	}
 });

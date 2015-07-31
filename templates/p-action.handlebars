@@ -18,7 +18,7 @@
             </tbody>
         </table>
     </div>
-    <h4>Response</h4><a data-type="example-response" href="#action-{{toLower Category.Name}}{{@index}}-response">Example</a>
+    <h4>Response</h4>
     <div class="table-wrapper">
         <table class="table--bordered table--striped table--data">
             <thead>
@@ -33,21 +33,20 @@
             </tbody>
         </table>
     </div>
-    <h4>Test it</h4>
+    <!--<h4>Test it</h4>
     <button class="btn btn--gamma btn--secondary">Clear</button>
     <button class="btn btn--gamma btn--positive btn--primary" data-endpoint="{{Endpoint}}" data-verb="{{Verb}}" data-sample='{{stringifyJSON SampleCall}}'>Execute</button>
     <h5>Result</h5>
-    <code></code>
-    <div id="action-{{toLower Category.Name}}{{@index}}-response" class="modal">
-        <section>
-            <header>
-                <h2>Sample Response</h2><a href="#" title="Close modal">Close</a>
-            </header>
-            <article>
-                <code>{{prettifyJSON SampleResponse}}</code>
-            </article>
-        </section>
-        <div class="overlay"></div>
+    <code></code>-->
+    <div class="sample-response">
+        <h4>Sample Response</h4>
+        <div class="onoff">
+            <input type="checkbox" id="switch-{{toLower Category.Name}}{{@index}}">
+            <label for="switch-{{toLower Category.Name}}{{@index}}">
+                <span class="inner"></span>
+                <span class="switch"></span>
+            </label>
+        </div>
+        <pre style="display: none;"><code>{{prettifyJSON SampleResponse}}</code></pre>
     </div>
 </div>
-                

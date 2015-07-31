@@ -32,7 +32,7 @@ module.exports = function (grunt) {
 			},
 			dist: {
 				// the files to concatenate
-				src: ['js/libraries/underscore-min.js', 'js/libraries/backbone-min.js', 'js/libraries/pretty-json-min.js', 'js/hb-helpers.js', 'js/hb-partials.js', 'js/hb-templates.js', 'js/models/category-model.js', 'js/collections/categories-collection.js', 'js/views/navigation-view.js', 'js/views/category-list-view.js', 'js/apps/doc-app.js'],
+				src: ['js/libraries/json2.js', 'js/libraries/underscore-min.js', 'js/libraries/backbone-min.js', 'js/libraries/pretty-json-min.js', 'js/hb-helpers.js', 'js/hb-partials.js', 'js/hb-templates.js', 'js/models/category-model.js', 'js/collections/categories-collection.js', 'js/views/navigation-view.js', 'js/views/category-list-view.js', 'js/apps/doc-app.js'],
 				// the location of the resulting JS file
 				dest: 'dist/<%= pkg.name %>.js'
 			}

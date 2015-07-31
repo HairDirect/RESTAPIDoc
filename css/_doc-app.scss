@@ -12,3 +12,15 @@
     @include rem-attribute('max-height', 6);
     overflow-y: auto;
 }
+
+.sample-response {
+    h4, .onoff {
+        display: inline-block;
+    }
+    h4 {
+        vertical-align: middle;
+    }
+    .onoff {
+        @include rem-attribute('margin-left', .5);
+    }
+}

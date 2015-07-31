@@ -1,0 +1,88 @@
+/*------------------------------------*\
+    $SWITCH
+\*------------------------------------*/
+.onoff {
+    position: relative;
+    @include rem-attribute('width', 4);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    > input[type=checkbox] {
+        display: none;
+
+        &:checked + label {
+            border-color: $darker-gray-blue;
+            > .inner {
+                margin-left: 0;
+            }
+
+            > .switch {
+                background-color: $darker-gray-blue;
+                right: 0;
+            }
+        }
+    }
+
+    > label {
+        display: block;
+        overflow: hidden;
+        cursor: pointer;
+        border: 2px solid $medium-gray;
+        @include rem-attribute('border-radius', 1.25);
+
+        > .inner {
+            display: block;
+            width: 200%;
+            margin-left: -100%;
+            -moz-transition: all 0.3s ease-in 0s;
+            -o-transition: all 0.3s ease-in 0s;
+            -webkit-transition: all 0.3s ease-in 0s; 
+            transition: all 0.3s ease-in 0s;
+
+            &:before, &:after {
+                display: block;
+                float: left;
+                width: 50%;
+                padding: 0;
+                @include rem-attribute('height', 1.875);
+                @include rem-attribute('line-height', 1.875);
+                font-weight: bold;
+                -moz-box-sizing: border-box;
+                -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+                content: "";
+            }
+
+            &:before {
+                /*content: "Hide";*/
+                @include rem-attribute('padding-left', .625);
+                background-color: $dark-gray-blue;
+            }
+
+            &:after {
+                /*content: "Show";*/
+                @include rem-attribute('padding-right', .625);
+                background-color: $light-gray;
+                text-align: right;
+            }
+        }
+
+        > .switch {
+            display: block;
+            @include rem-attribute('width', 1.563);
+            @include rem-attribute('margin', .25);
+            background: $white;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            @include rem-attribute('right', 1.938);
+            @include rem-attribute('border-radius', 1.25);
+            -moz-transition: all 0.3s ease-in 0s;
+            -o-transition: all 0.3s ease-in 0s;
+            -webkit-transition: all 0.3s ease-in 0s;
+            transition: all 0.3s ease-in 0s;
+        }
+    }
+}
