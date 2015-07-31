@@ -12,8 +12,18 @@ var CategoryListView = Backbone.View.extend({
 	render: function (categories) {
 		var view = this;
 		view.$el.html(view.template(categories));
+		view.formatSampleResponse();
 	},
 	//#endregion -- Backbone Objects --
+	formatSampleResponse: function () {
+		/// <summary>Handlebars adds additional whitespace when rendering a stringified JSON object, so we need to re-render the sample response manually.</summary>
+		var view = this;
+		view.$el.find(".sample-response pre > code").each(function () {
+			var $this = $(this),
+				json = JSON.parse($this.html());
+			$this.html(JSON.stringify(json, null, 2));
+		});
+	},
 	actionPrimaryClicked: function (event) {
 		var $this = $(event.target),
 			origText = $this.text(),

@@ -17,9 +17,11 @@
     h4, .onoff {
         display: inline-block;
     }
+
     h4 {
         vertical-align: middle;
     }
+
     .onoff {
         @include rem-attribute('margin-left', .5);
     }

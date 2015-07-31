@@ -1421,7 +1421,7 @@
                             "Notes": "Empty string indicates no errors were encountered"
                         }
                     ],
-                    "SampleReponse": {
+                    "SampleResponse": {
                         "Error": null,
                         "DepartmentLinks": [
                             {

@@ -70,7 +70,7 @@ Handlebars.registerPartial("p-action", Handlebars.template({"1":function(depth0,
     + alias2((helpers.toLower || (depth0 && depth0.toLower) || alias1).call(depth0,((stack1 = (depth0 != null ? depth0.Category : depth0)) != null ? stack1.Name : stack1),{"name":"toLower","hash":{},"data":data}))
     + alias2(((helper = (helper = helpers.index || (data && data.index)) != null ? helper : alias1),(typeof helper === alias3 ? helper.call(depth0,{"name":"index","hash":{},"data":data}) : helper)))
     + "\">\r\n                <span class=\"inner\"></span>\r\n                <span class=\"switch\"></span>\r\n            </label>\r\n        </div>\r\n        <pre style=\"display: none;\"><code>"
-    + alias2((helpers.prettifyJSON || (depth0 && depth0.prettifyJSON) || alias1).call(depth0,(depth0 != null ? depth0.SampleResponse : depth0),{"name":"prettifyJSON","hash":{},"data":data}))
+    + ((stack1 = (helpers.stringifyJSON || (depth0 && depth0.stringifyJSON) || alias1).call(depth0,(depth0 != null ? depth0.SampleResponse : depth0),{"name":"stringifyJSON","hash":{},"data":data})) != null ? stack1 : "")
     + "</code></pre>\r\n    </div>\r\n</div>\r\n";
 },"usePartial":true,"useData":true}));
 

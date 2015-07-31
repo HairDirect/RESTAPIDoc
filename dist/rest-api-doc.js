@@ -394,19 +394,6 @@ Handlebars.registerHelper('toLower', function (value, options) {
 	/// <param name="options" type="Object">Handlebars options</param>
 	return new Handlebars.SafeString(value.toLowerCase());
 });
-
-Handlebars.registerHelper('prettifyJSON', function (value, options) {
-	/// <summary>Formats JSON into collapsible markup.</summary>
-	/// <param name="value" type="String">The json data to prettify.</param>
-	/// <param name="options" type="Object">Handlebars options</param>
-	//var node = new PrettyJSON.view.Node({
-	//	data: value
-	//});
-	//node.expandAll();
-	//return new Handlebars.SafeString(node.el.innerHTML);
-	//return new Handlebars.SafeString(JSON.stringify(value, null, '\t'));
-	return new Handlebars.SafeString(JSON.stringify(value, null, 1));
-});
 Handlebars.registerPartial("p-category", Handlebars.template({"1":function(depth0,helpers,partials,data,blockParams,depths) {
     var helper, alias1=helpers.helperMissing, alias2=this.escapeExpression, alias3="function";
 
@@ -479,7 +466,7 @@ Handlebars.registerPartial("p-action", Handlebars.template({"1":function(depth0,
     + alias2((helpers.toLower || (depth0 && depth0.toLower) || alias1).call(depth0,((stack1 = (depth0 != null ? depth0.Category : depth0)) != null ? stack1.Name : stack1),{"name":"toLower","hash":{},"data":data}))
     + alias2(((helper = (helper = helpers.index || (data && data.index)) != null ? helper : alias1),(typeof helper === alias3 ? helper.call(depth0,{"name":"index","hash":{},"data":data}) : helper)))
     + "\">\r\n                <span class=\"inner\"></span>\r\n                <span class=\"switch\"></span>\r\n            </label>\r\n        </div>\r\n        <pre style=\"display: none;\"><code>"
-    + alias2((helpers.prettifyJSON || (depth0 && depth0.prettifyJSON) || alias1).call(depth0,(depth0 != null ? depth0.SampleResponse : depth0),{"name":"prettifyJSON","hash":{},"data":data}))
+    + ((stack1 = (helpers.stringifyJSON || (depth0 && depth0.stringifyJSON) || alias1).call(depth0,(depth0 != null ? depth0.SampleResponse : depth0),{"name":"stringifyJSON","hash":{},"data":data})) != null ? stack1 : "")
     + "</code></pre>\r\n    </div>\r\n</div>\r\n";
 },"usePartial":true,"useData":true}));
 
@@ -604,8 +591,18 @@ var CategoryListView = Backbone.View.extend({
 	render: function (categories) {
 		var view = this;
 		view.$el.html(view.template(categories));
+		view.formatSampleResponse();
 	},
 	//#endregion -- Backbone Objects --
+	formatSampleResponse: function () {
+		/// <summary>Handlebars adds additional whitespace when rendering a stringified JSON object, so we need to re-render the sample response manually.</summary>
+		var view = this;
+		view.$el.find(".sample-response pre > code").each(function () {
+			var $this = $(this),
+				json = JSON.parse($this.html());
+			$this.html(JSON.stringify(json, null, 2));
+		});
+	},
 	actionPrimaryClicked: function (event) {
 		var $this = $(event.target),
 			origText = $this.text(),
