@@ -13,16 +13,16 @@
         display: none;
 
         &:checked + label {
-            border-color: $darker-gray-blue;
+            border-color: $dark-gray-blue;
 
             > .inner {
                 margin-left: 0;
             }
 
             > .switch {
-                background-color: $darker-gray-blue;
+                background-color: $light-gray-blue;
                 right: 0;
-                box-shadow: -2px 1px 4px 0 $darkest-gray-blue;
+                box-shadow: -2px 1px 4px 0 $dark-gray-blue;
             }
         }
     }
@@ -58,13 +58,11 @@
             }
 
             &:before {
-                /*content: "Hide";*/
                 @include rem-attribute('padding-left', .625);
-                background-color: $dark-gray-blue;
+                background-color: $medium-gray-blue;
             }
 
             &:after {
-                /*content: "Show";*/
                 @include rem-attribute('padding-right', .625);
                 background-color: $light-gray;
                 text-align: right;
