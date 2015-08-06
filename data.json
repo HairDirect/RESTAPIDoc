@@ -105,42 +105,6 @@
                     }
                 },
                 {
-                    "Name": "Set Salesforce Contact Id",
-                    "Description": "Sets the Salesforce contact id for the customer's primary contact record",
-                    "Endpoint": "/account.svc/account/set/salesforce-contact-id",
-                    "Verb": "POST",
-                    "Payload": [
-                        {
-                            "Name": "CultureCode",
-                            "Type": "string",
-                            "Notes": "Currently the only implemented option is: en-US",
-                            "Required": true
-                        },
-                        {
-                            "Name": "SalesforceContactId",
-                            "Type": "string",
-                            "Notes": "Must be 50 characters or less",
-                            "Required": true
-                        },
-                        {
-                            "Name": "EmailAddress",
-                            "Type": "string",
-                            "Notes": "Must be 150 characters or less",
-                            "Required": true
-                        }
-                    ],
-                    "Response": [
-                        {
-                            "Name": "Error",
-                            "Type": "string",
-                            "Notes": "Empty string indicates no errors were encountered"
-                        }
-                    ],
-                    "SampleResponse": {
-                        "Error": null
-                    }
-                },
-                {
                     "Name": "Set Customer Email",
                     "Description": " Sets the email address on a customer account",
                     "Endpoint": "/account.svc/account/set/user-email",
@@ -1251,7 +1215,37 @@
                     "SampleResponse": {
                         "Error": null
                     }
-                }
+                },
+                {
+                    "Name": "Set Salesforce Contact Id",
+                    "Description": "Sets the Salesforce contact id for a contact record",
+                    "Endpoint": "/address.svc/contact/set/salesforce-contact-id",
+                    "Verb": "POST",
+                    "Payload": [
+                        {
+                            "Name": "ContactId",
+                            "Type": "long",
+                            "Notes": "",
+                            "Required": true
+                        },
+                        {
+                            "Name": "SalesforceContactId",
+                            "Type": "string",
+                            "Notes": "Must be 50 characters or less",
+                            "Required": true
+                        }
+                    ],
+                    "Response": [
+                        {
+                            "Name": "Error",
+                            "Type": "string",
+                            "Notes": "Empty string indicates no errors were encountered"
+                        }
+                    ],
+                    "SampleResponse": {
+                        "Error": null
+                    }
+                },
             ]
         },
         {
